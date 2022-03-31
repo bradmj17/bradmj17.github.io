@@ -1,0 +1,73 @@
+/* Row 1, brad */
+			body{
+                font-family: Arial;
+                background-image: url('../image/abstractPic.jpg');
+                background-size: cover;
+            }
+            @font-face {
+                font-family: 'LEAGUESPARTAN';
+                src: url('../font/leaguespartan-bold-webfont.woff') format('woff'),
+                     url('../font/leaguespartan-bold-webfont.woff2') format('woff2');
+                font-weight: normal;
+                font-style: normal;
+            }
+            h1{
+                font-family: 'LEAGUESPARTAN';
+                font-size:2em;
+            }
+            h3{
+                font-size:1.5em;
+                border-bottom:1px,solid,black;
+            }
+
+/* Row 2, brad */
+            .fonts{
+                color: orange;
+                font-family: 'Comic Sans MS';
+                font-size:1.5em;
+                font-style: italic,bold;
+            }
+            .colors{
+                color:red;
+                font-style:bold;
+
+            }
+            .more{
+                color:blue;
+                text-decoration:underline;
+                border: 1px,dashed,gray;
+                background-color:#D69BBE;
+            }
+            .backgrounds{
+                color:green;
+                font-family: Trebuchet MS, 1.25em;
+            }
+            article ul{
+                list-style-image: url('../image/peaceSign_resized.png');
+            }
+/* Row 3, william */
+#outerwrapper{
+    width: 650px;
+ background-color: #E7DBF6;
+ margin-left: auto;
+ margin-right: auto;
+}
+nav{
+    width: 175px;
+    background-color: #E7DBF6;
+    float: left;
+}
+article{
+    margin-left: 175px;
+    background-color: white;
+    padding: 10px;
+}
+
+
+/* Row 4, william */
+footer{
+    font-size: 12px;
+ text-align: center;
+ margin-top: 10px;
+ padding-bottom: 10px;
+} 
