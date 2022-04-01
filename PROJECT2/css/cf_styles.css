@@ -1,0 +1,62 @@
+/*Bradley Johnson, 4/1/22*/
+#outerwrapper {
+
+	margin-left: auto;
+	margin-right: auto;
+
+	width:70%;
+} 
+
+.floatleft { 
+float: left;
+margin-right:3%;
+}
+
+.floatright {
+float: right;
+margin-left:3%;
+
+}
+
+main, footer { 
+clear: both;
+}
+
+/*new style elements*/
+
+body{
+	background-color:#B8D1EB;
+	color:#000000;
+font-family:'Times New Roman',Times, serif;
+}
+main{
+	background-color: #C5A98B;
+	padding: 10px;
+}
+body nav ul{
+	list-style-type:none;
+}
+#outerwrapper h1{
+	font-family: 'Righteous', cursive;
+	font-size:70px;
+}
+@font-face {
+	font-family: 'QUICKSAND';
+	src: url('../fonts/quicksand-regular-webfont.woff') format('woff'),
+		 url('../fonts/quicksand-regular-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+}
+
+#outerwrapper h2{
+	font-family:'QUICKSAND','Times New Roman', Times, serif;
+}
+main ul{
+	list-style-image:url('../images/tomato.png');
+}
+footer{
+	font-size:.75em;
+	text-align:center;
+	background-color:burlywood;
+	padding:10px 10px;
+}
