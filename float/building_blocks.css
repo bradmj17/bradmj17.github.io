@@ -1,0 +1,82 @@
+/*brad*/
+*{
+    margin:0; 
+    padding:0;
+}
+
+body{
+    background-color:beige;
+}
+
+#main_container{
+   width:600px;
+   margin-top:20px;
+   margin-right:auto;
+   margin-left:auto;
+   background-color:#ffffff;
+   overflow:hidden;
+   padding:10px;
+   }
+
+.border {
+    border:10px solid #666666;
+    border-radius: 15px;
+    width:100px;
+    height:100px;
+}
+
+h2{
+    font-size: 80px;
+    font-family: verdana;
+    text-transform:uppercase;
+    text-align: center;
+    color:#666666;
+}
+
+#a{
+    float:left;
+    margin-bottom:5px;
+    margin-left:250px;
+}
+
+#b{
+    float:left;
+    clear:left;
+    margin-bottom:5px;
+    margin-left:190px;
+}
+
+#c{
+    float:left;
+    margin-left:3px;
+}
+
+#d{
+    float:left;
+    clear:left;
+    margin-left:125px;
+}
+
+#e{
+    float:left;
+    margin-left:3px;
+}
+
+#f{
+    float:left;
+    margin-left:3px;
+}
+
+/*colored text*/
+.blue{
+    color:dodgerblue;
+    border-color:dodgerblue;
+}
+.coral{
+    color:coral;
+    border-color: coral;
+}
+.green{
+    color:lawngreen;
+    border-color:lawngreen;
+}
