@@ -1,0 +1,89 @@
+/* Style sheet created by: Bradley Johnson, 4/6/2022 */
+
+/* Style for body specifies a background color */
+body {
+	background-color: #FFFFFF;
+}
+
+/* Style for the container element */
+#container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Style for the header element */
+header {
+	font-family: Verdana, Arial, sans-serif;
+	background-color: #FFFFFF;
+	color: #4E9657;
+	padding: 0.5%;
+	margin-left: 1%;
+	font-size: 3em;
+}
+
+/* Style for the nav element */
+nav {
+	padding: 0.5%;
+}
+
+/* Style for the nav list item elements */
+nav li {
+	display: inline;
+}
+
+/* Style for the nav links element */
+nav li a {
+	color: #4E9657;
+	padding-left: 2%;
+	padding-right: 2%;
+	text-decoration: none;
+}
+/* Style for the table */
+table{
+  width: 100%;
+}
+td, th {
+	border: 1px solid black;
+}
+/*added these*/
+main{
+	display:block;
+	padding:1em;
+	background-color:#4E9657;
+}
+section{
+	color:#4E9657;
+	background-color:white;
+	padding:1em;
+	margin-top:5px;
+}
+article{
+	color:black;
+	border-top:2px;
+	padding:1em;
+	margin-top:5px;
+}
+aside{
+	border-radius:95px;
+	text-align:center;
+	font-size:40px;
+	color:white;
+	padding:1em;
+	margin-top:5px;
+	background-color:#4E9657
+}
+footer{
+	text-align:center;
+	font-size:.70em;
+}
+/*added because i didn't know how the hr line appeared*/
+hr{
+	height:2px;
+background-color:#777;
+margin-bottom:-5px;
+margin-top:-5px;
+}
+caption{
+	margin-bottom:-15px;
+}
