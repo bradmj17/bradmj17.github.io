@@ -1,0 +1,65 @@
+/* Style Sheet If You Build It (table), They Will Come */
+/* Name:                                        */
+
+/* Gradient target HTML body element tag */
+body{
+    background: linear-gradient(to right,rgb(5, 252, 240),rgb(136, 143, 134) 50%);
+    width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* css target tableStyle class in HTML */
+.tableStyle{
+    background-color:white;
+    border: 10px solid rgb(5, 252, 240);
+    width: 80%;
+    margin:2% 20% 10% 10%;
+}
+
+
+/* css target HTML Table caption tag */
+caption{   
+    color:white;
+    font-size:1.5em;
+}
+
+
+/* css target HTML Table thead tag */
+ thead{
+     font-style:italic;
+     
+
+ }
+ 
+ 
+/* css target HTML Table tfoot tag */
+ tfoot{
+     text-align:center;
+     background-color:red;
+ }
+
+/* Add a pseudo-class selector (page 320) */
+/* For example --  :nth-child(even)       */
+:nth-child(2){
+    text-align:justify;
+}
+ 
+ 
+ 
+ 
+/* use colgroup */
+.yellow{
+    background-color:yellow;
+}
+.orange{
+    background-color:orange;
+}
+.blue{
+    background-color:blue;
+}
+.green{
+    background-color:green;
+}
+/* Week 3, Wednesday Video Lesson Chapter 8 folder - Table Column Group, page 173 */
