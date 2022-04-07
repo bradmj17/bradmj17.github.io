@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<!---Bradley Johnson 4/7/22    -->
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <meta name="keywords" content="contact, form, email">
+   <meta name="author" content="Bradley Johnson">
+   <meta description="description" content="Basic Contact Form layout demonstration HTML syntax />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Contact Form Example</title>
+<body>
+    <form action="mailto:bradleyjohnson@my.cwi.edu?subject=Personal Portfolio Mail" enctype="text/plain" method="POST">
+		<label for="company">Company:</label><br> 
+		<input type="text" name="Company Name" size="50" id="company"><br>
+		
+		<label for="contact">Person to contact:</label><br>
+		<input type="text" name="Contact Name" size="30" id="contact"><br><br>
+		
+		<label for="comment">Enter your comments:</label><br>
+		<textarea cols="100" rows="10" name="Comment"></textarea><br><br>
+		
+		<input type="submit" id="submit" value="Submit" class="btn">
+     </form>
+  </body>
+</html>
