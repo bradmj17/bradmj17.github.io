@@ -1,0 +1,19 @@
+svg{
+    margin-left:10%;
+}
+.myShape{
+transition: transform .5s;
+}
+svg:hover{
+    transform:scale(.8);
+}
+img{
+    transition: transform 1s;
+    margin-left:10%;
+}
+img:hover{
+    transform:scale(1.5);
+}
+body{
+    margin:2%;
+}
