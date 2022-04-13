@@ -1,0 +1,419 @@
+/*establishing fonts; used in h1, h2, nav, etc*/
+@font-face {
+    font-family: 'LEAGUESPARTAN';
+    src: url('../fonts/leaguespartan-bold-webfont.woff') format('woff'),
+         url('../fonts/leaguespartan-bold-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/*link psuedo code*/
+p a:link{
+    color:rgb(0, 8, 255);
+}
+p a:visited{
+    color:rgb(27, 34, 173);
+}
+p a:hover{
+    background-color:rgba(40, 43, 43, 0.24);
+}
+p a:active{
+    background-color:yellow;
+}
+/*alter colors classes*/
+.color1{
+    background-color:rgb(173, 211, 235);
+}
+.color2{
+    background-color:rgb(0, 0, 0);
+    color:rgb(123, 239, 243);
+}
+.gloss{
+    background-color: rgba(157, 169, 187, 0.359);
+}
+.removeColor{
+    background-color:#00000000
+}
+
+/*top ribbon menu*/
+header{
+    background-color:rgb(0, 0, 0);
+    align-items:center;
+    margin-right:-2px;
+    position:sticky;
+}
+#rightfloat{
+    float:right;
+}
+
+footer{
+    display: block;
+    background-color:rgb(0, 174, 255);
+    text-align:center;
+}
+footer article p{
+    font-size:30px;
+    font-family: 'LEAGUESPARTAN','Times New Roman', Times, serif,cursive;
+}
+footer article aside{
+    float:left;
+    margin-left: 25%;
+    margin-right: auto;
+}
+footer article aside address{
+    font-size:30px;
+}
+nav{   
+    margin: 0 auto;
+    display: block; 
+    }
+ul {
+    margin: auto;
+    list-style-type: none;
+    margin: 0px;
+    margin-right:0px;
+    padding: 20px;
+    overflow: hidden;
+    background-color: rgba(157, 169, 187, 0.359);
+  }
+  
+  li {
+      margin-left:4%;
+    float:left;
+    
+  }
+  li img{
+      margin-right:40px;
+  }
+  li a {
+    margin-top:15px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-size: 2em;
+    font-family: 'LEAGUESPARTAN','Times New Roman', Times, serif,cursive;
+  }
+  li p a img{
+      block-size: 40px;
+      float:right;
+      height:auto;
+      margin-left:0px;
+    margin-right:0px;
+}
+  li p a{
+    height:50px;
+    width:50px;
+    }
+  
+  li a:hover {
+    background-color: #111;
+    text-decoration:underline;
+  }
+  .pog {
+      margin-top:1%;
+      margin-left:2%;
+      width:175px;
+      height:auto;
+  }
+  /*basic page elements*/
+  body{
+      
+	box-shadow: rgba(158, 242, 242, 0.83) -20px 0px 30px,  rgba(158, 242, 242, 0.83) 20px 0px 30px;
+
+    width: 69%;
+	max-width: 7777px;
+	padding-left: 0%;
+	padding-right: 0%;
+	margin: auto auto auto auto;
+	clear: none;
+	float: none;
+    background-image: url('../images/destinybackground.jpg');
+    /*https://destinyemblemwallpapers.com/destiny2/desktop/emblems/Piratical%20Ambitions*/
+    background-size: cover;
+  }
+  section{
+      margin:0px;
+  }
+  main{
+    margin-top:-27px;
+}
+article{
+    background-color:rgba(145, 158, 162, 0.841);
+}
+div{
+    display:block;
+}
+main div{
+    background-color:rgba(145, 158, 162, 0.841);
+    text-align:center;
+}
+main div h1{
+    font-family: 'LEAGUESPARTAN','Times New Roman', Times, serif,cursive;
+    margin-left: 0px;
+    font-size:3em;
+}
+main div p{
+    margin-left:auto;
+    margin-right:auto;
+    font-size:1.6em;
+    margin-top:-10px;
+    font-style: normal;
+    font-family:'Times New Roman', Times, serif,cursive;
+}
+.center{
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.home p{
+    font-size:2em;
+}
+p{
+    font-size:1.3em;
+}
+hr{
+    background-color:rgba(145, 158, 162, 0.841);
+    border-bottom:none;
+    border-right:none;
+    margin-left:2%;
+    margin-right:2%;
+    margin-top:5%;
+    display:block;
+    }
+
+/*aligned name-of-page section [title of page, section underneath header]*/
+.namecard{
+display:flex;
+align-items:normal;
+margin-left:1%;
+}
+.namecard p{
+    margin-left:52px;
+    align-self:center;
+    font-size:1.5em;
+}
+.namecard h1{
+    align-self:center;
+    margin-left: 80px;
+    font-family: 'LEAGUESPARTAN','Times New Roman', Times, serif;
+    font-size:4em;
+}
+
+.picture aside {
+    position:fixed;
+    overflow-y:auto;
+    display:list-item;     
+}
+/*adjust for single column*/
+.singlecolumnstyling p{
+    font-family: 'Abel', sans-serif;
+    font-size:2em;
+    font-weight:bold;
+    width:80%;
+}
+/*TWO COLUMN SETUP*/
+.column {
+    float: left;
+    width: 50%;
+    
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column h2{
+    font-family: 'LEAGUESPARTAN','Times New Roman', Times, serif,cursive;
+    margin-top:15px;
+    font-size:2em;
+}
+h2{
+    font-family: 'LEAGUESPARTAN','Times New Roman', Times, serif,cursive;
+    margin-top:15px;
+    font-size:2em;
+}
+.column p{
+    font-family: 'Abel', sans-serif;
+    font-size:2em;
+}
+.column img{
+    height:auto;
+    width:90%;
+    }
+#IMGTEXT{
+    width:70%;
+}
+#IMGPIC{
+    width:30%;
+}
+.manual_topmarg{
+    margin-top:20px;
+}
+  /*scrollable pictures--scrapped--now in interests*/
+  ul.images {
+    padding: 3px;
+    white-space: nowrap;
+    width:100%;
+    height:1000px;
+    overflow-y: scroll;
+    float:left;
+    background-color:#00000000;
+  }
+  
+  ul.images li {
+    display: list-item;
+    width: 70%;
+    height: auto;
+    background-color:#00000000;
+    float:left;
+  }
+/*table*/
+  table{
+    width: 90%;
+    margin-left:5%;
+  }
+  table a{
+      color:rgb(255, 252, 189);
+    font-size:1.5em;
+  }
+  td, th {
+      border: 2.5px solid black;
+      font-size:2em;
+      border-radius:1.5%;
+      padding:10px;
+  }
+  thead{
+      background-color:rgb(255, 252, 189);
+      font-weight:bold;
+  }
+  tbody{
+      color:#111;
+  }
+  tfoot{
+    font-weight:italic;
+    font-stretch: ultra-expanded;
+    font-size:1.1em;
+  }
+  caption{
+      font-size:3.5em;
+  }
+  /*rowgroup*/
+  .A{
+    background-color:rgba(132, 180, 243, 0.874);
+  }
+  .B{
+    background-color:rgb(236, 250, 252);
+  }
+  .C{
+    background-color:rgb(255, 255, 255);
+  }
+  /*form*/
+  form{
+      display:block;
+      width:90%;
+      margin-left:auto;
+      margin-right:auto;
+      padding-bottom:10%;
+      
+  }
+  label{
+      font-family: 'LEAGUESPARTAN','Times New Roman', Times, serif,cursive;
+      font-size:2em;
+      font-weight:bold;
+      display:block;
+  }
+ 
+  input[type=text]{
+      width:80%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      font-size:2em;
+      border-radius:5px;
+      border-color:#111;
+  }
+  input[type=text]:focus{
+      background-color:rgb(231, 255, 255);
+  }
+  input[type=submit]{
+      width:20%;
+      font-size:2em;
+      margin-bottom:1%;
+  }
+  textarea{
+      font-size:1.5em;
+      width:50%;
+      float:right;
+      display:block;
+  }
+  input[type=radio]{
+      width:30px;
+      height:30px;
+      float:left;
+      margin-right:4%;
+  }
+  fieldset{
+      border-radius: 10%;
+      border:solid;
+      border-color:rgb(173, 211, 235);
+      border-width:0.4em;
+      width:auto;
+      height:auto;
+      font-family: 'LEAGUESPARTAN','Times New Roman', Times, serif,cursive;
+      display:block;
+
+  }
+  legend{
+      font-size:2em;
+      font-family: 'LEAGUESPARTAN','Times New Roman', Times, serif,cursive;
+  }
+  .floatleftform{
+      float:left;
+      text-align:left;
+      padding:2%;
+      margin-left:10%;
+      width:20%;
+      margin-top:1%;
+      display:block;
+  }
+  #formmargup{
+    margin-top:-10%;
+    float:none;
+  }
+  .floatrightform{
+    float:right;
+    text-align:left;
+    padding:2%;
+    margin-right:20%;
+    width:20%;
+  }
+  select{
+      height:3em;
+      width:90%;
+      font-size:2em;
+  }
+  option{
+      text-align:left;
+  }
+  .radiotext{
+      font-size:2em;
+  }
+  input[type=submit]{
+    font-family: 'LEAGUESPARTAN','Times New Roman', Times, serif,cursive;
+    padding:1%;
+
+  }
+  fieldset:focus{
+      background-color:#111;
+
+  }
+
+  /*bold 'Bradley Johnson' using span, on Home*/
+  span{
+      font-weight:bold;
+  }
+ /*div targetted using id, on Experience*/
+ #uniquecolor{
+     color:rgb(255, 252, 189);
+ }
