@@ -1,0 +1,40 @@
+/*table*/
+table{
+    width: 90%;
+    margin-left:5%;
+  }
+  table a{
+      color:rgb(255, 252, 189);
+    font-size:1.5em;
+  }
+  td, th {
+      border: 2.5px solid black;
+      font-size:2em;
+      border-radius:1.5%;
+      padding:10px;
+  }
+  thead{
+      background-color:rgb(255, 252, 189);
+      font-weight:bold;
+  }
+  tbody{
+      color:#111;
+  }
+  tfoot{
+    font-weight:italic;
+    font-stretch: ultra-expanded;
+    font-size:1.1em;
+  }
+  caption{
+      font-size:3.5em;
+  }
+  /*rowgroup*/
+  .A{
+    background-color:rgba(132, 180, 243, 0.874);
+  }
+  .B{
+    background-color:rgb(236, 250, 252);
+  }
+  .C{
+    background-color:rgb(255, 255, 255);
+  }
