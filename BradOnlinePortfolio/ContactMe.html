@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<!-- Bradley Johnson-->
+<html lang = "en">
+
+<head>
+    <meta charset = "utf-8">
+    <title>Contact Form - Bradley Johnson</title> 
+    <meta name = "description" content = "Contact form that will send an email upon submission">
+    <meta name = "keywords" content = "Programmer, form, email, contact, job, position, name, company, brad">
+    <meta name = "author" content = "Bradley Johnson">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/css_file.css" type="text/css" rel="stylesheet">
+
+        <!--Google Fonts to 'Abel' font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+            <nav><ul>
+                <li> <p><img class="pog" src="images/colorado.jpg" alt = "Brad"></p></li>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="AboutMe.html">About Me</a></li>
+                <li><a href="FAQ.html">FAQs</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="ContactMe.html">Contact Me</a></li>
+                <li> <p><a href="https://www.linkedin.com/" target="_blank"><img src="images/iconmonstr-linkedin.png" alt = "LinkedIn"></a></p></li>
+                <li> <p><a href="https://github.com/bradmj17" target="_blank"><img src="images/iconmonstr-github.png" alt = "Git"></a></p></li>
+            </ul></nav>
+    </header>
+    <section class="color1">
+            <div class="namecard">
+                <br><a href="Home.html"><img class="pog" src="images/bikeselfie.jpg" alt = "me on a bike" ></a>
+                <h1>Bradley Johnson; Contact</h1>
+            </div><br>
+    </section>
+    <main class="color1">
+        <div>
+            <h1 class="color2">Please fill out and submit this form and I will email you back!</h1>
+
+            <form action="mailto:bradleyjohnson@my.cwi.edu?subject=Contact&nbsp;Form&nbsp;Template&nbsp;Submission" name="Personal Portfolio Mail contact" enctype="text/plain" method="POST">
+                <label for="company">Company:</label><br> 
+                <input type="text" name="Company Name" size="50" id="company"><br>
+                
+                <label for="contact">Name:</label><br>
+                <input type="text" name="Contact Name" size="30" id="contact"><br><br>
+
+            
+                    <fieldset class="floatleftform gloss">
+                        <legend>How did you find me:</legend> <!--for="Found you"-->
+                            <input type="radio" id="foundChoice1"
+                            name="Found you where" value="LinkedIn">
+                            <label for="foundChoice1">LinkedIn</label>
+                                <br>
+                            <input type="radio" id="foundChoice2"
+                            name="Found you where" value="Indeed">
+                            <label for="foundChoice2">Indeed</label>
+                                <br>
+                            <input type="radio" id="foundChoice3"
+                            name="Found you where" value="Recommednation">
+                            <label for="foundChoice3">Recommendation</label>
+                                <br>
+                            <input type="radio" id="foundChoice4"
+                            name="Found you where" value="Job Fair">
+                            <label for="foundChoice4">Job Fair</label>
+                    </fieldset>
+               
+
+                <label>Enter additional comments:</label><br> <!--for="comment"-->
+                <textarea cols="125" rows="30" name="Comment(s)"></textarea><br><br>
+<!--this fieldset is messed up at less than 50% idk why-->
+                <fieldset class="floatleftform gloss" id="formmargup">
+                    <legend>Which position did you have in mind?</legend> <!-- for="position"; validator said take it out-->
+                    <select name="Position" id="Position">
+                        <optgroup label="Position">
+                        <option value="Full-Time">Full-Time</option>
+                        <option value="Part-Time">Part-Time</option>
+                        <option value="Internship">Internship</option>
+                    </optgroup>
+                    <optgroup label="Not a position">
+                        <option value="N/A">N/A</option>
+                    </optgroup>
+                    </select>
+                </fieldset><br>
+                <input class ="floatleftform" type="submit" id="submit" value="Submit">
+            </form>
+        </div>
+  </main>
+  <footer>
+    <article>
+    <h2>Contact me using..</h2>
+        <nav class="gloss">
+            <aside>
+            <p>My phone number: <a href="tel:+12085130443">  (208) 513-0443</a></p> 
+            <p>My email: <a href="mailto:bradmj17@gmail.com">bradmj17@gmail.com</a></p>
+            <address>2312 E Kara Anne Ave<br>Nampa, ID 83686</address>
+            </aside>
+            <ul class="removeColor">
+                <li> <p><a href="https://www.linkedin.com/" target="_blank"><img src="images/iconmonstr-linkedin2.png" alt = "LinkedIn"></a></p></li>
+                <li> <p><a href="https://github.com/bradmj17" target="_blank"><img src="images/iconmonstr-github2.png" alt = "Git"></a></p></li>
+            </ul>
+            <p>&nbsp;</p>
+        </nav>
+    </article>
+</footer>
+</body>
+
+</html>
