@@ -1,0 +1,91 @@
+/*bradley johnson 4/22/22*/
+
+
+body { 
+    color: #3F2860;
+    font-family: Verdana, Arial, sans-serif;
+	background-image:url('../images/yogamobile.png');
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-color:#F5F5F5;
+}
+#alignrightimg{
+	float:right;
+}
+
+header { 
+	background-color: #9BC1C2; 
+
+	background-position: right;
+	background-repeat: no-repeat;
+}
+header img{
+	width:100%;
+}
+h1 { 
+	text-indent: 1em;
+    line-height: 400%; 
+}
+
+nav { 
+     font-weight: bold; 
+	 display:block;
+	 margin-bottom:-10px;
+}
+
+footer { 
+	background-color: #9BC1C2; 
+    font-size: small;
+	text-align: center;
+	font-style: italic;
+	padding:.5em;
+}
+address{
+	margin-bottom:.5em;
+}
+main ul li{
+	list-style-image: url('../images/yogabullet.png'); 
+	margin-left:3em;
+}
+.schedule{
+	border-collapse:collapse;
+	border-color:black;
+	width:100%;
+	margin-bottom:.5em;
+}
+
+table,td{
+	border: solid black 1px;
+	text-align:center;
+}
+nav ul li{
+	display:block;
+	margin:0px;
+	padding:0px;
+}
+/*-mobile specific from instructions, but no view port @media adjust*/
+img{
+	display:none;
+}
+
+
+/*-----------------------------
+			TABLET
+-----------------------------*/
+
+@media screen and (min-width:641px){
+nav ul li{
+	display:inline;
+}
+body{
+	background-color:#F5F5F5;
+	background-image:none;
+}
+img{
+	display:block;
+}
+header{
+background-image: url('../images/lilyheader.jpg');
+}
+}
