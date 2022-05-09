@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,0HAAI",
+    "sources": [
+        "variables.scss",
+        "modules/media.scss",
+        "base.scss",
+        "variables.scss"
+    ],
+    "names": [],
+    "file": "variables.css"
+}
