@@ -1,0 +1,235 @@
+/*********************************************************************
+***
+*Original Author:  Bradley Johnson                                  *
+*Date Created:   8/22/22                                    *
+*Version:       0.44                                         *
+*Date Last Modified:    8/24/22                          *
+*Modified by:       Bradley Johnson                                   *
+*Modification log:                                  *
+
+        Ver0.1  :   08/22/22    >> Project started. Business for Pool Inflatables 
+                                >> Workshopped custom animated waves for the bottom of the screen. Very minimalistic and safe.
+
+        Ver0.16 :   08/24/22    >> Scrapped custom animations in favor of a bright, colorful stock video: https://www.istockphoto.com/video/empty-inflatable-flamingo-doughnuts-pineapple-and-watermelon-floats-in-pool-gm825721650-136615005?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_video_sponsored&utm_content=http%3A%2F%2Fpixabay.com%2Fvideos%2Fsearch%2Fpool%2520inflatibles%2F&utm_term=pool+inflatibles
+                                >> this should be better quality overall and also make the website more bombastic and summery
+                                >> guided by this blog to help: https://blog.hubspot.com/website/video-background-css
+
+        Ver0.24 :   08/24/22    >> colorway derived from destiny 2's gloamstrife. added radial gradient and white border boxes to be a cool, trendy start-up company branding
+                                >. ref palette https://coolors.co/fec271-8ec9c0-3d607d-eebc90-86dcdb https://pbs.twimg.com/media/FaxZ3tqUEAAWc35?format=jpg&name=large
+        Ver0.44 :   08/24/22    >> 
+
+***
+******************************************************************** */
+/*COLORS*/
+
+.colorG{color:#FEC271;}
+.colorG:hover{
+    transition: width 2s linear 1s;
+}
+.colorL{color:#8EC9C0;}
+.colorO{color:#3D607D;}
+.colorA{color:#EEBC90;}
+.colorM{color:#86DCDB;}
+
+/* video background */
+.background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+  }
+  .background-img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  .gradient {
+    background-image: radial-gradient(
+        circle at 50% 50%, 
+        #fec171b5 1%, 
+        rgba(90, 111, 214, 0.0),#EEBC90
+    );
+    z-index:-1;
+}
+.logo{
+    width:20%;
+    height:20%;
+    margin-left:40%;
+    margin-right:40%;
+}
+.trendyBox{
+    border:whitesmoke;
+    background-color:whitesmoke;
+    border-width:7px;
+    border-style:solid;
+    box-shadow: 0px 0px 140px #FEC271;
+    width:50%;
+    margin-left:25%;
+}
+  /* page content */
+  footer{
+    display:block;
+    margin-left:0%;
+
+  }
+  .bottom{
+    margin-left:2vh;
+    margin-bottom:0vh;
+    float:left;
+    font-size:1.5rem;
+    text-align:left;
+    width:auto;
+    border:none;
+    background-color:#8ec9c04c;
+
+    animation-name: emailArrive;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-iteration-count:1;
+
+  }
+  @keyframes emailArrive{
+    from{transform: translateX(-200px);opacity:0%;/*opacity is 0 then goes to 100*/}
+    to{transform: translateX(0.1%);opacity:60%}
+    }
+  footer p {
+    font-size:100px;
+  }
+  div{
+      display:block;
+  }
+  h1, h2 {
+    color: white;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    text-align: center;
+    padding:0.2%;
+  }
+  p{
+      font-size:2rem;
+  }
+  
+  h1 {
+    font-size: 8rem;
+    margin-top: 20vh; 
+  }
+  
+  h2 { font-size: 2.5rem; 
+    margin-top: 10vh;
+    background-color:whitesmoke;
+    border-style:dashed;
+    border-width:2px;
+    border-color:#86DCDB;
+    color:#3D607D;
+    width:30%;
+    margin-left:auto;
+    margin-right:auto;}
+  
+  @media (max-width: 750px) {
+      #background-video { display: none; }
+      body {
+        background-size: cover;
+        
+      }
+      h1{
+          font-size:2.5rem;
+        }
+        h2{
+            font-size:2rem;
+            width:70%;
+        }
+        span{
+            display:contents;
+            font-size:3rem;
+        }
+        .logo{
+            background-color:none;
+        }
+        .trendyBox{
+            border:#86DCDB;
+            border-width:7px;
+            border-style:solid;
+            width:90%;
+            margin-left:5%;
+        }
+  }
+  /*----*/
+header h1,header a{
+    animation-name: dropname;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-iteration-count:1;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+a{
+    text-decoration:none;
+}
+
+
+/*
+.container{
+    position:absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top,
+    rgb(2,186,180),rgb(2832,58));
+    overflow:hidden;
+    background: linear-gradient(#FEC271,
+    #EEBC90, #3D607D);
+}
+
+.water{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:33%;
+    background-position:0px;
+    z-index:99;
+    opacity:0.3;
+}
+.waveA{
+    background: url(../images/wave3.png);
+    animation: wave 10s linear infinite alternate;
+    height:25%;
+}
+.waveB{
+    background: url(../images/wave3.png);
+    animation: wave2 19s linear infinite alternate;
+}
+.waveC{
+    background: url(../images/wave3.png);
+    animation: wave1 15s linear infinite alternate;
+    height:20%;
+}
+@keyframes wave{
+    0%{
+        background-position-x:0;
+    }
+    100%{
+        background-position-x:1000px;
+    }
+}
+@keyframes wave2{
+    0%{
+        background-position-x:0;
+    }
+    100%{
+        background-position-x:-1000px;
+    }
+}*/
