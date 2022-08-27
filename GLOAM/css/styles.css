@@ -1,0 +1,162 @@
+.colorG{color:#FEC271;}
+.colorL{color:#8EC9C0;}
+.colorO{color:#3D607D;}
+.colorA{color:#EEBC90;}
+.colorM{color:#86DCDB;}
+/* https://coolors.co/fec271-8ec9c0-3d607d-eebc90-86dcdb
+https://pbs.twimg.com/media/FaxZ3tqUEAAWc35?format=jpg&name=large */
+
+/*brad's css
+-----------------------------------------------------*/
+
+/*establishing fonts; used in h1, h2, nav, etc
+@font-face {
+    font-family: 'LEAGUESPARTAN';
+    src: url('../fonts/futura_book_regular-webfont.woff') format('woff'),
+         url('../fonts/futura_book_regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    /*this is the custom font, i used Times New Roman as the websafe, and Abel as the google font*/
+
+/*link psuedo code*/
+p a:link{
+    color:#FEC271;;
+}
+p a:visited{
+    color:#EEBC90;
+}
+p a:hover{
+    background-color:#eebc90d8;
+}
+p a:active{
+    background-color:#FEC271;
+}
+
+/*top ribbon menu*/
+@media (max-width: 750px) {
+    body {
+      background-size: cover;
+    }
+    h1{
+        font-size:2.5rem;
+      }
+      h2{
+          font-size:2rem;
+          width:70%;
+      }
+      span{
+          display:contents;
+          font-size:3rem;
+      }
+      ul {
+        list-style-type: none;
+        margin-top: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+      }
+      li a {
+        display: block;
+        width:100%;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+      li a img{
+        width:50%;
+        height:50%;
+        display:block;
+      }
+      
+      /* Change the link color on hover */
+      li a:hover {
+        background-color: #EEBC90;;
+        color: white;
+      }
+}
+nav{ 
+padding:0;
+width:100%;
+font-family: Trebuchet MS;
+font-weight: bold;
+text-align: center;
+display:inline;
+}
+ul {
+    width:100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0%;
+    overflow: hidden;
+    background-color: rgb(38, 38, 38);
+  }
+body{
+    width:80%;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:-5px;
+    background-color:#8EC9C0;
+    color:white;
+}
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 18px 40px;
+    text-decoration: none;
+    font-size:25px;
+  }
+  div{
+    display:block;
+    background-color:whitesmoke;
+    width:100%;
+    height:auto;
+  }
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #EEBC90;
+  }
+  .GLOAMwords:hover{
+    background-color:whitesmoke;
+}
+  .active {
+    background-color: #04AA6D;
+  }
+
+li span{
+    font-size:300%;
+}
+.header{
+    display:block;
+    padding:1%;
+    height:50%;
+    width:70%;
+}
+.logo{
+    display:block;
+    padding:0%;
+    margin:0.5%;
+    height:5%;
+    width:5%;
+    float:left;
+    background-color:none;
+    border-radius:100%;
+    margin-left:10%;
+}
+.gradient {
+    background-image: radial-gradient(
+        circle at 50% 50%, 
+        #fec171b5 1%, 
+        #8EC9C0,#EEBC90
+    );
+    z-index:-1;
+}
+p{
+  color:#3D607D;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.right{float:right;}

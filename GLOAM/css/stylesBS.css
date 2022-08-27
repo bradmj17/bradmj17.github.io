@@ -1,0 +1,111 @@
+
+    .colorG{color:#FEC271;}
+    .colorGback{background-color:#FEC271}
+    .colorL{color:#8EC9C0;}
+    .colorO{color:#3D607D;}
+    .colorA{color:#EEBC90;}
+    .colorM{color:#86DCDB;}
+    .text-BIG{
+        font-weight:500;
+    }
+    a{
+        color:#ee6c4d;
+    }
+    p a:hover{
+        background-color:#98c1d9;
+        color:#ee6c4d;
+    }
+    /*-------------GENERAL TAGS-------------*/
+    nav{
+        font-size:2em;
+        text-align:center;
+        background-color:whitesmoke;
+    }
+    .navlink a:hover{
+        color:#ee6c4d;
+    }
+    .img-nav{
+        width:10%;
+        margin-right:15%;
+        margin-left:-10%;
+    }
+    nav span{
+        font-size:3em;
+    }
+    div{
+        display:block;
+    }
+    footer{
+        color:#ee6c4d;
+    }
+
+    /*-------------#HOME-------------*/
+    .hero{
+        background-image:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0.5)), url('/images/manWithUnicorn.jpg');
+        background-size:cover;
+        background-position: center;
+        background-repeat:no-repeat;
+    }
+    header h1,header a{
+        animation-name: dropname;
+        animation-duration: 1.5s;
+        animation-fill-mode: both;
+        animation-iteration-count:1;
+    }
+    /*name animation, fades in from the top*/
+    @keyframes dropname{
+        from{transform: translateY(-200px);opacity:0%;/*opacity is 0 then goes to 100*/}
+        to{transform: translateY(100px);opacity:100%}
+        }
+    .welcome{
+        position:relative;
+        top:20%;
+        margin-left:auto;
+        margin-right:auto;
+        padding:1em;
+    }
+    .welcome p{
+        font-size:1.5em;
+        width:70%;
+        line-height:1.5;
+    }
+    .btn:hover{
+     background-color:#ee6c4d;
+    }
+
+    /*-------------Media Query for Tablet Viewport, hamburger begins-------------*/
+    @media (max-width: 768px) {  
+        /* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+        .tablet-desktop {
+            display: block;
+        }
+    
+        .mobile {
+            display: none;
+        }
+        .img-nav{
+            display:none;
+        } 
+        .col-sm-2,.col-sm-4{
+            display:block;
+        }
+    
+    }
+    
+    /*-------------Media Query for bigger-than-mobile Viewport-------------*/
+    @media (min-width: 768px) {  
+        /*hr goes away*/
+        .btn {
+            grid-column: 1 / span 3;
+        }
+        hr{
+            display:none;
+        }
+        
+        nav{
+            font-size:1.4em;
+        }
+        #ratingmargindesktop{
+            margin-top:10%;
+        }
+    }
