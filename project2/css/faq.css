@@ -1,0 +1,38 @@
+h2.faq.open{
+    display:block;
+}
+div.faq{
+    display: none;
+}
+div.faq.open {
+    display: block;
+}
+.faq ul {
+    padding-left: 45px;
+}
+.faq li {
+    padding-bottom: .25em;
+}
+.faq p {
+    padding-bottom: .25em;
+    padding-left: 25px;
+}
+.FAQuestion{
+    display:block;
+}
+.FAQuestion p{
+    font-size:1.5em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+div.FAQuestion h2 a{
+    color:#86DCDB;
+}
+div.FAQuestion h2 a:focus{
+    color:#EEBC90;
+}
+div.FAQuestion h2 a:hover{
+    background-color:whitesmoke;
+    border-style:dashed;
+    border-width:2px;
+    border-color:#86DCDB;
+}

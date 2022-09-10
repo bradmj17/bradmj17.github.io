@@ -1,0 +1,58 @@
+form{
+  width:80%;
+  margin-left:20%;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+label {
+  display: inline-block;
+  width: 11em;
+  text-align: right;
+}
+input, textarea {
+  margin-left: 4em;
+  margin-right: 0.5em;
+  width:40%;
+  margin-bottom:1%;
+}
+#join_list, #clear_form, #newsletter{
+  width:auto;
+  background-color:#EEBC90;
+  border:none;
+}
+h2#newsletterResult{
+  color:whitesmoke;
+}
+h2{
+  font-size:1.5rem;
+  text-align:center;
+  margin:auto;
+  padding:0.5%;
+}
+.flavor{
+  font-size:80%;
+  margin-top:-1%;
+}
+/*------@MEDIA------*/
+@media (max-width: 1200px) {
+form{
+  margin-left:2%;
+  margin-bottom:0%;
+}
+#join_list, #clear_form, #newsletter{
+  width:100%;
+}
+input, textarea {
+  margin-left: 1em;
+  margin-right: 0.1em;
+  width:100%;
+  display:block;
+}
+label {
+  display:block;
+  width: 50%;
+  text-align: center;
+}
+div{
+  display:block;
+}
+}
