@@ -1,0 +1,98 @@
+<!doctype html>
+<!----------------------------------------------------------------------------------------------------------------
+--
+
+#Original Author:    Bradley Johnson                           #
+#Date Created:       8/22/22                                   #
+#Version:      2.00                                            #
+#Date Last Modified:    9/10/22                                #
+#Modified by:       Bradley Johnson                            #
+#Modification log:                                             #
+
+        Ver0.10  :   08/22/22    >> Project started. Business for Pool Inflatables 
+                                >> Workshopped custom animated waves for the bottom of the screen. Very minimalistic and safe.
+
+        Ver0.16 :   08/24/22    >> Scrapped custom animations in favor of a bright, colorful stock video: https://www.istockphoto.com/video/empty-inflatable-flamingo-doughnuts-pineapple-and-watermelon-floats-in-pool-gm825721650-136615005?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_video_sponsored&utm_content=http%3A%2F%2Fpixabay.com%2Fvideos%2Fsearch%2Fpool%2520inflatibles%2F&utm_term=pool+inflatibles
+
+        Ver0.24 :   08/24/22    >> Colorway derived from destiny 2's gloamstrife. added radial gradient and white border boxes to be a cool, trendy start-up company branding. More about this in CSS
+
+        Ver0.44 :   08/24/22    >> James called my original logo an ugly donut (it was a sideways floaty tube, still viewable in the folder) and suggested a flamingo
+                                >> here's the logo i colored over on illustrator: https://cdn5.vectorstock.com/i/1000x1000/97/04/flamingo-shaped-float-cartoon-isolated-design-icon-vector-32449704.jpg
+                                >> TrendyBox was filled in with white to more easily see GLOAMingo and GLOAM text
+
+        Ver1.00 :   08/26/22    >> Adjusted gradient. Tinkered with borders and other flair
+                                >> Added basic JavaScript in the form of a prompt. Used a W3Schools example to target the script to print inside a h2 field: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt
+                                >> Animation @keyframes on newsletter JavaScript element
+
+        Ver1.17 :   09/07/22    >> Project 3 has begun; add a home page, FAQ page, and Contact page [going to leave "Shop" for now].
+                                >> Some thoughts going into it: I had nearly no progress done on the home page and left it quite blank. My current JavaScript on the launch page is cool. If I could add a button that brings you to the contact page that could be sweet, then add like a phone number or something. It could also be complete as is and I don't need a newsletter section. I could google how to take the response and bring it to JavaScript in a different html page, though that might be difficult; it would have a newsletter form that would already be filled out with what was inputted on the launch screen. I think the FAQ page will be easy and I'll just put some bologne about shipping and location and normal things that aren't on the home page. I think I'll mostly put like an "our mission" type of thing on the home page and maybe begin filling out a product page and then have socials on the footer.
+                                >> Already made great progress on the home page. Looks nice. I was originally not going to have a video in the back again because it seems like a cop out, though my original idea of having it underneath the nav bar and bleed downwards into the next section wasn't working - the nav bar anchors would be unclickable and I tried messing with both display and position in CSS and it didn't cooperate so I've landed back on the background video. Should be nice with the sunset.
+                                >> The UL in the body of the home page doesn't really cooperate with anchors due to poor programming. Revisit that when we get to a shop.
+                                >> Home page complete for now. Nav bar is good enough, no hamburger though. Home body has blurb flavor, 15% newsletter contact link, promoting products (inflatables, towels, swimwear) and an okay footer.
+                                >> FAQs page created; loosely based around GLOAM's home page, will not need many changes and likely only use section 1 for the white canvas
+ 
+        Ver1.76 :   09/09/22    >> I didn't realize FAQ needed JS as well, so I have redone most of the FAQ. I couldn't implement the plus and minus thing.
+                                >> I took code from book apps ch06 because I would've had to begin from scratch. I still had to redo code here for it to cooperate with my existing CSS mostly. Somewhere this caused the plus and minus to not work. Also The clickable links are permanently the gross purple anchor color and I cannot change it no matter what I do about it. it must be a super annoying combination of "#faqs .faq.open a {}" or something like that                          
+                                >> contact page began - the goal is to have a one-entry newsletter at the top, then have a section below for more.
+                                
+                                
+        Ver2.00 :   09/10/22    >> sending values through JS didn't work out; I intended to send information from the launchPage JS prompt to the Contact page - so that the newsletter page would already be filled out with the entry from the prompt, which makes sense in my head. After a quick google search it didn't immediately work. I've left the code in both the newsPrompt.js and contact.js with some comments surrounding it. Will come back to the idea at a later date.
+                                >> Contact page looks good. Viewing from mobile looks bad but I can't really change that without ruining the desktop view.
+                                >> encountered bug about viewport  media@1200px. fixed.
+                                >> went back and fixed issues surrounding FAQ anchor colors
+                                >> validated html and css for some errors.
+                                >> looks good. done.
+                                >> shop doesn't have a page still, just redirects to launch page because i think it still looks good. updated to where the javascript pop-up in the bottom left will redirect you to the contact page whether or not you correctly inputted an email or not.
+
+--
+------------------------------------------------------------------------------------------------------------------>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <title>GLOAM Inflatables</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Bradley Johnson">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--icon at the top-->
+    <link rel="shortcut icon" href="images/GLOAMingo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/GLOAMingo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/GLOAMingo.png">
+    <link rel="icon" sizes="192x192" href="images/GLOAMingo.png">
+
+    <!--My Style Sheet-->
+    <link rel="stylesheet" href="css/wave.css">
+   
+  </head>
+<body>
+  <a href="home.html">
+    <div class="gradient">
+      <video class="background-video" autoplay loop muted poster="images/placeholderImage.png">
+          <source src="images/stockIntro2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <img class="background-img gradient"></img>
+    <div>
+      <!--wrap box-->
+      <h1 class="trendyBox">
+        <div><img src="images/GLOAMingo.png" class="logo"></img></div>
+        <span class="colorO">G</span>
+        <span class="colorL">L</span>
+        <span class="colorA">O</span>
+        <span class="colorL">A</span>
+        <span class="colorO">M</span>
+        <p class="colorO">Inflatables</p>
+      </h1>
+      <h2>Click anywhere to start shopping!</h2></a>
+      <!--JS finds #email-->
+      <a href="contact.html"><h2 id="email" class="bottom"></h2></a>
+   
+  </div> 
+  <footer>
+  </footer>
+  <script src="scripts/newsPrompt.js"></script>
+</body>
+
+</html>
