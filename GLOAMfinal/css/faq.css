@@ -1,0 +1,51 @@
+
+
+h2.faq.open{
+    display:block;
+}
+div.faq{
+    display: none;
+}
+div.faq.open {
+    display: block;
+}
+.faq ul {
+    padding-left: 45px;
+}
+.faq li {
+    padding-bottom: -5em;
+}
+.faq p {
+    padding-bottom: -3em;
+    padding-left: 25px;
+}
+.FAQuestion{
+    display:block;
+}
+.FAQuestion p{
+    font-size:1.5em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+div.FAQuestion h2 a{
+    color:#86DCDB;
+}
+div.FAQuestion h2 a:hover{
+    color:#EEBC90;
+}
+div.FAQuestion h2 a:hover{
+    background-color:whitesmoke;
+    border-style:dashed;
+    border-width:2px;
+    border-color:#86DCDB;
+}
+h2{
+padding: 0.25em 0 0.25em 25px;
+cursor: pointer;
+background-image: src("images/plus.png") no-repeat left center;
+}
+h2.minus {
+    background-image: src("images/minus.png") no-repeat left center;
+  }
+h3{
+    font-size:large;
+}

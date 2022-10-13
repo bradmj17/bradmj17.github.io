@@ -1,0 +1,184 @@
+<!doctype html>
+<!-----------------------MASTER CHANGE LOG------------------------------------------------------------------
+--
+
+#Original Author:    Bradley Johnson                           #
+#Date Created:       8/22/22                                   #
+#Version:      5.00                                            #
+#Date Last Modified:    10/12/22                                #
+#Modified by:       Bradley Johnson                            #
+#Modification log:                                             #
+
+        Ver0.10  :   08/22/22   >> Project started. Business for Pool Inflatables 
+                                >> Workshopped custom animated waves for the bottom of the screen. Very minimalistic and safe.
+
+        Ver0.16 :   08/24/22    >> Scrapped custom animations in favor of a bright, colorful stock video: https://www.istockphoto.com/video/empty-inflatable-flamingo-doughnuts-pineapple-and-watermelon-floats-in-pool-gm825721650-136615005?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_video_sponsored&utm_content=http%3A%2F%2Fpixabay.com%2Fvideos%2Fsearch%2Fpool%2520inflatibles%2F&utm_term=pool+inflatibles
+
+        Ver0.24 :   08/24/22    >> Colorway derived from destiny 2's gloamstrife. added radial gradient and white border boxes to be a cool, trendy start-up company branding. More about this in CSS
+                                >> placeholder name "GLOAM" is now the name.
+
+        Ver0.44 :   08/24/22    >> James called my original logo an ugly donut (it was a sideways floaty tube, still viewable in the folder) and suggested a flamingo
+                                >> here's the logo i colored over on illustrator: https://cdn5.vectorstock.com/i/1000x1000/97/04/flamingo-shaped-float-cartoon-isolated-design-icon-vector-32449704.jpg
+                                >> TrendyBox was filled in with white to more easily see GLOAMingo and GLOAM text
+
+        Ver1.00 :   08/26/22    >> Adjusted gradient. Tinkered with borders and other flair
+                                >> Added basic JavaScript in the form of a prompt. Used a W3Schools example to target the script to print inside a h2 field: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt
+                                >> Animation @keyframes on newsletter JavaScript element
+
+        Ver1.17 :   09/07/22    >> Project 3 has begun; add a home page, FAQ page, and Contact page [going to leave "Shop" for now].
+                                >> Some thoughts going into it: I had nearly no progress done on the home page and left it quite blank. My current JavaScript on the launch page is cool. If I could add a button that brings you to the contact page that could be sweet, then add like a phone number or something. It could also be complete as is and I don't need a newsletter section. I could google how to take the response and bring it to JavaScript in a different html page, though that might be difficult; it would have a newsletter form that would already be filled out with what was inputted on the launch screen. I think the FAQ page will be easy and I'll just put some bologne about shipping and location and normal things that aren't on the home page. I think I'll mostly put like an "our mission" type of thing on the home page and maybe begin filling out a product page and then have socials on the footer.
+                                >> Already made great progress on the home page. Looks nice. I was originally not going to have a video in the back again because it seems like a cop out, though my original idea of having it underneath the nav bar and bleed downwards into the next section wasn't working - the nav bar anchors would be unclickable and I tried messing with both display and position in CSS and it didn't cooperate so I've landed back on the background video. Should be nice with the sunset.
+                                >> The UL in the body of the home page doesn't really cooperate with anchors due to poor programming. Revisit that when we get to a shop.
+                                >> Home page complete for now. Nav bar is good enough, no hamburger though. Home body has blurb flavor, 15% newsletter contact link, promoting products (inflatables, towels, swimwear) and an okay footer.
+                                >> FAQs page created; loosely based around GLOAM's home page, will not need many changes and likely only use section 1 for the white canvas
+ 
+        Ver1.76 :   09/09/22    >> I didn't realize FAQ needed JS as well, so I have redone most of the FAQ. I couldn't implement the plus and minus thing.
+                                >> I took code from book apps ch06 because I would've had to begin from scratch. I still had to redo code here for it to cooperate with my existing CSS mostly. Somewhere this caused the plus and minus to not work. Also The clickable links are permanently the gross purple anchor color and I cannot change it no matter what I do about it. it must be a super annoying combination of "#faqs .faq.open a {}" or something like that                          
+                                >> contact page began - the goal is to have a one-entry newsletter at the top, then have a section below for more.
+                                
+                                
+        Ver2.00 :   09/10/22    >> sending values through JS didn't work out; I intended to send information from the launchPage JS prompt to the Contact page - so that the newsletter page would already be filled out with the entry from the prompt, which makes sense in my head. After a quick google search it didn't immediately work. I've left the code in both the newsPrompt.js and contact.js with some comments surrounding it. Will come back to the idea at a later date.
+                                >> Contact page looks good. Viewing from mobile looks bad but I can't really change that without ruining the desktop view.
+                                >> encountered bug about viewport  media@1200px. fixed.
+                                >> went back and fixed issues surrounding FAQ anchor colors
+                                >> validated html and css for some errors.
+                                >> looks good. done.
+                                >> shop doesn't have a page still, just redirects to launch page because i think it still looks good. updated to where the javascript pop-up in the bottom left will redirect you to the contact page whether or not you correctly inputted an email or not.
+
+        Ver2.01 :   09/19/22    >> PROJECT 3: One new page (likely the outline of a shop?? I'm not sure but maybe more content throughout the week will shape up to be a good shop/catalog page, otherwise i can make something up.)
+                                >> need to add a carousel/slideshow to FAQ, fully implement good JQuery and JavaScript for the FAQ section (I went ahead and through it in the previous project due to misunderstanding and thinking I needed JS in every page, though I think i went above and beyond since it wasn't covered in class at that point)
+                                >> continue adding meaningful content in <p> tags
+                                  
+        Ver2.22 :   09/22/22    >> experiementing with new jquery ideas. the catalog thing seems pretty far out of an idea so i may need to reel back in my plans.
+                                >> probably putting a slideshow on the home menu and display some products that way. better than my previous ul that was coded poorly enough anchor tags wouldn't work
+                                >> made home a little bit better; split paragraph into two, made ul at bottom have functional anchors (it should take you to certain pages in catalog [not quite there])
+                                >> plan for catalog: have invisible uls that have src, title, and alt that can be pulled and put onto pages
+    
+        Ver2.54 :   09/23/22    >> catalog plan probably not the best, sort of complicated and will likely get sunset later on and isn't worth the amount of effort perfecting that system. I'm going to yoink and twist the JQuery used in FAQ at the moment to toggle classes to pull different sections of the catalog down form a menu on the left hand side. much simplier, much doable, less stress, and i'll be finished shortly.
+                                >> wondering if i should not have animation; lecture mentioned too much animation can = cringe
+                                >> idea: put animation on the celebratory remarks on contact page that slide down (it currently pops up and is pretty unpolished)
+                              
+        Ver2.98 :   09/23/22    >> catalog is done. it just uses jquery/js from FAQ. slideshow on home page because it didn't previously contain any JS/Jquery
+                                >> done for today, 3.00 coming out on saturday or sunday whenever i get back on the laptop to triple-check the requirements to make sure i didnt miss anything
+                                >> i feel like the catalog page is bad, and in upcoming lectures we'll go over how to load HTML straight from js, but i think this is a good foundation to go off of, I sort of know what I'm looking for and I got A LOT of pictures.
+                            
+        Ver3.00 :   09/24/22    >> swapped catalog jquery animation from slideup/slidedown to fadein/fadeout because the aside menu caused the footer to also slide up and down when pressing a catalog menu option
+                                >> catalog bug found where each anchor you need to click twice. just going to leave it for now. as said previously, the page may be sunset in exchange for far superior code, hopefully JS that feeds html code into the page from a database of some sort
+                                >> FIXED CATALOG ITEM CARDS! i had to move the @media to the bottom of the css; fixed the width of the cards when viewed on mobile. fixed 
+                                >> $(inflat).fadeOut(600); removed from catalog where =! invis is true because you could close out of the menu entirely and it would just be empty; similar to the slideup/down issues with the footer coming up as well. now you cannot close a menu without selecting another option to transition to.
+                                >> menu slideshow is alright. updated some flavor text.
+                                >> done for now & uploading ver3.00 to github
+
+        Ver3.27 :   09/28/22    >> project 4 begins; add 1 new page, 3 new jquery features
+                                >> i've updated the mobile hamburger menu to be functional (hamburger.js). no plugin but it was considered
+                                >> i think my next page might be a "locations tab" where i use a jquery plugin to get a map that i can put locations in random spots. probably going to put location markers in random spots just to show that i can tinker with the plugin
+                                >> locations.html uses a plugin. not sure if it's properly installed. I think it's fine. https://www.jqueryscript.net/other/leaflet-map-interactive-layer.html
+                                >> the instructions on how to install wasn't very clear, so i did the best i could. i've renamed the folder of the plugin used to map_plugin. it includes a readme file, a js file, and an index.html file. i've ignored most things and instead just copied the key assets from the index.html file and adopted it into the locations.html file.
+                                >> the div where the map rests in isn't very responsive in terms of being positioned relative to the drop-down mobile menu, so I've just made its top margin down nearly the entire page. same with the footer, just added an arbitrary distance to both mobile view and desktop view that looks decently okay.
+                                >> various west-coast american locations chosen as retail stores on the map.
+                                >> completed plugin lab after the fact, probably will make a slideshow with a cool transition and then maybe i'll find a goofy one to throw in the faq section i think. maybe another slideshow or something in there. not sure yet.
+        
+        Ver3.60 :   09/29/22    >> found carousel plugin: https://www.cssscript.com/flip-element-carousel/
+                                >> putting on home page right now, outside of main because inside of main divs struggle to support the plugin alongside the div css style inside of styles.css
+                                >> looks good, plugin comes with previous and forward buttons with a play button; the play button begins a slideshow, adjusted to move every 5 seconds. new stock photos pulled to give more variety in image, may get rid of current css slideshow and throw it under a random FAQ div
+                                >> 2/3 jquery plugins now implemented - seeking a third idea now. I might find a FAQ plugin because i used the FAQ code for the hamburger menu and some other things because it's such versatile code. 
+                                >> wasted a hour trying to do a notification toast plugin when accepting that you successfully filled out the form. that failed. https://www.jqueryscript.net/other/toast-notification-countdown-bar.html
+                                >> wasted another hour trying to copy the plugin from the lab that deals with the accordion to replace the current faq jquery/js
+                                >> successfully used 2 hours and made the contact page up to standards. jquery/js on a lot of it. it has a drop down thing confirming. you can click the reset button to reset span tags and dropdown result h2/div tag - resets all inputs as well. it's likely the best quality page on the website. very proud of that page now. in the future i could actually have it send emails or something like that. i dunno.
+ 
+        Ver3.97 :   09/29/22    >> moved js slideshow from project 3 to faq because i added the jquery slideshow to home in ver3.60
+                                >> had a heart attack because i misclicked when deleting a carousel plugin file, accidentlally deleting the well implemented slideshow on home
+                                >> FAQ accordion plugin done. i made a new css and js script here: https://jqueryui.com/themeroller/#!zThemeParams=5d00008000f505000000000000003d8888d844329a8dfe02723de3e5701dc2cb2be0d98fe676bb46e85f37dc776900758c78913f9312333e9706b7b80bd224322bfaab107e3260e82537f5ce176fda4f592ed29b0e5e52144349e88182b7b1cf5434eea1a71f997fcba266230456d838ecb33b5720db0fe724413eab603d57690ffb4ff20fbc900b46faef40655abb0298b8998bb7ce4102e397760d5878ee53d6f57123570ba75f85f19187a125ae66a7a31aa288575dd3739c1342ea76ea3cc648cebfecb478066d16d32b30dc285baead66d19ae62a268409eb0b345f3fef3ed486cd51cd7887d1dedd356c52ecd2cde2160d9844275a89c39b75c66a36940a936b09d78faf39d58575fcbe201d865eb2d95078ec1780699c3d95ea039cdde69a83f54818f400f7b14a7b71d258484afbb45e21ca712d77be0c7448d6b10bec8d104a4609c8798047f493119440474146c1c8eff0e59c5f3c5476fe48fde5838ad31bd4c4a7e12d4e2b14d2bf5669fcb31b162e9eff437899f7ef7007122f26f68283dabc5b42e3254d745c88a1713d72e56a1fafcb5f7d82a2a935642fa2745b54c97fb67e9893062a57e5268cb5c89217dd90ce0407cff59afc2e7c8985535bf6f4e397b435978a7447079fcd5915e1da71e7a3845f382c49c283aecdf49bcf4e543232025be34553f9fe488a1a
+                                >> when it was shipped here, it had TONS of errors that I got rid of. lots of ms-kit type of properties.
+                                >> in the process of getting rid of the yellow underline errors, the little > and V icons were deleted. at the end of the day, that's all right since my previous FAQ page also lacked that asset, and I think this is still clean.
+                                >> styling on themeroller is difficult since i can't manually adjust the size when it's in mobile vs desktop. so i settled for a good size on mobile, then a somewhat tiny size on desktop. i also have a big monitor so maybe that's why, so it's probably alright.
+                                >> cooperates with mobile view well & hamburger menu
+                                >> removed original js slideshow; slideshow looked bad.
+
+        Ver4.00 :   09/29/22    >> PROJECT 4 RECAP: NEW PLUGINS 1) *NEW* Locations tab map using a plugin 2) Home page slideshow/carousel toward bottom [complete with forward+start/pause+backwards] 3) FAQ Accordion
+                                >> Contact page revamped to better standards [validation & animation upon completion & seamless reset/clear function].                              
+                                >> Additional Qs added to FAQ
+                                >> Several catalog images resized to look less squished
+                                >> Added hamburger menu
+
+        Ver4.02 :   10/04/22    >> Project 5; final project; main display
+                                >> add "regex" to all forms, add a date/time function, 5 pages, fine-tuned, have <p> tags fulfilled
+                                >> I added a date/time function to the catalog page in the form of a countdown. not sure if this qualifies. I have it being a countdown for a large fall merch/clothing drop. seemed pretty alright.
+
+        Ver4.20 :   10/05/22    >> Project due date moved back a week; My countdown was originally planned to finish on october 10th, one day after the original due date (oct 9th), so now i should move that otherwise it'll say something like "BRAND NEW MERCH DROP AVAILABLE NOW" and then there's no actual countdown doing anything.
+                                >> The weakest part of my project is the catalog page. I need to either try my best to retune some aspects of my catalog.js, or revamp the whole page and start from scratch. a third idea is would be a shopping/catalog plugin that could carry that page and be easy to input information. pretty similar to previous patch notes where i discuss my ideas surrounding the catalog.
+                                >> worst parts of the catalog is simply the cards are boring and look silly and you sometimes need to double-click the catalog anchor tabs to transition to a new #section.
+
+        Ver4.64 :   10/07/22    >> i recognize now that my form is pretty mundane, not really requiring a phone number or anything.
+                                >> previously, without full understanding, i implemented regex into my contact's jquery in (likely) ver3.60 for email validation.
+                                >> i think putting date of birth into the newsletter form would actually be sick. while i could do a datepicker, I think just MM/DD/YYYY regex would be easier for both the user filling out the form and myself when implementing. My original reasoning for only having the newsletter have 2 fields (email1, email2) because I thought it would be good if the barrier of entry was so low, one may think 'yeah ok why not fill this form out and get the newsletter'
+                                >> birthday regex in the contact form.
+
+        Ver4.99 :   10/12/22    >> been working on other things because i think GLOAM is doing well.
+                                >> updated countdown on catalog to be good. countdown ends on october 16th, my birthday. it displays HH:MM:SS when it gets below 1 day (23:59:59). on a timer.
+                                >> i had some code layed out, then i found some code online at w3schools that simplified everything so much and was much better. I left my old code as a relic of the past.
+                                >> adding halloween catalog content. odd bug that displays hidden catalogs sometimes if you spam refresh????
+                                >> we are learning about cookies right now in lecture. I want to finally implement where it saves from the launchPage and sends the information to the contact and automatically fill out the newsletter form.
+                                >> catalog looks good with the halloween stuff. i have the countdown.js dealing with updating the countdown at the top of the halloweencatalog and then it changes the opacity of the catalog items. At first I had the display toggling from none to block, but it would cause another old bug when I had slideUp slideDown transitions that had plagued the catalog in previous versions.
+                                >> 6 new cards for halloween content, images
+                                >> top-margin of aside h's adjusted because with four it was bleeding underneath content.
+                                >> locations tab retail store links no longer link to old version of the website; that was a placeholder. now it only goes to "#"
+                                >> tinkered with fontsize when in desktop view on home.html - larger to make it look like there's more content
+                                >> not doing cookie stuff because i have a bunch of labs to catch up with
+
+        Ver5.00 :   10/12/22    >> PROJECT 5 RECAP: 1) regex on contact page 2) fixed bugs and added QoL features 3) countdown/timer/date() on catalog page [halloween drop]
+                          
+
+                          
+
+--
+------------------------------------------------------------------------------------------------------------------>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <title>GLOAM Inflatables</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Bradley Johnson">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--icon at the top-->
+    <link rel="shortcut icon" href="images/GLOAMingo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/GLOAMingo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/GLOAMingo.png">
+    <link rel="icon" sizes="192x192" href="images/GLOAMingo.png">
+
+    <!--My Style Sheet-->
+    <link rel="stylesheet" href="css/wave.css">
+   
+  </head>
+<body>
+  <a href="home.html">
+    <div class="gradient">
+      <video class="background-video" autoplay loop muted poster="images/placeholderImage.png">
+          <source src="images/stockIntro2.mp4" type="video/mp4">
+      </video>
+    </div>    <img class="background-img gradient"></img>
+    <div>
+      <!--wrap box-->
+      <h1 class="trendyBox">
+        <div><img src="images/GLOAMingo.png" class="logo"></img></div>
+        <span class="colorO">G</span>
+        <span class="colorL">L</span>
+        <span class="colorA">O</span>
+        <span class="colorL">A</span>
+        <span class="colorO">M</span>
+        <p class="colorO">Inflatables</p>
+      </h1>
+      <h2>Click anywhere to start shopping!</h2></a>
+      <!--JS finds #email-->
+      <a href="contact.html"><h2 id="email" class="bottom"></h2></a>
+   
+  </div> 
+  <footer>
+  </footer>
+  <script src="scripts/newsPrompt.js"></script>
+</body>
+
+</html>

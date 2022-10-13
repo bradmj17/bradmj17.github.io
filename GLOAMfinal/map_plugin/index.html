@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>am_map.js: Custom Leaflet Map Example</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/locations.css">
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+
+</head>
+<body>
+
+  <header>
+    <nav><ul> 
+      <li>
+        <a href="launchPage.html" id="GLOAMingoAnchor">
+        <span class="colorO">G</span>
+        <span class="colorL">L</span>
+        <span class="colorA">O</span>
+        <span class="colorL">A</span>
+        <span class="colorO">M</span>
+        <img class="pog" src="images/GLOAMingo.png" alt = "GLOAMingo">
+      </a>
+    </li>
+    <li><a href="#" id="hamburger"><img src="images/hamburger.png" class="centerHamburger"></a></li>
+    <span id="effect" class="normal">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="catalog.html">Catalog</a></li>
+      <li><a href="FAQ.html" id="active">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li></li>
+    </span>
+      </ul></nav>
+  </header>
+
+  <div id="jquery-script-menu">
+
+  <div class="container">
+    
+  <div id="div_map"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.utm@1.0.0/L.LatLng.UTM.min.js"></script>
+ <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+
+<script src="map_plugin/am_map.js"></script>
+<script>
+  var map = $("#div_map").am_map( { } );
+  $("#div_map").am_map( 'addLayer', { 'name' : 'layer4', 'points' : [37.75, -122.43, { 'code' : 1, 'name' : 'GLOAM', 'desc' :'San Fransisco, California USA' }], 'url' : 'https://bradmj17.github.io/GLOAMjquery/launchPage.html' });
+$("#div_map").am_map( 'addLayer', { 'name' : 'layer1', 'points' : [43.565, -116.575, { 'code' : 1, 'name' : 'GLOAM', 'desc' :'Nampa, Idaho, USA' }], 'url' : 'https://bradmj17.github.io/GLOAMjquery/launchPage.html' });
+$("#div_map").am_map( 'addLayer', { 'name' : 'layer2', 'points' : [37.3, -121.9, { 'code' : 1, 'name' : 'GLOAM', 'desc' :'San Jose, California USA' }], 'url' : 'https://bradmj17.github.io/GLOAMjquery/launchPage.html' });
+$("#div_map").am_map( 'addLayer', { 'name' : 'layer3', 'points' : [ 42.55, 3.45 ], 'icon' : '<i class="fa fa-stop-circle-o" style="color:#8b0000;"></i>' });
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+<footer>
+  <div class="section3">
+    <p>Phone: <a href="tel:+12085130443">  (415) 513-0443</a></p> 
+    <p>Email: <a href="mailto:bradleyjohnson@my.cwi.edu">customerservice@GLOAMingo.com</a></p>
+    <p>1690 16th Ave<br>San Francisco, CA 94122</p>
+    <p>&copy;	2013-2022 GLOAM All Rights Reserved</p>
+  </div>
+      </footer>
+<script src="scripts/hamburger.js"></script>
+</body>
+</html>

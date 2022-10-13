@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <title>GLOAM Locations</title>
+    <meta name="description" content="View GLOAM retail locations">
+    <meta name="keywords" content="Home, GLOAM, Inflatables, Water, Beach, Clothes, Merchandise, GLOAMingo, Pool, Floaty, Towel, Customer Service, Ask, Newsletter, Discount">
+    <meta name="author" content="Bradley Johnson">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--icon at the top-->
+    <link rel="shortcut icon" href="images/GLOAMingo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="GLOAMingo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/GLOAMingo.png">
+    <link rel="icon" sizes="192x192" href="images/GLOAMingo.png">
+
+    <!--css-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/locations.css">
+
+    <!--plugin-->
+    <link rel="stylesheet" href="/path/to/cdn/leaflet.css" />
+    
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+
+   
+  </head>
+<body class="gradient">
+    <header>
+      <nav><ul>
+            
+        <li>
+          <a href="launchPage.html" id="GLOAMingoAnchor">
+          <span class="colorO">G</span>
+          <span class="colorL">L</span>
+          <span class="colorA">O</span>
+          <span class="colorL">A</span>
+          <span class="colorO">M</span>
+          <img class="pog" src="images/GLOAMingo.png" alt = "GLOAMingo">
+        </a>
+      </li>
+      <li><a href="#" id="hamburger"><img src="images/hamburger.png" class="centerHamburger"></a></li>
+      <span id="effect" class="normal">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="FAQ.html" >FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="locations.html" id="active">Locations</a></li>
+        <li></li>
+      </span>
+        </ul></nav>
+    </header>
+    
+      <video class="background-video" autoplay loop muted poster="images/placeholderImage.png">
+        <source src="images/flamingoWaves.mp4" type="video/mp4">
+    </video>
+
+    <div id="jquery-script-menu">
+      
+      <div class="container">
+        <div><h2 class="colorM" id="locationh2">RETAIL LOCATIONS:</h2>
+        <p class="colorO">Scroll on this map to see if there is a retail store near you.</p></div>
+      <div id="div_map"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.utm@1.0.0/L.LatLng.UTM.min.js"></script>
+ <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+
+<script src="map_plugin/am_map.js"></script>
+<script>
+  var map = $("#div_map").am_map( { } );
+  $("#div_map").am_map( 'addLayer', { 'name' : 'layer4', 'points' : [37.75, -122.43, { 'code' : 1, 'name' : 'GLOAM', 'desc' :'San Fransisco, California, USA' }], 'url' : '#'});
+$("#div_map").am_map( 'addLayer', { 'name' : 'layer1', 'points' : [43.565078, -116.573716, { 'code' : 1, 'name' : 'GLOAM', 'desc' :'Nampa, Idaho, USA' }], 'url' : '#'});
+$("#div_map").am_map( 'addLayer', { 'name' : 'layer2', 'points' : [37.3, -121.9, { 'code' : 1, 'name' : 'GLOAM', 'desc' :'San Jose, California, USA' }], 'url' : '#'});
+$("#div_map").am_map( 'addLayer', { 'name' : 'layer5', 'points' : [44.652, -124.0535, { 'code' : 1, 'name' : 'GLOAM', 'desc' :'Newport, Oregon, USA' }], 'url' : '#'});
+$("#div_map").am_map( 'addLayer', { 'name' : 'layer6', 'points' : [47.616216, -122.203321, { 'code' : 1, 'name' : 'GLOAM', 'desc' :'Bellevue, Washington, USA <br> Bellevue Square Mall' }], 'url' : '#'});
+$("#div_map").am_map( 'addLayer', { 'name' : 'layer7', 'points' : [48.431013, -123.400166, { 'code' : 1, 'name' : 'GLOAM', 'desc' :'Victoria, British Colombia, Canada' }], 'url' : '#'});
+$("#div_map").am_map( 'addLayer', { 'name' : 'layer8', 'points' : [43.590575, -116.289766, { 'code' : 1, 'name' : 'GLOAM', 'desc' :'Boise, Idaho, USA' }], 'url' : '#'});
+$("#div_map").am_map( 'addLayer', { 'name' : 'layer3', 'points' : [40.611808, -105.076109, { 'code' : 1, 'name' : 'GLOAM', 'desc' :'Fort Collins, Colorado, USA' }], 'url' : '#'});
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script></div></div>
+<footer>
+  <div class="section3">
+    <p>Phone: <a href="tel:+12085130443">  (415) 513-0443</a></p> 
+    <p>Email: <a href="mailto:bradleyjohnson@my.cwi.edu">customerservice@GLOAMingo.com</a></p>
+    <p>1690 16th Ave<br>San Francisco, CA 94122</p>
+    <p>&copy;	2013-2022 GLOAM All Rights Reserved</p>
+  </div>
+      </footer>
+<script src="scripts/hamburger.js"></script>
+</body>
+</html>

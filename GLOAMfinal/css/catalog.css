@@ -1,0 +1,138 @@
+aside{
+  width: 20%;
+  background-color: whitesmoke;
+  float: left;
+  height:50em;
+  z-index:auto;
+}
+aside h1{
+  font-size:3em;
+  margin-left:10px;
+}
+aside ul li{
+  margin-top:70%;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  height:40%;
+  float:right;
+  padding:1%;
+}
+.card img{
+  width:100%;
+  height:400px;
+}
+#swimCatalog img{
+  height:600px;
+}
+#merchCatalog img{
+  height:450px;
+}
+#halloweenCatalog img{
+  height:600px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.container {
+  padding: 2px 14px;
+}
+main div{
+  display:block;
+}
+ul li{
+  position:relative;
+  float:inline-start;
+}
+/*.invis{
+  display:none;
+}*/
+.hideUntilReady{
+display:block;
+opacity:20%;
+}
+.unhide{
+  display:block;
+  opacity:100%;
+}
+a.colorA{
+  font-size:25px;
+}
+.countdownCard{
+  width:83%;
+}
+.seethrough{
+  background-color:rgba(250, 235, 215, 0.063);
+}
+#drop{
+  font-size:18px;
+  padding:0;
+  text-align:center;
+  margin-top:0;
+  margin-bottom:0;
+}
+.countdownCard{
+  background-image: url("../images/halloweenBG.jpg");
+  background-repeat:repeat;
+  background-size:cover;
+  padding:0% 0% 0% 0%;
+}
+
+@media (max-width: 1475px) {
+  aside{
+    float:none;
+    display:block;
+    width:100%;
+    height:1%;
+   }
+   aside ul li{
+    margin-top:10%;
+  }
+  .card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    height:30%;
+    padding:1%;
+    margin-top:4%;
+  }
+  ul li{
+    display:inline-block;
+    width:100%;
+  }
+  div.content ul li{
+    margin-left:auto;
+    margin-right:auto;
+  }
+  ul{
+    left:2px;
+  }
+  #drop{
+    font-size:12px;
+    padding:0px;
+    margin:0px;
+  }
+
+}
+@media (min-width: 1500px) {
+  #swimCatalog img{
+    height:550px;
+  }
+  #merchCatalog img{
+    height:400px;
+  }
+  #inflatableCatalog img{
+    height:300px;
+  }
+  #halloweenCatalog img{
+    height:300px;
+  }
+
+}
