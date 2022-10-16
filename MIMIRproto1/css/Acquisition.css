@@ -1,0 +1,47 @@
+
+/*-----*/
+
+#SymbolList .selected { 
+    background: #14f357;
+     color: black; 
+    }
+    #SymbolList li:hover{
+        border-width:2px;
+        border-color:aqua;
+    }
+    #SymbolList .FinalThree{
+        content: '';
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7));
+    }
+#SymbolList {
+     list-style-type: none;
+    margin:0;
+     padding: 10px;
+      width: 100%; 
+      color:white;
+    }
+#SymbolList li { 
+    margin: 3px; 
+    padding: 1px; 
+    float:left;
+     width: 31.5%;
+      height: auto;
+       font-size: 150%;
+        text-align: center; 
+    }
+    #SymbolList img{
+        width:max-content;
+    }
+    span#results{
+        background: #82a3a16b;
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+        transition: 0.5s;
+    }

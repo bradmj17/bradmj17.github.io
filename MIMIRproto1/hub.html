@@ -1,0 +1,88 @@
+<!doctype html>
+<!----------------------------------------------------------------------------------------------------------------
+--
+
+#Original Author:    Bradley Johnson                           #
+#Date Created:       10/12/22                                   #
+#Version:      0.10                                            #
+#Date Last Modified:    10/12/22                                #
+#Modified by:       Bradley Johnson                            #
+#Modification log:                                             #
+
+        Ver0.10  :   10/12/22   >> Project started. Destiny 2 Raid Help Application
+                                >> green color palette: https://coolors.co/palette/d8f3dc-b7e4c7-95d5b2-74c69d-52b788-40916c-2d6a4f-1b4332-081c15
+                                >> flowery color palette: https://coolors.co/palette/011936-465362-82a3a1-9fc490-c0dfa1
+                                >> pulling name from destiny 2 lore, probably gensym raids
+                                >> Mímir from Norse Mythology - god of knowledge, would drink from Gjallarhorn
+
+        Ver0.27   :  10/13/22   >> just getting hamburger good. used this reference: https://www.sliderrevolution.com/resources/css-hamburger-menu/ , specifically the author is Leif Riksheim. I wanted it to come in from the side.
+        Ver0.37   :  10/14/22   >> added a typing plugin; animates each key stroke.
+
+
+                          
+
+--
+------------------------------------------------------------------------------------------------------------------>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <title>Mímir Raids</title>
+    <meta name="description" content="Mímir provides Destiny 2 players with tools and information to complete the most challenging endgame activities">
+    <meta name="keywords" content="Destiny 2, Destiny, Raids, Mimir, Mímir, Raiding, Raid Help, Vow of the Disciple, Vault of Glass, Kings Fall, Last Wish, Deep Stone Crypt">
+    <meta name="author" content="Bradley Johnson">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--icon at the top-->
+    <link rel="shortcut icon" href="images/mimirLogo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/mimirLogo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/mimirLogo.png">
+    <link rel="icon" sizes="192x192" href="images/mimirlogo.png">
+
+    <!--css-->
+    <link rel="stylesheet" href="css/styles.css">
+   
+  </head>
+<body>
+  <header>
+    <h1 class="Title">Mímir Raids</h1>
+    <input type="checkbox" id="menyAvPaa">
+    <label id="burger" for="menyAvPaa">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+  <nav id="meny">
+    <div class="dropdown">
+      <button class="dropbtn">Vault of Glass</button>
+      <div class="dropdown-content">
+        <a href="#">Confluxes</a>
+        <a href="#">Oracles</a>
+        <a href="#">Templar</a>
+        <a href="#">Gatekeeper</a>
+        <a href="#">Atheon</a>
+      </div>
+    </div> 
+    <div class="dropdown">
+      <button class="dropbtn">Vow of the Disciple</button>
+      <div class="dropdown-content">
+        <a href="Acquisition.html">Acquisition</a>
+        <a href="#">Caretaker</a>
+        <a href="#">Exhibition</a>
+        <a href="#">Rhulk, Disciple of the Witness</a>
+      </div>
+    </div> 
+  </nav>
+</header>
+<main>
+  <div class="home">
+    <h1>Hello. Welcome to Mimir Raids.</h1>
+    <img src="images/mimirLogo.png">
+  </div>
+
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="scripts/menu.js"></script>
+</body>
+
+</html>
