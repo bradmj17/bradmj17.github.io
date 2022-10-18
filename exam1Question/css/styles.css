@@ -1,0 +1,17 @@
+
+h1 { 
+    font-size: 150%;
+    color: palegreen;
+    margin-bottom: .5em;
+    background-color:white;
+}
+input {
+    width: 22em;
+    margin-right: 2em;
+    margin-bottom: 1em;
+}
+#tasks {
+    margin-top: 0;
+    float: none;
+    margin-bottom:10%;
+}
