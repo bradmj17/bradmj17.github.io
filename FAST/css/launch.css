@@ -1,0 +1,131 @@
+
+
+  /*------ page content ------*/
+  body{
+    background-color:#86DCDB;
+  }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+a{
+    text-decoration:none;
+    text-align:center;
+}
+.logo{
+    width:20%;
+    height:20%;
+    margin-left:40%;
+    margin-right:40%;
+}
+.trendyBox{
+    border:rgb(255, 0, 0);
+    background-color:rgb(255, 255, 255);
+    border-width:7px;
+    border-style:solid;
+    box-shadow: 0px 0px 140px #fe7171;
+    width:50%;
+    margin-left:25%;
+    color:red;
+}
+.trendyBox h1{color:red;}
+  footer{
+    display:block;
+    margin-left:0%;
+
+  }
+  .bottom{
+    margin-left:2vh;
+    margin-bottom:0vh;
+    margin-top:1%;
+    float:left;
+    font-size:1.5rem;
+    text-align:left;
+    width:50%;
+    border:none;
+    background-color:#ff12124c;
+
+    animation-name: wicked;
+    animation-duration: 10s;
+    animation-fill-mode:both;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count:infinite;
+
+  }
+  .down{
+  margin-left:50%;
+  bottom:0;
+  margin-bottom:0vh;
+
+  font-size:1.5rem;
+  text-align:left;
+  width:auto;
+  border:none;
+  background-color:#ff12124c;}
+
+  @keyframes wicked{
+    
+    from{transform: translateX(1000%);opacity:100%;/*opacity is 0 then goes to 100*/}
+    to{transform: translateX(-120%);opacity:100%}
+    }
+  footer p {
+    font-size:100px;
+  }
+  div{
+      display:block;
+  }
+  h1, h2 {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding:0.2%;
+  }
+  p{
+      font-size:2rem;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    margin-top: 20vh; 
+  }
+  
+  h2 { font-size: 2.5rem; 
+    margin-top: 10vh;
+    background-color:whitesmoke;
+    border-style:dashed;
+    border-width:2px;
+    border-color:#86DCDB;
+    color:#3D607D;
+    width:30%;
+    margin-left:auto;
+    margin-right:auto;}
+  /*------@MEDIA------*/
+@media (max-width: 1200px) {
+    #background-video { display: none; }
+    body{
+ background-size: cover;     
+        }
+      h1{
+          font-size:3rem;
+        }
+        h2{
+            font-size:1.5rem;
+            width:70%;
+        }
+        span{
+            display:contents;
+            font-size:3rem;
+        }
+        .logo{
+            background-color:none;
+        }
+        .trendyBox{
+            border:#dc8686;
+            border-width:7px;
+            border-style:solid;
+            width:90%;
+            margin-left:5%;
+        }
+  }

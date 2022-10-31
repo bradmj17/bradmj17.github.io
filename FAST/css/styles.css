@@ -1,0 +1,134 @@
+/*COLORWAY*/
+.colorM{color:#063601;}
+.colorI{color:#536246;}
+.colorMM{color:#ffffff;}
+.colorII{color:#ffffff;}
+.colorR{color:#fefefe;}
+
+
+
+* {
+  margin: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html {
+  font-size: 16px;
+  font-family: Arial;
+}
+header {
+  border-bottom: 1px solid #eee;
+  height: 4rem;
+  background-color: #ff0000;
+  padding-bottom:1%;
+}
+h1.Title{
+  font-size:4em;
+  color:#ffffff;
+  text-align:center;
+}
+body{
+  background-color: #ffffff;
+}
+main{
+  background-color: #68758430;
+  margin-left:10%;
+  margin-right:10%;
+  height:100vh;
+}
+header a{
+  text-decoration:none;
+  font-size:1em;
+  color:#011936;
+}
+.home{
+  padding:10%;
+  text-align:center;
+}
+/*hamburger css*/
+.burger-wrapper {
+cursor: pointer;
+}
+#meny {
+  background: #ffffffae;
+  width: 50rem;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  transition-timing-function: cubic-bezier(10,2,3,1);
+  transform: translateX(50rem);
+  top: 0;
+  z-index: 0;
+  transition: 0.5s;
+}
+#menyAvPaa {
+  display: none;
+}
+
+#menyAvPaa:checked ~ #meny {
+  transform: translateX(0rem);
+}
+
+#burger {
+  position: absolute;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  right: 1rem;
+  top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#burger > div {
+  height: 2px;
+  background-color: #ffffff;
+  transition: 0.5s;
+  z-index: 999;
+}
+
+#menyAvPaa:checked ~ #burger > div {
+background-color: #011936;
+}
+
+#menyAvPaa:checked ~ #burger > div:nth-child(1) {
+  transform: translateY(15px) rotate(45deg);
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(2) {
+  opacity: 0;
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(3) {
+  transform: translateY(-15px) rotate(-45deg);
+}
+/*--menu--*/
+nav ul{
+ margin-top:12%;
+}
+nav ul li{
+  list-style-type:none;
+}
+
+nav ul li a{
+  text-decoration:none;
+  font-size:2em;
+  color:#fe1010;
+}
+
+/*------@MEDIA------*/
+@media (max-width: 1200px) {
+  #meny {
+    background: #ffffff6b;
+    width: 25rem;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    transition-timing-function: cubic-bezier(10,2,3,1);
+    transform: translateX(50rem);
+    top: 0;
+    z-index: 0;
+    transition: 0.5s;
+  }
+  nav ul{
+    margin-top:20%;
+   }
+}
