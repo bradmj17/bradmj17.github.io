@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<!----------------------------------------------------------------------------------------------------------------
+--
+#Original Author:    Bradley Johnson                           #
+#Date Created:       11/08/22                                   #
+#Version:      1.00                                            #
+#Date Last Modified:    11/12/22                                #
+#Modified by:       Bradley Johnson                            #
+#Modification log:                                             #
+
+    Ver0.03  :   11/08/22      >> project began;
+                               >> bootstrap 5 website, one page - scrollspy, branded website with nearly no restrictions
+                               >> 5 sections: opening page, about, some products/catagory, social/events/BlackFriday, contact.. bonus 6th can be just a lot of pictures of shoes like a "our customers" section, placed between where ever
+                               >> brand: sprial shoes, a shoe store based out of chicago who sells performance athletic/running wears; sells shoes.
+                               >> logo made, laces of shoe with spiral text-- might change.
+                               >> last project was a retail store website, maybe i should pivot to a brand new idea like a park or a small resturant.
+
+    Ver0.14  :   11/08/22      >> Navbar is welldone now - best I've created thus far. Logo looks even better than I thought before.
+                               >> Going for nice dark mode, a look I've never gone for before.
+                               >> Carosel at the beginning of the webpage beneath the navbar, displaying a bunch of cool images that have athletes who are supposed to be wearing the brand's apparal.
+                               
+    Ver0.20  :   11/09/22      >> 180 from yesterday. Difficult day trying to have cards displaying shoes from a catalog. Absolute headache. No results to show. My imbedded carousels would break one another.
+                               >> The side controls would never work. Just going to leave the cards without a carousel. Looks pretty bland.
+
+    Ver0.76  :   11/10/22      >> Catalog design is bulky.
+                               >> Began objective/aboutus section, just filled in with lorem ipsum, probably entering in some images floating on the sides of the paragraphs.
+                               >> Catalog has some lorem ipsum thrown around, then just the cards I worked on before then I'll put a "Browse catalog" button below.
+                               >> for posterity's sake, the catalog was intended to be a 3x1 carousel that goes through maybe three different sets of products
+                               >> at the moment, i've landed on a half-baked layout of a 1x4 grid just going straight down the page.
+    
+    Ver0.83  :   11/11/22      >> still need two sections. i made the navbar go fixed after scrolling. it sort of pops in, but it's okay.
+                               >> grabbed previously used contact page in order to save some sanity/time/health/wealth/joy/sorrow, somewhat didn't transfer over very well.
+                               >> toyed with using offcanvas to open it up on the side, didn't like it & also maybe it's technically not a page--and i'd lose more and more time to devote to 1) coming up with a new page 2) creating a new page that somehow fits, and black friday deal section is a stretch as is
+                               >> i was trying some jquery to make the nav bar look good. i got frustrated, only to realize i didn't add jquery script to the page :(
+                               >> worked on black friday section - an overall lazy section, however i have some cool features included to compensate.
+                               >> BF section has 1) countdown with jquery from previous assignments, counting down from dec 7, 1 week after black friday (normal stores have their black friday deals all holliday season so this isn't absurd)
+                               >> and 2) tooltips when hovering over, giving you a price & name. I wanted to be able to add styling to the tooltip and put a strike through for the reg price, then add a red font color to the brand new discount price, but it seems like tooltips suck so regular text will have to work.
+                               >> also i did the footer, since i was also forgetting to add that. added a bunch of social icons, followed by copyright, phone, and address. looks kinda clean i think, probably, maybe
+                               >> unfortunately, the contact button only deploys the contact form. i don't know why and im tired.
+                               >> i spent all day working on this. I would've saved an hour if i added JQuery LMAO i couldn't understand why it wasn't working. I have a css animation for the nav bar when it snaps down, i might change it so it's smooth
+                               >> overall i could bundle this project up and send it away now, which was my goal this evening because i want to have my weekend and i haven't touched an essay.
+
+    Ver0.99  :   11/12/22      >> i had this extremely profound dream for my website while i was dreaming. i don't remember it.
+                               >> i changed the contact form again. I moved it into a offcanvas, with offcanvas-bottom and it looks more normal than appearing on the start/end
+                               >> put lorem ipsum in the contact page so it counts as a section??
+
+    Ver1.00  :   11/12/22      >> https://www.youtube.com/watch?v=WvEk7roWZ4g 
+                               >> things i think are cool:
+                               >> nav interacts with scroll, mobileOnly and deskOnly differences, contact offcanvas, 
+
+        --
+------------------------------------------------------------------------------------------------------------------>
+<html lang="en">
+  <head>
+    <!--meta tags-->
+    <meta charset="utf-8" />
+    <title>Spiral Shoes & Co.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Improve. Overcome. Shop the online catalog of Canada's greatest running performance footwear and clothing.">
+    <meta name="keywords" content="Bradley Johnson, Shoes, Performance, Running, Walking, Jogging, Lifting, Shorts, Shirt, Canada, Athlete">
+    <meta name="author" content="Bradley Johnson">
+
+    <!--icon-->
+    <link rel="shortcut icon" href="images/Logo3.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Logo3.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Logo3.png">
+    <link rel="icon" sizes="192x192" href="images/Logo3.png">
+<!--bootstrap 5-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Offside&display=swap" rel="stylesheet">
+        <!--My Style Sheet-->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/contact.css">
+  </head>
+
+  <body class="bg-dark container-xl">
+    <!--NAV-->
+    <span id="home"></span> 
+    <nav class="navbar navbar-expand-xxl navbar-dark container nav-recolor1" id="NAV">
+        <div class="container-fluid">
+          <h3 class="spiralYellow"><a href="home.html"><img src="images/spiralLogo.png" width="100vw" class="spiralYellowBG rounded"></a></h3>
+          <button id="navBUTTON" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="bi bi-three-dots"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <div class="navbar-nav ms-auto align-items-center">
+              <a class="nav-item nav-link lead" aria-current="page" href="#home"><i class="bi bi-house mobileOnly"> Home</i><span class="deskOnly">Home</span></a>
+              <a class="nav-item nav-link lead" href="#objective"><i class="bi bi-info-square mobileOnly"> Objective</i><span class="deskOnly">Objective</span></a>
+              <a class="nav-item nav-link lead" href="#catalog"><i class="bi bi-bag mobileOnly"> Catalog</i><span class="deskOnly">Catalog</span></a>
+              <a class="nav-item nav-link lead blackfridaybtn" href="#MoreShop"><i class="bi bi-calendar2-week mobileOnly"> Black Friday</i><span class="deskOnly">Black Friday</span></a>
+              <a class="nav-item nav-link lead" href="#contact"><i class="bi bi-envelope mobileOnly"> Contact</i><span class="deskOnly">Contact</span></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <main class="">
+
+            <!--carosel-->
+           
+<div id="robotcarousel" class="carousel carousel-dark slide carousel-fade position-static top-0 w-100 behind data-bs-interval(100)" data-bs-ride="carousel">
+  
+
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100 promoImage rounded" src="images/twoPeople.jpg" alt="Image featuring two athletes wearing Spiral branded shoes.">
+      <div class="carousel-caption"><h1 class="text-dark" style="font-size:20em;"><img src="images/Logo2.png" alt="Spiral Logo" width="300vw" class="mb-5 promoLogo" style="filter:invert(15%);"></h1>
+        <button type="button" class="btn spiralYellowBG btn-lg text-dark promoButton"><h1>Innovate today</h1></button>
+      </div>
+    </div>
+    <div class="carousel-item">
+        <img class="d-block w-100 promoImage rounded" src="images/mountainPromo.jpg" alt="Athletes jogging outside.">
+        <div class="carousel-caption"><h1 class="text-dark" style="font-size:20em;"><img src="images/Logo2.png" alt="Spiral Logo" width="300vw" class="mb-5 promoLogo" style="filter:invert(15%);"></h1>
+          <button type="button" class="btn spiralYellowBG btn-lg text-dark promoButton"><h1>Begin your adventure</h1></button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 promoImage rounded" src="images/roadPromo.jpg" alt="Two athletes jogging on a road.">
+        <div class="carousel-caption"><h1 class="text-dark" style="font-size:20em;"><img src="images/Logo2.png" alt="Spiral Logo" width="300vw" class="mb-5 promoLogo" style="filter:invert(15%);"></h1>
+          <button type="button" class="btn spiralYellowBG btn-lg text-dark promoButton"><h1>Hit the road</h1></button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 promoImage rounded" src="images/autumnPromo.jpg" alt="Cross country runner in an autumn forest.">
+        <div class="carousel-caption"><h1 class="text-dark" style="font-size:20em;"><img src="images/Logo3.png" alt="Spiral Logo" width="300vw" class="mb-5 promoLogo"></h1>
+          <button type="button" class="btn spiralYellowBG btn-lg text-dark promoButton"><h1>Find yourself</h1></button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 promoImage rounded" src="images/liftingPromo.jpg" alt="Women lifting outdoors, wearing Spiral apparal.">
+        <div class="carousel-caption"><h1 class="text-dark" style="font-size:20em;"><img src="images/Logo2.png" alt="Spiral Logo" width="300vw" class="mb-5 promoLogo" style="filter:invert(15%);"></h1>
+          <button type="button" class="btn spiralYellowBG btn-lg text-dark promoButton"><h1>Grow your legend</h1></button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 promoImage rounded" src="images/joggingPromo.jpg" alt="Promotional image of two joggers wearing Spiral apparal.">
+        <div class="carousel-caption"><h1 class="text-dark" style="font-size:20em;"><img src="images/Logo3.png" alt="Spiral Logo" width="300vw" class="mb-5 promoLogo"></h1>
+          <button type="button" class="btn spiralYellowBG btn-lg text-dark promoButton"><h1>Take the next step</h1></button>
+        </div>
+      </div>
+    <div class="carousel-indicators position-relative bottom-0">
+        <button type="button" data-bs-target="#robotcarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#robotcarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#robotcarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#robotcarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#robotcarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#robotcarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div>
+  </div>
+
+  
+  
+</div>
+   <hr class="spiralYellowBG m-5"> 
+       <!--About Us-->
+       <div class="objective" id="objective">
+        <div class="container p-2">
+        <h1 class="spiralYellow display-3">Objective<i class="bi bi-slash-lg"> //</i></h1>
+        <div class="col-12 row mt-4 deskOnly">
+          <div class="row row-cols-1 g-2 col-6">
+            <p class="text-light lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Et malesuada fames ac turpis egestas. Elit at imperdiet dui accumsan sit amet nulla facilisi. Ultricies tristique nulla aliquet enim tortor. Egestas dui id ornare arcu odio ut sem nulla.</p>
+            <p class="text-light lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Habitasse platea dictumst vestibulum rhoncus est pellentesque. Aliquam vestibulum morbi blandit cursus risus at ultrices mi.</p>
+          </div>
+          <div class="row row-cols-1 g-0 col-6 p-3">
+            <img src="images/ownerImage.jpg" class="rounded-top border border-warning w-100 h-100" alt="image of the owner of Spiral">
+          </div>
+        
+        <p class="text-light lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Habitasse platea dictumst vestibulum rhoncus est pellentesque. Aliquam vestibulum morbi blandit cursus risus at ultrices mi.</p>
+        <div class="col-12 row mt-4">
+        <div class="row row-cols-3 g-0 col-12 m-1">
+          <img src="images/successTrack.jpg" class="rounded-top border border-warning" alt="Track and Field athlete sponsered by Spiral">
+          <img src="images/successGym.jpg" class="rounded-top border border-warning" alt="image of a successful session at the gym">
+          <img src="images/fourRunners.jpg" class="rounded-top border border-warning" alt="four runners, showcasing spiral">
+        </div>
+      </div>
+      </div>
+      <!--mobile only with different images-->
+      <div class="col-12 row mt-4 mobileOnly">
+        <div class="row row-cols-1 g-0 col-12">
+          <p class="text-light lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Et malesuada fames ac turpis egestas. Elit at imperdiet dui accumsan sit amet nulla facilisi. Ultricies tristique nulla aliquet enim tortor. Egestas dui id ornare arcu odio ut sem nulla.</p>
+          <p class="text-light lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Habitasse platea dictumst vestibulum rhoncus est pellentesque. Aliquam vestibulum morbi blandit cursus risus at ultrices mi.</p>
+        </div>
+        <div class="row row-cols-1 g-0 col-12 p-3">
+          <img src="images/ownerImage.jpg" class="rounded-top border border-warning w-100 h-50">
+        </div>
+      
+      <p class="text-light lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Habitasse platea dictumst vestibulum rhoncus est pellentesque. Aliquam vestibulum morbi blandit cursus risus at ultrices mi.</p>
+      <div class="col-12 row mt-4">
+      <div class="row row-cols-2 g-0 col-12 m-1">
+        <img src="images/successTrack.jpg" class="rounded-top border border-warning" alt="Track and Field athlete sponsered by Spiral">
+        <img src="images/successGym.jpg" class="rounded-top border border-warning" alt="image of a successful session at the gym">
+      </div>
+    </div>
+    </div>
+    <!--end of about us-->
+    </div>
+    </div>
+<hr class="spiralYellowBG mt-5 mb-5">
+       <!--CATALOG PREVIEW SECTION-->
+       <div class="spiralSecondaryBG rounded-top mb-5" id="catalog">
+       <div class="container p-2">
+       <h1 class="spiralYellow display-3">Catalog<i class="bi bi-slash-lg"> //</i></h1>
+       <p class="text-light lead mt-4 g-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer vitae justo eget magna fermentum iaculis eu non diam. Eu scelerisque felis imperdiet proin fermentum leo vel. Ullamcorper morbi tincidunt ornare massa eget egestas. Pharetra massa massa ultricies mi quis hendrerit dolor. Vel pretium lectus quam id leo. Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Velit egestas dui id ornare arcu odio. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Ullamcorper eget nulla facilisi etiam dignissim. Sagittis orci a scelerisque purus semper eget. Proin sagittis nisl rhoncus mattis rhoncus urna neque. Vivamus arcu felis bibendum ut tristique et egestas quis ipsum. Consequat semper viverra nam libero justo.</p>
+      </div>
+       
+            <div class="p-1 position-relative row row-cols-1 g-2 text-center col-8 m-auto">
+              <!--green shoes-->
+                  <div class="col-12 cardDiv">
+                      <div class="border border-warning rounded-3">
+                        <div class="card">
+                          <div class="row g-1">
+                            <div class="col-lg-5">
+                              <div id="mala" class="carousel" data-bs-ride="true">
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#mala" data-bs-slide-to="0" class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#mala" data-bs-slide-to="1" class="bg-dark" aria-label="Slide 2"></button>
+                            
+                                </div>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="images/malachite1.jpg" class="d-block w-100 h-100" alt="First image of blue shoes">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="images/malachite2.jpg" class="d-block w-100 h-100" alt="Second image of blue shoes">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7">
+                              <div class="card-body">
+                                <h5 class="card-title">Revenent II</h5>
+                                <p class="card-text">egestas tellus rutrum tellus pellentesque eu malachite tincidunt tortor</p>
+                                      <table class="table text-light shoeSizes border table-bordered border-dark deskOnly">
+                                        <tbody>
+                                          <tr>
+                                            <td>7.0</td>
+                                            <td>7.5</td>
+                                            <td class="OoS">8.0</td>
+                                            <td>8.5</td>
+                                            <td>9.0</td>
+                                            <td>9.5</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="OoS">10.0</td>
+                                            <td>10.5</td>
+                                            <td class="OoS">11.0</td>
+                                            <td>11.5</td>
+                                            <td>12.0</td>
+                                            <td>12.5</td>
+                                          </tr>
+                                          <tr>
+                                            <td>13.0</td>
+                                            <td>14.0</td>
+                                          </tr>
+                                          <tr>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <!-- Button trigger modal -->
+                                    <button type="button" class="btn spiralYellowBG mobileOnly" data-bs-toggle="modal" data-bs-target="#ah">
+                                      Check availability
+                                    </button>
+
+
+                                    <a class="text-decoration-none"href="#"><p class="card-text"><small class="text-muted">Visit page</small></p></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                 <!-- blue shoes-->
+                  
+                  <div class="col-12 cardDiv">
+                    <div class="border border-warning rounded-3">
+                      <div class="card">
+                        <div class="row g-1">
+                          <div class="col-lg-5">
+                            <div id="blueshoe" class="carousel" data-bs-ride="true">
+                              <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#blueshoe" data-bs-slide-to="0" class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#blueshoe" data-bs-slide-to="1" class="bg-dark" aria-label="Slide 2"></button>
+                          
+                              </div>
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                  <img src="images/blue1.jpg" class="d-block w-100 h-100" alt="First image of blue shoes">
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="images/blue2.jpg" class="d-block w-100 h-100" alt="Second image of blue shoes">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                            <div class="card-body">
+                              <h5 class="card-title">Sunsinger 12</h5>
+                              <p class="card-text">curabitur vitae nunc sed velit dignissim sodales</p>
+                                    <table class="table text-light shoeSizes border table-bordered border-dark deskOnly">
+                                      <tbody>
+                                        <tr>
+                                          <td>7.0</td>
+                                          <td>7.5</td>
+                                          <td >8.0</td>
+                                          <td>8.5</td>
+                                          <td>9.0</td>
+                                          <td>9.5</td>
+                                        </tr>
+                                        <tr>
+                                          <td >10.0</td>
+                                          <td>10.5</td>
+                                          <td >11.0</td>
+                                          <td>11.5</td>
+                                          <td class="OoS">12.0</td>
+                                          <td>12.5</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="OoS">13.0</td>
+                                          <td class="OoS">14.0</td>
+                                        </tr>
+                                        <tr>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <!-- Button trigger modal -->
+                                  <button type="button" class="btn spiralYellowBG mobileOnly" data-bs-toggle="modal" data-bs-target="#e">
+                                    Check availability
+                                  </button>
+
+ 
+                                  <a class="text-decoration-none"href="#"><p class="card-text"><small class="text-muted">Visit page</small></p></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              <!--  grey shoes-->
+                <div class="col-12 cardDiv">
+                  <div class="border border-warning rounded-3">
+                    <div class="card">
+                      <div class="row g-1">
+                        <div class="col-lg-5">
+                          <div id="greyshoe" class="carousel" data-bs-ride="true">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#greyshoe" data-bs-slide-to="0" class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#greyshoe" data-bs-slide-to="1" class="bg-dark" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#greyshoe" data-bs-slide-to="2" class="bg-dark" aria-label="Slide 3"></button>
+                        
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="images/grey1.jpg" class="d-block w-100 h-100" alt="First image of grey shoes">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/grey2.jpg" class="d-block w-100 h-100" alt="Second image of grey shoes">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/grey3.jpg" class="d-block w-100 h-100" alt="Second image of grey shoes">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-7">
+                          <div class="card-body">
+                            <h5 class="card-title">Phantom 8</h5>
+                            <p class="card-text">in ornare quam viverra orci</p>
+                                  <table class="table text-light shoeSizes border table-bordered border-dark deskOnly">
+                                    <tbody>
+                                      <tr>
+                                        <td>7.0</td>
+                                        <td>7.5</td>
+                                        <td class="OoS">8.0</td>
+                                        <td>8.5</td>
+                                        <td>9.0</td>
+                                        <td class="OoS">9.5</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="OoS">10.0</td>
+                                        <td class="OoS">10.5</td>
+                                        <td class="OoS">11.0</td>
+                                        <td>11.5</td>
+                                        <td>12.0</td>
+                                        <td class="OoS">12.5</td>
+                                      </tr>
+                                      <tr>
+                                        <td>13.0</td>
+                                        <td>14.0</td>
+                                      </tr>
+                                      <tr>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- Button trigger modal -->
+                                <button type="button" class="btn spiralYellowBG mobileOnly" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                  Check availability
+                                </button>
+
+ 
+                            <a class="text-decoration-none"href="#"><p class="card-text"><small class="text-muted">Visit page</small></p></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+                            <!--bright blue shoes-->
+              <div class="col-12 cardDiv">
+                              <div class="border border-warning rounded-3">
+                                <div class="card">
+                                  <div class="row g-1">
+                                    <div class="col-lg-5">
+                                      <div id="BB" class="carousel" data-bs-ride="true">
+                                        <div class="carousel-indicators">
+                                          <button type="button" data-bs-target="#BB" data-bs-slide-to="0" class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                                          <button type="button" data-bs-target="#BB" data-bs-slide-to="1" class="bg-dark" aria-label="Slide 2"></button>
+                                          <button type="button" data-bs-target="#BB" data-bs-slide-to="2" class="bg-dark" aria-label="Slide 3"></button>
+                                    
+                                        </div>
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <img src="images/brightblue1.jpg" class="d-block w-100 h-100" alt="First image of brightblue shoes">
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="images/brightblue2.jpg" class="d-block w-100 h-100" alt="Second image of brightblue shoes">
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="images/brightblue3.jpg" class="d-block w-100 h-100" alt="Second image of brightblue shoes">
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Libra IV</h5>
+                                        <p class="card-text">sagittis aliquam malesuada bibendum arcu vitae elementum curabitur</p>
+                                              <table class="table text-light shoeSizes border table-bordered border-dark deskOnly">
+                                                <tbody>
+                                                  <tr>
+                                                    <td>7.0</td>
+                                                    <td>7.5</td>
+                                                    <td>8.0</td>
+                                                    <td>8.5</td>
+                                                    <td class="OoS">9.0</td>
+                                                    <td >9.5</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>10.0</td>
+                                                    <td>10.5</td>
+                                                    <td>11.0</td>
+                                                    <td>11.5</td>
+                                                    <td>12.0</td>
+                                                    <td>12.5</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>13.0</td>
+                                                    <td>14.0</td>
+                                                  </tr>
+                                                  <tr>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                              <!-- Button trigger modal -->
+                                            <button type="button" class="btn spiralYellowBG mobileOnly" data-bs-toggle="modal" data-bs-target="#sa">
+                                              Check availability
+                                            </button>
+            
+ 
+                                        <a class="text-decoration-none"href="#"><p class="card-text"><small class="text-muted">Visit page</small></p></a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+              </div>
+              <div class="col-12">
+                <a href="#catalog"><p class="text-warning small float-end">Browse all categories<i class="bi bi-slash-lg"> >></i></p></a>
+              </div>
+              </div>
+
+        </div>
+      </div>
+      <hr class="spiralYellowBG mt-5 mb-5">
+            <!--BLACK FRIDAY-->
+            <div class="col-12 mb-5" id="MoreShop">
+              <div class="container p-2 m-auto">
+              <h1 class="spiralYellow display-3">Black Friday Specials<i class="bi bi-slash-lg"> //</i></h1>
+              <h1 class="spiralYellow small"><span id="bfCountdown">calculating...</span><i class="bi bi-slash-lg"> //</i></h1>
+              <div class="col-12 row mt-4 deskOnly">
+                
+              
+              <p class="text-light lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Habitasse platea dictumst vestibulum rhoncus est pellentesque. Aliquam vestibulum morbi blandit cursus risus at ultrices mi.</p>
+              <p class="text-light lead">hover to see deals</p>
+              <div class="col-12 row mt-4 m-auto">
+                <div class="row row-cols-3 g-0 col-12">
+                  <img src="images/pink1.jpg" class="rounded-top border border-warning" data-bs-toggle="tooltip" data-bs-placement="top" title='Crush 40: $49.99' alt="pink shoe">
+                  <img src="images/white1.jpg" class="rounded-top border border-warning" data-bs-toggle="tooltip" data-bs-placement="top" title='Mononoke 99: $119.99' alt="white shoe with blue and pink highlights">
+                  <img src="images/blueorange.jpg" class="rounded-top border border-warning" data-bs-toggle="tooltip" data-bs-placement="top" title='Ada I: $50.00' alt="Blue shoe with orange highlights">
+                  <img src="images/greens.jpg" class="rounded-top border border-warning" data-bs-toggle="tooltip" data-bs-placement="left" title='Venom 11: $42.00' alt="green shoes">
+                  <img src="images/BlueGrippers.jpg" class="rounded-top border border-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title='Wake XI: $42.00' alt="green shoes">
+                  <img src="images/gloamShoes.jpg" class="rounded-top border border-warning" data-bs-toggle="tooltip" data-bs-placement="right" title='Gloam 7: $777.00' alt="green shoes">
+                </div>
+            </div>
+            </div>
+            <!--mobile only with different images-->
+            <div class="col-12 row mt-4 mobileOnly">
+               
+              
+              <p class="text-light lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Habitasse platea dictumst vestibulum rhoncus est pellentesque. Aliquam vestibulum morbi blandit cursus risus at ultrices mi.</p>
+              <p class="text-light lead">hover to see deals</p>
+              <div class="col-12 row mt-4">
+                <div class="row row-cols-2 g-0 col-12 m-1 mb-5 BFlimiter">
+                  <img src="images/pink1.jpg" class="rounded-top border border-warning " data-bs-toggle="tooltip" data-bs-placement="top" title='Crush 40: $49.99' alt="pink shoe">
+                  <img src="images/white1.jpg" class="rounded-top border border-warning" data-bs-toggle="tooltip" data-bs-placement="top" title='Mononoke 99: $119.99' alt="white shoe with blue and pink highlights">
+                  <img src="images/blueorange.jpg" class="rounded-top border border-warning" data-bs-toggle="tooltip" data-bs-placement="top" title='Ada I: $50.00' alt="Blue shoe with orange highlights">
+                  <img src="images/greens.jpg" class="rounded-top border border-warning" data-bs-toggle="tooltip" data-bs-placement="top" title='Venom 11: $42.00' alt="green shoes">
+                  <img src="images/BlueGrippers.jpg" class="rounded-top border border-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title='Wake XI: $42.00' alt="green shoes">
+                  <img src="images/gloamShoes.jpg" class="rounded-top border border-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title='Gloam 7: $777.00' alt="green shoes">
+                </div>
+            </div>
+          </div>
+          
+          </div>
+          </div>
+          <!--sunset contact-->
+          <!--
+            contact
+            <div class="container col-12 m-auto text-center mt-5">
+            <button type="button" class="btn spiralYellowBG btn-lg text-dark promoButton" id="contactButton"><h1>contact us</h1></button>
+            
+            contact starts
+            <div class="invis mt-0 m-auto" id="contactSection">
+              <form id="contact_form" name="contact_form" method="get" >
+            <div>
+                <label for="email1">Email Address:</label>
+                <input type="text" id="email1" name="email1">
+                <span>*</span>
+            </div>
+            
+            <div>
+                <label for="email1">Confirm Email Address:</label>
+                <input type="text" id="email2" name="email2">
+                <span>*</span>
+            </div>
+            
+            <div>
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name">
+                <span>*</span>
+            </div>
+      
+            <div>
+              <label for="last_name">Last Name:</label>
+              <input type="text" id="last_name" name="last_name">
+              <span>*</span>
+          </div>
+      
+            <div>
+              <label for="comment">Tell us more:</label>
+              <textarea cols="20" rows="5" id="comment" name="comment" class="commentbox"></textarea>
+              <span></span>
+          </div>
+            
+            <div>
+                <label>&nbsp;</label>
+                <input type="button" id="join_list" name="join_list" value="Submit" class="btn-warning">
+                <input type="reset" id="clear_form" value="Clear" class="btn-warning">
+            </div>     
+      
+        </form>   
+      </div>  
+      <div id="contactResult" class="invis display-1 text-white">
+        <h2 class="" >We've recieved your form!</h2>
+    </div>
+  </div>-->
+      </div>
+
+          </div>
+
+     <hr class="spiralYellowBG mt-5 mb-5">
+<!--OFFCANVAS CONTACT-->
+<div class="objective" id="contact">
+  <div class="container p-2">
+  <h1 class="spiralYellow display-3">Contact<i class="bi bi-slash-lg"> //</i></h1>
+  <div class="col-12 row mt-4">
+    <div class="row row-cols-1 g-2 col-8">
+      <p class="text-light lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Et malesuada fames ac turpis egestas. Elit at imperdiet dui accumsan sit amet nulla facilisi. Ultricies tristique nulla aliquet enim tortor. Egestas dui id ornare arcu odio ut sem nulla.</p>
+      <p class="text-light lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Et malesuada fames ac turpis egestas. Elit at imperdiet dui accumsan sit amet nulla facilisi. Ultricies tristique nulla aliquet enim tortor. Egestas dui id ornare arcu odio ut sem nulla.</p>
+    </div>
+    <div class="row row-cols-1 g-0 col-4 mb-5 deskOnly">
+      <img src="images/customerService.jpg" class="rounded-top border border-warning w-100 h-100" alt="image of customer service">
+    </div>
+    <div class="row row-cols-1 g-0 col-4 mb-5 mobileOnly">
+      <img src="images/customerService.jpg" class="rounded-top border border-warning w-100 h-50" alt="image of customer service">
+    </div>
+  
+
+<!--ACCORDION-->
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item spiralSecondaryBG text-white">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        How can I be notified when shoes are restocked?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Habitasse platea dictumst vestibulum rhoncus 24 est pellentesque. Aliquam vestibulum morbi blandit cursus risus at ultrices mi.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item spiralSecondaryBG text-white">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Where can I find retail stores?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Habitasse platea dictumst vestibulum rhoncus 24 est pellentesque. Aliquam vestibulum morbi blandit cursus risus at ultrices mi.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item spiralSecondaryBG text-white">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Where do we ship to?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Habitasse platea dictumst vestibulum rhoncus 24 est pellentesque. Aliquam vestibulum morbi blandit cursus risus at ultrices mi.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item spiralSecondaryBG text-white">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        Do you have gift cards?
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Habitasse platea dictumst vestibulum rhoncus 24 est pellentesque. Aliquam vestibulum morbi blandit cursus risus at ultrices mi.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item spiralSecondaryBG text-white">
+    <h2 class="accordion-header" id="headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        How can I contact Spiral directly?
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Habitasse platea dictumst vestibulum rhoncus 24 est pellentesque. Aliquam vestibulum morbi blandit cursus risus at ultrices mi.
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<!--end of contact-->
+</div>
+</div>
+<div class="row row-cols-1 g-2 col-12">
+  <p class="text-light lead text-center">Still need help? Fill out a ticket by clicking the "Contact Us" button.</p>
+</div>
+<div class="container col-12 m-auto text-center m-5">
+<a class="btn spiralYellowBG btn-lg text-dark promoButton" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  Contact Us
+</a>
+</div>
+
+<div class="offcanvas offcanvas-bottom bg-dark" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title spiralYellow" id="offcanvasExampleLabel">Contact Form: </h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body"><p>hi</p>
+
+    <div class="mt-0 m-auto" id="contactSection">
+      <form id="contact_form" name="contact_form" method="get" >
+    <div>
+        <label for="email1">Email Address:</label>
+        <input type="text" id="email1" name="email1">
+        <span>*</span>
+    </div>
+    
+    <div>
+        <label for="email1">Confirm Email Address:</label>
+        <input type="text" id="email2" name="email2">
+        <span>*</span>
+    </div>
+    
+    <div>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name">
+        <span>*</span>
+    </div>
+
+    <div>
+      <label for="last_name">Last Name:</label>
+      <input type="text" id="last_name" name="last_name">
+      <span>*</span>
+  </div>
+
+    <div>
+      <label for="comment">Tell us more:</label>
+      <textarea cols="20" rows="5" id="comment" name="comment" class="commentbox"></textarea>
+      <span></span>
+  </div>
+    
+    <div>
+        <label>&nbsp;</label>
+        <input type="button" id="join_list" name="join_list" value="Submit" class="btn-warning">
+        <input type="reset" id="clear_form" value="Clear" class="btn-warning">
+    </div>     
+
+</form>   
+</div>  
+<div id="contactResult" class="invis display-1 text-white">
+<h2 class="" >We've recieved your form!</h2>
+</div>
+  </div>
+</div>
+
+<!--MODALS-->
+ <!-- Malachite Modal -->
+ <div class="modal fade" id="ah" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-white" id="staticBackdropLabel">Sizes in stock</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table text-light shoeSizes border  table-bordered">
+          <tbody>
+            <tr>
+              <td>7.0</td>
+              <td>7.5</td>
+              <td class="OoS">8.0</td>
+              <td>8.5</td>
+              <td>9.0</td>
+              <td>9.5</td>
+            </tr>
+            <tr>
+              <td class="OoS">10.0</td>
+              <td>10.5</td>
+              <td class="OoS">11.0</td>
+              <td>11.5</td>
+              <td>12.0</td>
+              <td>12.5</td>
+            </tr>
+            <tr>
+              <td>13.0</td>
+              <td>14.0</td>
+            </tr>
+            <tr>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+                                 <!-- Blue shoes Modal -->
+<div class="modal fade" id="e" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content bg-dark">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5 text-white" id="staticBackdropLabel">Sizes in stock</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <table class="table text-light shoeSizes border  table-bordered">
+        <tbody>
+          <tr>
+            <td>7.0</td>
+            <td>7.5</td>
+            <td >8.0</td>
+            <td>8.5</td>
+            <td>9.0</td>
+            <td>9.5</td>
+          </tr>
+          <tr>
+            <td >10.0</td>
+            <td>10.5</td>
+            <td >11.0</td>
+            <td>11.5</td>
+            <td class="OoS">12.0</td>
+            <td>12.5</td>
+          </tr>
+          <tr>
+            <td class="OoS">13.0</td>
+            <td class="OoS">14.0</td>
+          </tr>
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+                             <!-- Grey shoes Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content bg-dark">
+  <div class="modal-header">
+    <h1 class="modal-title fs-5 text-white" id="staticBackdropLabel">Sizes in stock</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+    <table class="table text-light shoeSizes border  table-bordered">
+      <tbody>
+        <tr>
+          <td>7.0</td>
+          <td>7.5</td>
+          <td class="OoS">8.0</td>
+          <td>8.5</td>
+          <td>9.0</td>
+          <td class="OoS">9.5</td>
+        </tr>
+        <tr>
+          <td class="OoS">10.0</td>
+          <td class="OoS">10.5</td>
+          <td class="OoS">11.0</td>
+          <td>11.5</td>
+          <td>12.0</td>
+          <td class="OoS">12.5</td>
+        </tr>
+        <tr>
+          <td>13.0</td>
+          <td>14.0</td>
+        </tr>
+        <tr>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+  </div>
+</div>
+</div>
+</div>
+<!-- bright blue shoe Modal -->
+<div class="modal fade" id="sa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                          <div class="modal-content bg-dark">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5 text-white" id="sa">Sizes in stock</h1>
+                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                              <table class="table text-light shoeSizes border  table-bordered">
+                                                <tbody>
+                                                  <tr>
+                                                    <td>7.0</td>
+                                                    <td>7.5</td>
+                                                    <td>8.0</td>
+                                                    <td>8.5</td>
+                                                    <td class="OoS">9.0</td>
+                                                    <td >9.5</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>10.0</td>
+                                                    <td>10.5</td>
+                                                    <td>11.0</td>
+                                                    <td>11.5</td>
+                                                    <td>12.0</td>
+                                                    <td>12.5</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>13.0</td>
+                                                    <td>14.0</td>
+                                                  </tr>
+                                                  <tr>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                          </div>
+                                        </div>
+</div>
+      <!--footer-->
+      <footer class="p-2 rounded-top">
+        <div class="ms-auto me-auto mb-5 mt-5 text-center">
+          <a href="#"><i class="bi bi-twitter spiralYellow"></i></a>
+          <a href="#"><i class="bi bi-youtube spiralYellow"></i></a>
+          <a href="#"><i class="bi bi-linkedin spiralYellow"></i></a>
+          <a href="#"><i class="bi bi-facebook spiralYellow"></i></a>
+          <a href="#"><i class="bi bi-instagram spiralYellow"></i></a>
+          <a href="mailto:bradleyjohnson@my.cwi.edu"><i class="bi bi-envelope spiralYellow"></i></a>
+        </div>
+        <div class="m-auto text-center">
+          <p class="small small spiralYellow">© Copyright 2022. All Rights Reserved.</p>
+          <p><a href="tel:+12085130443" class="small spiralYellow">(208) 513-0443</a></p>
+          <address class="spiralYellow">324 8 Ave SW, Calgary, AB T2P 2Z2, Canada</address>
+        </div>
+
+      </footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/nav.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/blackfriday.js"></script>
+    <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+      </script>
+  </body>
+</html>
