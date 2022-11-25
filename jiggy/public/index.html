@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!----------------------------------------------------------------------------------------------------------------
+--
+
+#Original Author:    Bradley Johnson                           #
+#Date Created:       11/15/22                                  #
+#Version:      0.33                                            #
+#Date Last Modified:    11/17/22                               #
+#Modified by:       Bradley Johnson                            #
+#Modification log:                                             #
+
+        Ver0.01  :   11/15/22   >> everybody likes vue 2.0, not vue 3.0; all the documentation on how-to-use vue 3.0 is old, depricated code.
+                                >> Project 2 begins: manage to get Vue to work.
+                                >> The original plan was to make a really cool website, though that's being toned down after realizing the lack of Vue 3.0 resources.
+                                >> My next plan is to make a website that hosts the full roster from Smash Bros Ultimate and allows the user to select a couple characters and then it'll display them all and allow you to take a screenshot.
+                                >> that plan is in the gutter due to the lack of resources for Vue 3.0. I'd be done with this basic website if I were using JavaScript
+                                >> Every example uses single-page document format without subcomponent .vue files, which is the opposite of what I want, on top of that even if I were to be able to use that code, it's all outdated.
+
+        Ver0.02  :   11/16/22   >> I managed to get images working and I can send the array of information with images, name, and roster # to the main Vue.
+                                >> The Navbar works.
+                                >> bootstrap works.
+                                >> I followed the tutorial of the second LinkedIn Learning course to a tee up until things stopped working.
+                                >> I attempted to follow an easy tutorial of how to get a search feature so you could just look up "Luigi" and it would show Luigi. It would've been cool to also type a 2 and only get donkey kong.
+                                >> That idea is also thrown in the dumpster because none of the code works.
+
+        Ver0.03  :   11/17/22   >> Vue is awful. I tried using regular JQuery but it doesn't recognize it despite me setting it up with npm.
+                                >> Nobody online knows how to add a click function, and nobody has yet to do a search function using two different .vue pages. everything is just one page, and i cant use it because nobody has shown me how transfer data between all of the .vue files, only to the main .vue file and then it compiles things there.
+                                >> Vue bad.
+                                >> sadness.
+                                >> this is going to be the worst project i've ever done ever and there's nothing I can do about it.
+                                >> happy thanksgiving break.
+                                >> why can't i just use an image with a regular path. that makes zero sense. it's not like the path gets changed at all. the path is absolute. it doesn't change. it makes no sense. i don't understand. let me put images in my nav without feeding it through several hoops. it's such a awful framework. useful api documentation would be useful but the vue website is also garbage nonsense that doesn't call upon other subcomponents. 
+                                >> vue bad.
+
+        Ver0.04  :   11/17/22   >> a diamond was hidden on page 4 of google search results https://learnvue.co/tutorials/intro-to-vue-3 
+
+        Ver0.05  :   11/18/22   >> using that code found yesterday evening, i started trying to incorporate smash characters into that functioning search feature.
+                                >> unfortunately im back to trying to solve how to get images from a path defined in a .json file where all my data is being held and then have the path read properly over in vue.
+                                >> impossible task
+                                >> i deleted most of my "i hate vue" notes here, but i've kept an alright amount of them, specifically ver 0.03 because holyyy. going to try to keep the remainder of these notes more upbeat, as the professionalism has tanked here drastically though if you were to tell me to stub my toe forcefully several times, i'd still be upset and rightfully rant on and on about why that's a dumb thing to make me do.
+                                >> this will be my worst project.
+
+        Ver0.06  :   11/18/22   >> thread of useless resources online:
+                                >> https://forum.vuejs.org/t/how-to-display-a-local-image-from-json-file/56496
+                                >> https://medium.appbase.io/vue-js-components-for-building-search-uis-7b2a1b6fe159
+                                >> https://www.sitepoint.com/building-a-shopping-list-app-with-the-vue-composition-api/
+                                >> https://softauthor.com/vuejs-composition-api-search-bar-using-computed-properties/
+                                >> https://blog.piio.co/posts/how-to-use-images-in-vue-js aint no way this is useless too
+
+        Ver0.20  :   11/21/22   >> weekend has gone by. it's monday. Friday night i had an idea and i had to jump on the computer and boot up a paint project and draw what i thought of, can be found in the file: epiphanyFromWhenIWasPuttingThePizzaIntoZiplockBagsForWarmupsTomorrow_thereMayBeHope.png
+                                >> as of right now, im not sure how to do basic things using vue such as clicking on an element and adding that to a list to pull from later (sort of like a basic shopping cart). so instead im just going to focus on compiling information.
+                                >> i wanted stripes in the back of the cards, found it, then decided it would be too busy if it was on the cards itself so now it exists as the background of the body. now, animated but i think it's really laggy and is slowing down my computer so i might stop the animation. it looks cool though and sort of like a thing that would be on the actual smash website.
+                                >> redoing the roster cards with a better format, number on left, character next, then some flavor. also using cards, on mobile it snaps everything to be inline and looks great.
+                                >> keeping the results at the top, will likely add animation to bring it down rather than just leaving an ugly box at the top..
+                                >> probably need a logo and to determine the branding of the website. right now it's sandbag.gg because of the iconic smash sandbag.
+                                >> smash roster images from this: https://supersmashbros.fandom.com/f/p/4400000000003523457
+                                >> renders were all taken from the official smash bros website and compiled in a onedrive, linked on the forum post.
+
+        Ver0.33  :   11/22/22   >> finished inputting roster data
+                                >> i reread the rubric for the project.. kinda awkward to have added 81+ data entries for a project that doesn't require meaningful data. yay me.
+                                >> next on the list:
+                                >> 1) will be aiming to reposition the search inside the navbar-send search.vue component inside navbar.vue
+                                >> 2) add sticky and snap down to the navbar when scrolling down. you should be able to search and bounce up and down the list via nav
+                                >> 3) fix logo and branding; the current logo doesn't work because lmao vue
+                                >> 4) get vue @click events to work, have a "+" button that you can add fighters to a list and try to do the original plan
+                                >> number 4 should be least priority and only if everything else can be added with ease to relieve stress on my thanksgiving break.
+
+        Ver0.49  :   11/23/22   >> changed color to use bootstrap info for borders, bgs, etc. most of the page is dark.
+                                >> renamed project to jiggy centro. still can't get logos to work on the index.html to let alone get a icon for the website.. so i might just not have one??
+                                >> intro component. footer component. need to get icons for social media soon. unfortunately bootstrap icons dont work.
+
+        Ver0.69  :   11/24/22   >> i have sidestepped the logo issue altogether, moving onto better things.
+                                >> i got the buttons to add all the information about the fighter to a separate array. now i just need to recieve that array in a new component and have it list out the fighters. in like a modal button or something in the nav bar.
+                                >> this is huge. if i can get that array sent over, this project is complete!
+                                >> if not, then i have hours of frustration ahead of me and an incomplete project
+                                >> NOOOOO BOOTSTRAP MODALS DON'T WORK???
+                                >> i got desperate and tried using a cdn. i downloaded it inside of my project using the linkedin learning tutorial and yet icons do not work, and now modals do not work.
+                                >> if modals, offcanvas, and other things just do not work im furious. already a huge negative that icons don't work.
+
+        Ver0.70  :   11/24/22   >> in reply to whether or not i could send the array over, the answer is hours of frustration
+                                >> i think it gets sent??? but then it doesn't do anything??? maybe it doesn't get properly sent?
+                                >> right now there is a console.log that displays the array when any button gets clicked. the odd thing is that it doesn't straight up say the array name, rather just says "Proxy" and i feel like this is my error and I need to fix that. The thing is that it current stores all the data correctly though, but I can't access it. Everything is stored in default, which I'm not sure where default is but I think that's how I'll find it?
+                                >> tired.
+                                >>I AM ABANDONING THE IDEA OF HAVING THE ARRAY IN A SEPARATE VUE COMPONENT. IM JUST PUTTING IT IN ROSTER
+                                >> YourList.vue component removed from app.vue -- im keeping it in the project for posterity's sake
+                                >> using html modal for this because lmao bootstrap
+                                >> alright i did it immediately upon no longer having the desire to move it to another component. that sucked.
+                                >> it's done now.
+        
+        Ver0.85  :   11/24/22   >> Added add/remove functionality to all the cards.
+                                >> Added "View Selected" button where you can view the things you added to the list.
+                                >> If I had the option I would move the position of "View Selected", but Vue literally does everything it can to prevent me from sending arrays back and forth between components.
+--
+------------------------------------------------------------------------------------------------------------------>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <title>Jiggy Centro</title>
+    <meta name="description" content="Smash Brothers Ultimate character selector">
+    <meta name="keywords" content="Smash Bros, Mario, Nintendo Switch, Smash Ultimate, Smash Brothers Ultimate">
+    <meta name="author" content="Bradley Johnson">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--icon at the top-->
+    <link rel="shortcut icon" href="/src/images/jiggyLogo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/images/jiggyLogo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/images/jiggyLogo.png">
+    <link rel="icon" sizes="192x192" href="/src/images/jiggyLogo.png">
+
+    <!--css-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+
+  </head>
+  <body class="container rosterAnimation">
+    <div id="app" class="bg-dark text-white"></div>
+    <!-- built files will be auto injected -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  </body>
+</html>
