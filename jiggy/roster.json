@@ -1,0 +1,427 @@
+[
+  {
+    "num": 1,
+    "name":"Mario",
+    "path": "require('/src/images/Mario.png')"
+  },
+  {
+    "num": 2,
+    "name":"Donkey Kong",
+    "path": "Donkey Kong.png"
+  },
+  {
+    "num": 3,
+    "name":"Link",
+    "path": "Link.png"
+  },
+  {
+    "num": 4,
+    "name":"Samus",
+    "path": "url('Link.png)"
+  },
+  {
+    "num": "4e",
+    "name":"Dark Samus",
+    "path": "Mario.png"
+  },
+  {
+    "num": 5,
+    "name":"Yoshi",
+    "path": "Mario.png"
+  },
+  {
+    "num": 6,
+    "name":"Kirby",
+    "path": "Mario.png"
+  },
+  {
+    "num": 7,
+    "name":"Fox",
+    "path": "Mario.png"
+  },
+  {
+    "num": 8,
+    "name":"Pikachu",
+    "path": "Mario.png"
+  },
+  {
+    "num": 9,
+    "name":"Luigi",
+    "path": "Mario.png"
+  },
+  {
+    "num": 10,
+    "name":"Ness",
+    "path": "Mario.png"
+  },
+  {
+    "num": 11,
+    "name":"Captain Falcon",
+    "path": "Mario.png"
+  },
+  {
+    "num": 12,
+    "name":"Jigglypuff",
+    "path": "Mario.png"
+  },
+  {
+    "num": 13,
+    "name":"Peach",
+    "path": "Mario.png"
+  },
+  {
+    "num": "13e",
+    "name":"Daisy",
+    "path": "Mario.png"
+  },
+  {
+    "num": 14,
+    "name":"Bowser",
+    "path": "Mario.png"
+  },
+  {
+    "num": 15,
+    "name":"Ice Climbers",
+    "path": "Mario.png"
+  },
+  {
+    "num": 16,
+    "name":"Sheik",
+    "path": "Mario.png"
+  },
+  {
+    "num": 17,
+    "name":"Zelda",
+    "path": "Mario.png"
+  },
+  {
+    "num": 18,
+    "name":"Dr. Mario",
+    "path": "Mario.png"
+  },
+  {
+    "num": 19,
+    "name":"Pichu",
+    "path": "Mario.png"
+  },
+  {
+    "num": 20,
+    "name":"Falco",
+    "path": "Mario.png"
+  },
+  {
+    "num": 21,
+    "name":"Marth",
+    "path": "Mario.png"
+  },
+  {
+    "num": "21e",
+    "name":"Lucina",
+    "path": "Mario.png"
+  },
+  {
+    "num": 22,
+    "name":"Young Link",
+    "path": "Mario.png"
+  },
+  {
+    "num": 23,
+    "name":"Ganondorf",
+    "path": "Mario.png"
+  },
+  {
+    "num": 24,
+    "name":"Mewtwo",
+    "path": "Mario.png"
+  },
+  {
+    "num": 25,
+    "name":"Roy",
+    "path": "Mario.png"
+  },
+  {
+    "num": "25e",
+    "name":"Chrom",
+    "path": "Mario.png"
+  },
+  {
+    "num": 26,
+    "name":"Mr. Game & Watch",
+    "path": "Mario.png"
+  },
+  {
+    "num": 27,
+    "name":"Meta Knight",
+    "path": "Mario.png"
+  },
+  {
+    "num": 28,
+    "name":"Pit",
+    "path": "Mario.png"
+  },
+  {
+    "num": "25e",
+    "name":"Dark Pit",
+    "path": "Mario.png"
+  },
+  {
+    "num": 29,
+    "name":"Zero Suit Samus",
+    "path": "Mario.png"
+  },
+  {
+    "num": 30,
+    "name":"Wario",
+    "path": "Mario.png"
+  },
+  {
+    "num": 31,
+    "name":"Snake",
+    "path": "Mario.png"
+  },
+  {
+    "num": 32,
+    "name":"Ike",
+    "path": "Mario.png"
+  },
+  {
+    "num": "33-35",
+    "name":"Pokemon Trainer",
+    "path": "Mario.png"
+  },
+  {
+    "num": 36,
+    "name":"Diddy Kong",
+    "path": "Mario.png"
+  },
+  {
+    "num": 37,
+    "name":"Lucas",
+    "path": "Mario.png"
+  },
+  {
+    "num": 38,
+    "name":"Sonic",
+    "path": "Mario.png"
+  },
+  {
+    "num": 39,
+    "name":"King Dedede",
+    "path": "Mario.png"
+  },
+  {
+    "num": 40,
+    "name":"Olimar",
+    "path": "Mario.png"
+  },
+  {
+    "num": 41,
+    "name":"Lucario",
+    "path": "Mario.png"
+  },
+  {
+    "num": 42,
+    "name":"R.O.B.",
+    "path": "Mario.png"
+  },
+  {
+    "num": 43,
+    "name":"Toon Link",
+    "path": "Mario.png"
+  },
+  {
+    "num": 44,
+    "name":"Wolf",
+    "path": "Mario.png"
+  },
+  {
+    "num": 45,
+    "name":"Villager",
+    "path": "Mario.png"
+  },
+  {
+    "num": 46,
+    "name":"Mega Man",
+    "path": "Mario.png"
+  },
+  {
+    "num": 47,
+    "name":"Wii Fit Trainer",
+    "path": "Mario.png"
+  },
+  {
+    "num": 48,
+    "name":"Rosalina & Luma",
+    "path": "Mario.png"
+  },
+  {
+    "num": 49,
+    "name":"Little Mac",
+    "path": "Mario.png"
+  },
+  {
+    "num": 50,
+    "name":"Greninja",
+    "path": "Mario.png"
+  },
+  {
+    "num": 51,
+    "name":"Mii Brawler",
+    "path": "Mario.png"
+  },
+  {
+    "num": 52,
+    "name":"Mii Swordfighter",
+    "path": "Mario.png"
+  },
+  {
+    "num": 53,
+    "name":"Mii Gunner",
+    "path": "Mario.png"
+  },
+  {
+    "num": 54,
+    "name":"Palutena",
+    "path": "Mario.png"
+  },
+  {
+    "num": 55,
+    "name":"Pac-Man",
+    "path": "Mario.png"
+  },
+  {
+    "num": 56,
+    "name":"Robin",
+    "path": "Mario.png"
+  },
+  {
+    "num": 57,
+    "name":"Shulk",
+    "path": "Mario.png"
+  },
+  {
+    "num": 58,
+    "name":"Bowser Jr.",
+    "path": "Mario.png"
+  },
+  {
+    "num": 59,
+    "name":"Duck Hunt",
+    "path": "Mario.png"
+  },
+  {
+    "num": 60,
+    "name":"Ryu",
+    "path": "Mario.png"
+  },
+  {
+    "num": "60e",
+    "name":"Ken",
+    "path": "Mario.png"
+  },
+  {
+    "num": 61,
+    "name":"Cloud",
+    "path": "Mario.png"
+  },
+  {
+    "num": 62,
+    "name":"Corrin",
+    "path": "Mario.png"
+  },
+  {
+    "num": 63,
+    "name":"Bayonetta",
+    "path": "Mario.png"
+  },
+  {
+    "num": 64,
+    "name":"Inkling",
+    "path": "Mario.png"
+  },
+  {
+    "num": 65,
+    "name":"Ridley",
+    "path": "Mario.png"
+  },
+  {
+    "num": 66,
+    "name":"Simon",
+    "path": "Mario.png"
+  },
+  {
+    "num": "66e",
+    "name":"Richter",
+    "path": "Mario.png"
+  },
+  {
+    "num": 67,
+    "name":"King K. Rool",
+    "path": "Mario.png"
+  },  {
+    "num": 68,
+    "name":"Isabelle",
+    "path": "Mario.png"
+  },  {
+    "num": 69,
+    "name":"Incineroar",
+    "path": "Mario.png"
+  },  {
+    "num": 70,
+    "name":"Piranha Plant",
+    "path": "Mario.png"
+  },  {
+    "num": 71,
+    "name":"Joker",
+    "path": "Mario.png"
+  },  {
+    "num": 72,
+    "name":"Hero",
+    "path": "Mario.png"
+  },  {
+    "num": 73,
+    "name":"Banjo & Kazooie",
+    "path": "Mario.png"
+  },
+  {
+    "num": 74,
+    "name":"Terry",
+    "path": "Mario.png"
+  },
+  {
+    "num": 75,
+    "name":"Byleth",
+    "path": "Mario.png"
+  },
+  {
+    "num": 76,
+    "name":"Min Min",
+    "path": "Mario.png"
+  },
+  {
+    "num": 77,
+    "name":"Steve",
+    "path": "Mario.png"
+  },
+  {
+    "num": 78,
+    "name":"Sephiroth",
+    "path": "Mario.png"
+  },
+  {
+    "num": "79-80",
+    "name":"Pyra and Mythra",
+    "path": "Mario.png"
+  },
+  {
+    "num": 81,
+    "name":"Kazuya",
+    "path": "Mario.png"
+  },
+  {
+    "num": 82,
+    "name":"Sora",
+    "path": "Mario.png"
+  }
+  
+]
