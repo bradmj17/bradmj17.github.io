@@ -1,0 +1,291 @@
+/*made by BRADLEY JOHNSON, 4/25/2022
+---------------------------------------------------------------------------------*/
+
+/*********************************************************************
+***
+#Original Author:    Bradley Johnson                           #
+#Date Created:       03/01/22                                   #
+#Version:      1.00                                            #
+#Date Last Modified:    8/30/22                                #
+#Modified by:       Bradley Johnson                            #
+#Modification log:                                             #
+***
+      Ver0.10  :   03/01/22    >> Original Portfolio using basic CSS and HTML began early in my spring 2022 semester at College of Western Idaho
+                                 >> Proper documentation does not begin until version 1.0, early in my fall 2022 semester
+
+      Ver1.00  :   05/01/22    >> Around this time was the end of my spring 2022 semester, Bootstrap was implemented.
+                                 >> I recieved feedback such as spreading out my information better (less condensed; not three pieces of information on one horizontal section) which I'm really going to focus on for later versions.
+
+      Ver2.00  :   09/04/22    >> No major changes applied to CSS file. Added media query for contact label text. Reccomendation was too big of a word.
+
+******************************************************************** */
+
+
+
+
+
+
+/*-------------BACKGROUND COLORS-------------
+colorway1: [used this one]
+#3d5a80 // #98c1d9 // #e0fbfc // #ee6c4d //#293241 
+    greyblue    skyblue     iceblue   salmonorange    offblack
+colorway2: may change
+#0a2463 // #3e92cc // #fffaff // #d8315b // #1e1b18
+    navy    blueteam White   VoWpink   offblack*/
+.bg-A{
+    background-color:#3d5a80;
+}
+.bg-B{
+    background-color:#98c1d9;
+}
+.bg-C{
+    background-color:#e0fbfc;
+}
+.bg-D{
+    background-color:#ee6c4d;
+}
+.bg-E{
+    background-color:#293241 ;
+}
+.text-orange{
+    color:#ee6c4d;
+}
+.text-BIG{
+    font-weight:bold;
+}
+a{
+    color:#ee6c4d;
+}
+p a:hover{
+    background-color:#98c1d9;
+    color:#ee6c4d;
+}
+/*-------------GENERAL TAGS-------------*/
+nav{
+    font-size:1em;
+    text-align:center;
+}
+.navlink a:hover{
+    color:#ee6c4d;
+}
+.img-nav{
+    width:8%;
+    margin-right:15%;
+    margin-left:-10%;
+}
+div{
+    display:block;
+}
+hr{
+    background-color:#ee6c4d;
+    height: .08rem;
+    margin-left:.5rem;
+    margin-right:.5rem;
+    display:block;
+    margin-top:2rem;
+    margin-bottom:2rem;
+}
+footer{
+    color:#ee6c4d;
+}
+/*the idea was to have cool horizontal slants between each section,
+but it turned out to be a hassle. maybe another time.
+.leftA{
+    background-color: #3d5a80;
+    bottom: -30%;
+    content: "";
+    height: 20%;
+    left: -15%;
+    position: absolute;
+    transform: rotate(5.25deg);
+    width: 120%;
+  }
+  .rightA{
+    background-color: #3d5a80;
+    bottom: -30%;
+    content: "";
+    height: 20%;
+    left: -15%;
+    position: absolute;
+    transform: rotate(-4deg) scaleX(-1);
+    width: 120%;
+  }*/
+
+/*-------------#HOME-------------*/
+.hero{
+    background-image:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0.5)), url('../images/hiking.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+header h1,header a{
+    animation-name: dropname;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-iteration-count:1;
+}
+/*name animation, fades in from the top*/
+@keyframes dropname{
+    from{transform: translateY(-200px);opacity:0%;/*opacity is 0 then goes to 100*/}
+    to{transform: translateY(100px);opacity:100%}
+    }
+.welcome{
+    position:relative;
+    top:20%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:1em;
+}
+.welcome p{
+    font-size:1.5em;
+    width:70%;
+    line-height:1.5;
+}
+.lead{
+    font-size:1.em;
+}
+.btn:hover{
+ background-color:#ee6c4d;
+}
+/*-------------#ABOUT-------------*/
+.uppies{
+    position:relative;
+    top:-20px;
+}
+.display-4{
+font-weight:500;
+}
+/*-------------#PROJECTS-------------*/
+.card:hover, img{
+    transform:scale(1.01);
+    animation-duration:2s;
+    animation-fill-mode:both;
+}
+.hide{
+    /*keeps the spacing but hides the content; designed for the card i want to hide for now*/
+    opacity:0%;
+}
+/*-------------#INTERESTS-------------*/
+
+/*-------------#CONTRACT-------------*/
+label {
+    display: block;
+    padding-top: 3%;
+}
+.submit:hover{
+    animation-name: selectOrange;
+    animation-duration:.3s;
+    animation-fill-mode:forwards;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    height: 5px;
+    background: #ee6c4d;
+    border-radius: 5px;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #98c1d9;
+    cursor: ew-resize;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+    cursor:pointer;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 2px solid #e0fbfc;
+    background-color: #e0fbfc;
+    border-radius: 50%;
+  }
+  /*animates to orange when selected*/
+input[type="radio"]:checked {
+    /*background-color: #ee6c4d;*/
+    animation-name: selectOrange;
+    animation-duration:.3s;
+    animation-fill-mode:forwards;
+  }
+@keyframes selectOrange {
+    from {background-color: #e0fbfc}
+    to {background-color: #ee6c4d}
+  }
+/*this does activate when refreshing #Contact, but it's hardly noticable
+it transitions from the selected orange to the lightblue upon changing the selected radio button*/
+input[type=radio]:not(:checked) {
+    animation-name:deselect;
+   animation-duration:.3s;
+   animation-fill-mode:forwards;
+  }
+@keyframes deselect {
+    from {background-color: #ee6c4d}
+    to {background-color: #e0fbfc}
+  }
+/*-------------#FOOTER-------------*/
+#copyright{
+    color:#ee6c4d;
+}
+
+/*-------------Media Query for Tablet Viewport, hamburger begins-------------*/
+@media (max-width: 768px) {  
+    /* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+    .img-nav{
+        display:none;
+    } 
+    .col-sm-2,.col-sm-4{
+        display:block;
+    }
+
+}
+
+/*-------------Media Query for bigger-than-mobile Viewport-------------*/
+@media (min-width: 768px) {  
+    /*hr goes away*/
+    .btn {
+        grid-column: 1 / span 3;
+    }
+    hr{
+        display:none;
+    }
+    
+    nav{
+        font-size:1.4em;
+    }
+    #ratingmargindesktop{
+        margin-top:10%;
+    }
+    .hideinDesktop{
+        display:none;
+    }
+}
+/*-------------Media Query to make the reccomendation not look bad on somewhat normal sized monitors-------------*/
+@media (max-width: 1651px) {  
+    /*hr goes away*/
+    label{
+        font-size:80%;
+    }
+}
+
