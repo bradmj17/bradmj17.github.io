@@ -1,0 +1,390 @@
+/*********************************************************************
+***
+*Original Author:  Bradley Johnson                           *
+*Date Created:   8/22/22                                     *
+*Version:       4.00                                         *
+*Date Last Modified:    9/30/22                             *
+*Modified by:       Bradley Johnson                          *
+*Modification log:                                           *
+
+        Ver2.00 :   09/10/22    >> This CSS file compies the majority of CSS and is present in each HTML.
+                                >> the master update log is located in launchpage.
+                                
+        Ver4.00 :   09/30/22    >> several updates can be viewed in the launchPage.html master log
+
+***
+******************************************************************** */
+/*COLORS TO APPLY TO TEXT*/
+.colorG{color:#FEC271;}
+.colorL{color:#8EC9C0;}
+.colorO{color:#3D607D;}
+.colorA{color:#EEBC90;}
+.colorM{color:#86DCDB;}
+/* https://coolors.co/fec271-8ec9c0-3d607d-eebc90-86dcdb
+https://pbs.twimg.com/media/FaxZ3tqUEAAWc35?format=jpg&name=large */
+
+
+
+/*top ribbon menu*/
+#active{
+  background-color:#EEBC90;
+}
+header{
+  align-items:center;
+  position:sticky;
+}
+span{
+  font-size:2em;
+  float:none;
+}
+nav{   
+  margin: 0 auto;
+  display:block; 
+  z-index:3;
+  position:relative;
+  }
+ul {
+  margin: auto;
+  list-style-type: none;
+  margin: 0px;
+  margin-right:0px;
+  padding: 20px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.136);
+  
+}
+
+nav ul li {
+    margin-left:2%;
+  float:left;
+}
+nav ul li img{
+    margin-right:40px;
+}
+nav ul li a {
+  margin-top:auto;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 22px;
+  text-decoration: none;
+  font-size: 1.3em;
+  position:relative;
+}
+span#effect{
+  font-size:1.5em;
+}
+#hamburger{
+  display:none;
+}
+nav ul li p a img{
+    block-size: 40px;
+    float:none;
+    height:auto;
+    margin-left:0px;
+  margin-right:0px;
+}
+nav ul li p a{
+  height:50px;
+  width:50px;
+  z-index:5;
+  }
+
+li a:hover {
+  background-color: #8EC9C0;
+  text-decoration:underline;
+}
+#GLOAMingoAnchor:hover {
+  background-color: white;
+  text-decoration:underline;
+  border-radius:50%;
+  border:#86DCDB;
+  border-width:15px;
+}
+.pog {
+    margin-top:1%;
+    margin-left:2%;
+    width:10rem;
+    height:auto;
+    float:none;
+}
+/*basic page elements*/
+body{
+  
+  width: 69%;
+padding-left: 0%;
+padding-right: 0%;
+margin: auto;
+float:none;
+}
+h1, h2, h3, h4, p, a{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h2 {
+  font-size:1.3rem;
+}
+.homeh2{
+  width:30%;
+  display:block;
+  color:#EEBC90;
+  font-size:3rem;
+  
+}
+.gradient {
+    background-image: radial-gradient(
+        circle at 50% 50%, 
+        #fec171b5 1%, 
+        #8EC9C0,#EEBC90
+    );
+    z-index:-1;
+}
+section{
+    margin:0px;
+}
+main{
+  margin-top:0px;
+}
+article{
+  background-color:rgba(145, 158, 162, 0.841);
+}
+div{
+  display:block;
+  padding:0.5%;
+}
+main div{
+  background-color:whitesmoke;
+  text-align:left;
+  display:flex;
+}
+.item{
+  float:left;
+  border:#3D607D;
+  border-width:2px;
+}
+main div h1{
+  font-size:2.9em;
+  margin-left:auto;
+  margin-right:auto;
+}
+main div p{
+  margin-left:auto;
+  margin-right:auto;
+  font-size:1.9em;
+  font-style: normal;
+}
+.center{
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+}
+.centerHamburger{
+  width:15%;
+  height:20%;
+  margin-left:15px;
+  margin-right:auto;
+}
+.home p{
+  font-size:1.7em;
+}
+p{
+  font-size:1.2em;
+  padding:1%;
+}
+hr{
+  background-color:rgba(145, 158, 162, 0.841);
+  border-bottom:none;
+  border-right:none;
+  margin-left:2%;
+  margin-right:2%;
+  margin-top:5%;
+  display:block;
+  }
+  /* drop down */
+  
+ 
+/*aligned name-of-page section [title of page, section underneath header]*/
+
+.background-video{
+  height: 100%;
+  width: 100%;
+  object-fit:fill;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+.left{
+  float:left;
+  width:30%;
+  padding:1%;
+  border-radius:7%;
+  height:50%;
+}
+/*COLORED SECTIONS*/
+.section2{
+  background-color:#EEBC90;
+  color:whitesmoke;
+  text-decoration:none;
+}
+.highlight:hover{
+  background-color:#8EC9C0;
+}
+.section3{
+  background-color:#8EC9C0;
+  color:#3D607D;
+}
+.section4{
+  background-color:#3D607D;
+  color:#86DCDB;
+}
+/*SHOP PREVIEW SECTION*/
+.itemUL{
+  background-color:rgba(255, 255, 255, 0);
+  padding:3%;
+  display:flex;
+  margin:3%;
+  width:100%;
+  height:100%;
+}
+.itemInflatables{
+  border:#86DCDB;
+  border-radius:2%;
+  width:100%;
+  height:100%;
+  background-image: url("../images/orcaFloat.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  padding:3% 3% 0% 3%;
+}
+.itemTowels{
+  border:#86DCDB;
+  border-radius:2%;
+  width:100%;
+  height:100%;
+  background-image: url("../images/girlTowel.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  padding:3% 3% 0% 3%;
+}
+ul.itemUL a{
+  text-decoration:none;
+}
+ul.itemUL a:hover{
+  text-decoration:none;
+}
+.itemSwimwear{
+  border:#86DCDB;
+  border-radius:2%;
+  width:100%;
+  height:100%;
+  background-image: url("../images/groupClothes.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  padding:3% 3% 0% 3%;
+}
+
+.itemText{
+  text-align:center;
+  background-color:#eebc90b5;
+  margin-bottom:ex;
+  padding:10% 10% 10% 10%;
+  color:whitesmoke;
+  font-weight:bold;
+  margin-top:30%;
+}
+
+#slides img {
+  display: none;
+  width:50%;
+}
+#slide img{
+  display:block;
+  position:absolute;
+  width:50%;
+}
+h2#caption{
+  display:block;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+}
+img#slide{
+border-radius:2%;
+background-color:#3D607D;
+width:50%;
+}
+div#slides{
+  display:none;
+}
+
+
+/*footer*/
+footer{
+  text-align:center;
+  text-decoration: none;
+}
+footer a{
+  text-decoration:none;
+  color:#3D607D;
+}
+footer p{
+  margin:-1%;
+  font-size:1rem;
+}
+
+
+
+ /*------@MEDIA------*/
+ @media (max-width: 1200px) {
+  .namecard{
+    display:block;
+    margin-top:0%;
+  }
+  .left{
+    display:none;
+  }
+  .itemSwimwear, .itemInflatables, .itemTowels{
+    display:inline-block;
+    width:90%;
+    margin-bottom:2%;
+  }
+  .itemUL{
+    display:block;
+    padding:3%;
+  }
+  .itemText{
+    font-size:1rem;
+    padding:2%;
+  }
+  main div p{
+    font-size:1.3rem;
+  }
+  div{
+    padding:4%;
+  }
+  nav{
+    margin-bottom:3%;
+  }
+  img.pog{
+    display:none;
+  }
+  nav ul li{
+    width:80%;
+    margin-left:10%;
+  }
+  .mobileNAV{
+    display:block;
+  }
+  #hamburger{
+    display:block;
+  }
+  .normal{
+    display:none;
+  }
+  span#effect{
+    font-size:20px;
+  }
+}
