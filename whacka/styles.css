@@ -1,0 +1,93 @@
+body{
+    background-color:rgb(79, 174, 196);
+}
+h1{
+    color:green;
+}
+.grid{
+    width:700px;
+    height:600px;
+    display:flex;
+    flex-wrap:wrap;
+    margin: auto;
+}
+.top{
+    font-family: arial;
+    width: 100%;
+    height: auto;
+    margin-bottom:2%;
+    display:flex;
+    flex-wrap:wrap;
+}
+.top div{
+    padding:2%;
+    border-style: solid;
+    border-color: green;
+    background-color:white;
+    margin:auto;
+}
+
+.square{
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+  border-color: green;
+  background-color:white;
+}
+
+.mole{
+    /*ttyd whacka*/
+    background-image: url("images/whackaBump.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+.mole:hover{
+    background-color:rgba(136, 0, 0, 0.384);
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255, 151, 110);
+    color: white;
+    text-align: center;
+    padding:0.5%;
+}
+/*looks good on mobile with this*/
+@media only screen and (max-width: 600px) {
+    .grid{
+        width:100%;
+        height:100%;
+        display:flex;
+        flex-wrap:wrap;
+        margin: auto;
+    }
+    .top{
+        font-family: arial;
+        width: 100%;
+        height: auto;
+    
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .top div{
+        padding:2%;
+        border-style: solid;
+        border-color: green;
+        margin-bottom:2%;
+        /* Center horizontally*/
+        margin: 0 auto;
+        background-color:white;
+    }
+    
+    .square{
+        height: 30vw;
+        width: 30vw;
+        border-style: solid;
+      border-color: green;
+      background-color:white;
+    }
+    
+  }
