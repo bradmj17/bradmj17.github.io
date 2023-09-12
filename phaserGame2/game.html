@@ -1,0 +1,296 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>Brad's Game</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding:20;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var config = {
+    type: Phaser.AUTO,
+    width: 400,
+    height: 800,
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 150 },
+            debug: false
+        }
+    },
+    scene: {
+        preload: preload,
+        create: create,
+        update: update
+    }
+};
+
+var player;
+var bombs;
+var platforms;
+var meteors;
+var cursors;
+var score = 0;
+var gameOver = false;
+var scoreText;
+var cooldown = 0;
+
+var game = new Phaser.Game(config);
+
+function preload ()
+{
+    this.load.image('meteor', 'assets/pixil-frame-0.png');
+    this.load.image('sky', 'assets/space.jpg');
+    this.load.image('ground', 'assets/platform.png');
+
+    this.load.image('bomb', 'assets/bomb.png');
+    this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
+}
+
+function create ()
+{
+
+    
+    //  A simple background for our game
+    this.add.image(400, 600, 'sky');
+    platforms = this.physics.add.staticGroup();
+    platforms.create(400, 800, 'ground').setScale(2).refreshBody();
+
+   // platforms.create(200, -20, 'ground');
+    platforms.create(200, -40, 'ground');
+
+
+    // The player and its settings
+    player = this.physics.add.sprite(200, 700, 'dude');
+
+    //  Player physics properties. Give the little guy a slight bounce.
+    player.setBounce(0.15);
+    player.setCollideWorldBounds(true);
+
+    //  Our player animations, turning, walking left and walking right.
+    this.anims.create({
+        key: 'left',
+        frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+        frameRate: 10,
+        repeat: -1
+    });
+
+    this.anims.create({
+        key: 'turn',
+        frames: [ { key: 'dude', frame: 4 } ],
+        frameRate: 20
+    });
+
+    this.anims.create({
+        key: 'right',
+        frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+        frameRate: 10,
+        repeat: -1
+    });
+
+    //  Input Events
+    cursors = this.input.keyboard.createCursorKeys();
+
+    //  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
+
+    
+
+    meteors = this.physics.add.group({
+        key: 'meteor',
+        repeat: 5,
+
+        setXY: { x: 20, y: -2, stepX: 70 }
+    });
+   
+
+    meteors.children.iterate(function (child) {
+
+        //  Give each star a slightly different bounce
+        child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+
+    });
+
+    bombs = this.physics.add.group();
+
+    //  The score
+    scoreText = this.add.text(16, 16, 'Meteors: 0', { fontSize: '40px', fill: '#498645' });
+
+    //  Collide the player and the stars with the platforms
+    this.physics.add.collider(player, platforms);
+    //this.physics.add.collider(meteors, platforms);
+  //  this.physics.add.collider(meteors, bombs);
+   // this.physics.add.collider(bombs, platforms);
+
+    //  Checks to see if the player overlaps with any of the stars, if he does call the collectStar function
+
+    //this.physics.add.collider(player, bombs, hitBomb, null, this);
+    this.physics.add.collider(platforms, bombs, hitCeiling, null, this);
+    this.physics.add.collider(meteors, bombs, hitMeteor, null, this);
+    this.physics.add.collider(meteors, platforms, MeteorLand, null, this);
+    this.physics.add.collider(player, meteors, endGame, null, this);
+}
+
+function update ()
+{
+    if (gameOver)
+    {
+        return;
+    }
+
+    if (cursors.left.isDown)
+    {
+        player.setVelocityX(-130);
+
+        player.anims.play('left', true);
+    }
+    else if (cursors.right.isDown)
+    {
+        player.setVelocityX(130);
+
+        player.anims.play('right', true);
+    }
+    else
+    {
+        player.setVelocityX(0);
+
+        player.anims.play('turn');
+    }
+
+    if (cursors.up.isDown && player.body.touching.down)
+    {
+        
+        if(cooldown != 20 ){
+            var x = player.x;
+            var y = player.y;
+            var bomb = bombs.create(x, y, 'bomb');
+            bomb.setBounce(1);
+            bomb.setCollideWorldBounds(false);
+            bomb.setVelocity(Phaser.Math.Between(-20, 20), -650);
+            bomb.allowGravity = false;
+            cooldown = 0;
+        }else{
+            cooldown++
+        }
+      
+        
+    };
+    }
+
+
+
+
+function endGame (player, meteor)
+{
+    this.physics.pause();
+
+    player.setTint(0xff0000);
+
+    player.anims.play('turn');
+
+    scoreText.setText('Meteors: ' + score +"\n\nGAME OVER");
+
+    gameOver = true;
+}
+function hitMeteor (meteor, bomb)
+{
+    meteor.disableBody(true, true);
+    bomb.disableBody(true, true);
+
+    //  Add and update the score
+    score += 1;
+    scoreText.setText('Meteors: ' + score);
+
+    if (meteors.countActive(true) === 0)
+    {
+        //  A new batch of stars to collect
+        meteors = this.physics.add.group({
+        key: 'meteor',
+        repeat: 5,
+
+        setXY: { x: 20, y: 2, stepX: 70 }
+    });
+   // this.physics.add.collider(meteors, platforms);
+    this.physics.add.collider(meteors, bombs, hitMeteor, null, this);
+    this.physics.add.collider(meteors, platforms, MeteorLand, null, this);
+    this.physics.add.collider(player, meteors, endGame, null, this);
+    meteors.children.iterate(function (child) {
+
+//  Give each star a slightly different bounce
+child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+
+});
+
+
+    }
+
+}
+function hitCeiling (platform, bomb)
+{
+    bomb.disableBody(true, true);
+
+}
+function MeteorLand (meteor, platform)
+{
+    meteor.disableBody(true, true);
+    if (meteors.countActive(true) === 0)
+    {
+        //  A new batch of stars to collect
+        meteors = this.physics.add.group({
+        key: 'meteor',
+        repeat: 5,
+
+        setXY: { x: 20, y: 2, stepX: 70 }
+    });
+   // this.physics.add.collider(meteors, platforms);
+    this.physics.add.collider(meteors, bombs, hitMeteor, null, this);
+    this.physics.add.collider(meteors, platforms, MeteorLand, null, this);
+    this.physics.add.collider(player, meteors, endGame, null, this);
+    meteors.children.iterate(function (child) {
+
+//  Give each star a slightly different bounce
+child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+
+});
+
+
+    }
+
+}
+
+
+</script>
+<div style="display:flex;background-color:black; width:400px; color: green;">
+<p>brad's game</p>
+<button id="show" style="background-color:black; color:green; left:350px; position:fixed; width:50px;">rules</button>
+<button id="hide" style="background-color:black; color:green; left:350px; position:fixed; width:50px; display:none;">hide</button>
+
+</div>
+<div style="display:none; background-color:black; color:white;width:400px;margin:0;padding:0;" id="rules" >
+    <p>press up arrow to fire bombs</p>
+<p>move left and right with arrow keys</p>
+<p>destroy meteors to score points</p>
+<p>refresh game when you game over</p>
+</div>
+<script>
+    document.getElementById("hide").onclick = function() {
+    document.getElementById("rules").style.display = "none";
+    document.getElementById("show").style.display = "block";
+    document.getElementById("hide").style.display = "none";
+}
+ 
+document.getElementById("show").onclick = function() {
+    document.getElementById("rules").style.display = "block";
+    document.getElementById("hide").style.display = "block";
+    document.getElementById("show").style.display = "none";
+}
+</script>
+</body>
+</html>
