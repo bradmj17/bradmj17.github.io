@@ -1,0 +1,9 @@
+{
+    "title": "Bradley's List",
+    "description": "Fetch remote data from Adhithi's blog",
+    "articles": [
+      { "id": "1", "name": "Burger", "price": "10.00" },
+      { "id": "2", "name": "Large Pizza", "price": "12.00" },
+      { "id": "3", "name": "Corndog", "price": "5.00" }
+    ]
+  }
