@@ -31,32 +31,32 @@ colorway2: may change
 #0a2463 // #3e92cc // #fffaff // #d8315b // #1e1b18
     navy    blueteam White   VoWpink   offblack*/
 .bg-A{
-    background-color:#3d5a80;
+    background-color:#344E41;
 }
 .bg-B{
-    background-color:#98c1d9;
+    background-color:#3A5A40;
 }
 .bg-C{
-    background-color:#e0fbfc;
+    background-color:#c4996f;
 }
 .bg-D{
-    background-color:#ee6c4d;
+    background-color:#588157;
 }
 .bg-E{
-    background-color:#293241 ;
+    background-color:#665849 ;
 }
 .text-orange{
-    color:#ee6c4d;
+    color:#DDA15E;
 }
 .text-BIG{
     font-weight:bold;
 }
 a{
-    color:#ee6c4d;
+    color:#588157;
 }
 p a:hover{
-    background-color:#98c1d9;
-    color:#ee6c4d;
+    background-color:#FEFAE0;
+    color:#588157;
 }
 /*-------------GENERAL TAGS-------------*/
 nav{
@@ -64,7 +64,7 @@ nav{
     text-align:center;
 }
 .navlink a:hover{
-    color:#ee6c4d;
+    color:#c4996f;
 }
 .img-nav{
     width:8%;
@@ -75,7 +75,7 @@ div{
     display:block;
 }
 hr{
-    background-color:#ee6c4d;
+    background-color:#c4996f;
     height: .08rem;
     margin-left:.5rem;
     margin-right:.5rem;
@@ -84,7 +84,7 @@ hr{
     margin-bottom:2rem;
 }
 footer{
-    color:#ee6c4d;
+    color:#c4996f;
 }
 /*the idea was to have cool horizontal slants between each section,
 but it turned out to be a hassle. maybe another time.
@@ -111,7 +111,7 @@ but it turned out to be a hassle. maybe another time.
 
 /*-------------#HOME-------------*/
 .hero{
-    background-image:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0.5)), url('../images/hiking.jpg');
+    background-image:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0.5)), url('../images/banff.jpg');
     background-size:cover;
     background-position: center;
     background-repeat:no-repeat;
@@ -143,7 +143,7 @@ header h1,header a{
     font-size:1.em;
 }
 .btn:hover{
- background-color:#ee6c4d;
+ background-color:#c4996f;
 }
 /*-------------#ABOUT-------------*/
 .uppies{
@@ -178,7 +178,7 @@ label {
 input[type="range"] {
     -webkit-appearance: none;
     height: 5px;
-    background: #ee6c4d;
+    background: #c4996f;
     border-radius: 5px;
   }
   
@@ -209,8 +209,8 @@ input[type="radio"] {
     cursor:pointer;
     /* background-color only for content */
     background-clip: content-box;
-    border: 2px solid #e0fbfc;
-    background-color: #e0fbfc;
+    border: 2px solid #588157;
+    background-color: #588157;
     border-radius: 50%;
   }
   /*animates to orange when selected*/
@@ -221,8 +221,8 @@ input[type="radio"]:checked {
     animation-fill-mode:forwards;
   }
 @keyframes selectOrange {
-    from {background-color: #e0fbfc}
-    to {background-color: #ee6c4d}
+    from {background-color: #588157}
+    to {background-color: #c4996f}
   }
 /*this does activate when refreshing #Contact, but it's hardly noticable
 it transitions from the selected orange to the lightblue upon changing the selected radio button*/
@@ -232,12 +232,12 @@ input[type=radio]:not(:checked) {
    animation-fill-mode:forwards;
   }
 @keyframes deselect {
-    from {background-color: #ee6c4d}
-    to {background-color: #e0fbfc}
+    from {background-color: #c4996f}
+    to {background-color: #588157}
   }
 /*-------------#FOOTER-------------*/
 #copyright{
-    color:#ee6c4d;
+    color:#c4996f;
 }
 
 /*-------------Media Query for Tablet Viewport, hamburger begins-------------*/
