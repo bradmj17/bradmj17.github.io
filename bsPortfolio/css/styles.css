@@ -176,7 +176,7 @@ label {
     animation-fill-mode:forwards;
 }
 input[type="range"] {
-    -webkit-appearance: none;
+   /* -webkit-appearance: none;*/
     height: 5px;
     background: #c4996f;
     border-radius: 5px;
