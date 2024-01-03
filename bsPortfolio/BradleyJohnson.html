@@ -3,8 +3,8 @@
 --
 #Original Author:    Bradley Johnson                           #
 #Date Created:       03/01/22                                  #
-#Version:      3.70                                            #
-#Date Last Modified:    12/31/23                               #
+#Version:      4.00                                            #
+#Date Last Modified:    01/03/24                              #
 #Modified by:       Bradley Johnson                            #
 #Modification log:                                             #
 
@@ -40,6 +40,12 @@
                                >> mimir was zipped and able to be downloaded. github cannot contain mimir, so im removing it from the file and the download link in the mimir modal
 
       Ver3.70  :   12/12/22    >> Updating colors, layout, and new projects
+
+      Ver4.00  :   01/03/24    >> Added Projects page that contains more projects without cluttering the main, single-page format.
+                               >> Added many projects.
+                               >> Removed game section in bio.
+                               >> Added portfolio download next to past work experience.
+                               >> Chart.js added below education
         --
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
@@ -66,6 +72,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <!--chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
     <!--Bootstrap Font Icons CDN-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
@@ -129,15 +137,19 @@
             <a href="https://cwi.edu/" target="_blank" class="smooth-link rounded"><img src="./images/cwi.jpg"  alt="College of Western Idaho" class="img-fluid"></a>
           </figure>
           <h1>College of Western Idaho</h1>
-          <p class="lead">I completed my two-year associate's degree in Software Development in Fall 2023. This class had an emphasis on web development and accomplishing tasks under real-world timelines to help prepare for the workforce.</p>
+          <p class="lead">I completed my two-year associate's degree in Software Development in Fall 2023. This class had an emphasis on web development and accomplishing tasks under real-world timelines to help prepare for the workforce. I learned programming languages such as HTML, C#, C++, JavaScript, SQL, PHP, and more.</p>
         </div></div>
         <div class="col-sm-12">        
         <div class="col-sm-8 p-3 table-responsive m-auto">
 </div> 
+          <div class="container bg-A p-5 rounded">
+            <canvas id="myChart"></canvas>
+          </div>
+         
           <hr class="hr" />
           <div class="col-8 m-auto">
-          <h1>Past Work Experience</h1>
-          
+          <h1 class="mt-5">Resume&nbsp;&nbsp;<a href="Resume_BradleyJohnson_Jan2024.docx.pdf" target="_blank"><i class="bi bi-arrow-up-right-square"></i></a></h1>
+
           <div class="row mb-5 tablet-desktop">
             <div class="col-7 flex-column mobile"><p class="lead">Since 2019, I've been working summers at <span class="font-weight-normal">Western Water Works Supply</span>, a pipe drafting company based outside of Boise. Here, I recieve plans approved by the sales team, and translate a PDF file of complex pipe into AutoCAD. I've had success at this job because I have four years of AutoCAD experience and I am well-versed in Microsoft Excel, allowing me to read both detailed spreadsheets and AutoCAD plans.</p></div>
             <div class="col-5 flex-column float-right">
@@ -163,7 +175,7 @@
 
         <div class="bg-A p-5 text-white mt-3 " id="Projects">
           <div class="row">
-            <h1 class="col-12 text-center mb-5 display-4">Past Projects <a href="Projects.html"><i class="bi bi-arrow-up-right-square"></i></a></h1>
+            <h1 class="col-12 text-center mb-5 display-4">Past Projects&nbsp;&nbsp;<a href="Projects.html"><i class="bi bi-arrow-up-right-square"></i></a></h1>
             <div class="col-md-4">
               <div class="card bg-E p-3">
                   <img class="card-img-top" src="./images/Peppermint.png" alt="PEPPERMINT preview image">
@@ -809,5 +821,64 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="scripts/contact.js"></script>
 <script src="scripts/script.js"></script>
+<!--Chart.js-->
+<script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['HTML', 'CSS', 'C#', 'C++', 'SQL', 'PHP' ],
+      datasets: [{
+        label: 'Skill Level',
+        data: [8, 7, 8, 6, 7,4],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 0, 132, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 0, 132, 1)'
+        ],
+        borderWidth: 3
+      }]
+    },
+    options: {
+      fontColor:'white',
+        scales: {
+          y: {
+            beginAtZero: true,
+           
+            ticks:{
+              color: 'white'
+            }
+          },
+          x:{
+            ticks:{
+              color: 'white'
+            }
+          }
+        },
+        plugins: {
+          labels:{
+            fontColor:'white'
+          },
+          legend: {
+            labels: {
+              color: 'white',
+              fontColor: 'white'
+            }
+          }
+        }
+      }
+    });
+</script>
   </body>
 </html>
