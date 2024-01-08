@@ -1,51 +1,8 @@
 <!doctype html>
 <!----------------------------------------------------------------------------------------------------------------
 --
-#Original Author:    Bradley Johnson                           #
-#Date Created:       03/01/22                                  #
-#Version:      3.70                                            #
-#Date Last Modified:    12/31/23                               #
-#Modified by:       Bradley Johnson                            #
-#Modification log:                                             #
-
-      Ver0.10  :   03/01/22    >> Original Portfolio using basic CSS and HTML began early in my spring 2022 semester at College of Western Idaho
-                               >> Proper documentation does not begin until version 1.0, early in my fall 2022 semester
-                               >> test github edit
-
-      Ver1.00  :   05/01/22    >> Around this time was the end of my spring 2022 semester, Bootstrap was implemented.
-                               >> I recieved feedback such as spreading out my information better (less condensed; not three pieces of information on one horizontal section) which I'm really going to focus on for later versions.
-
-      Ver1.30  :   08/30/22    >> Fall 2022 Semester, modification log updated properly now. additional divs included to add more blank space   
-        
-      Ver1.56  :   09/01/22    >> Couldn't quite nail the look. Adding lots of whitespace is tough. Eventually got a hang of it and added new divs surrounding everything. Also m-auto is a cheat code.
-
-      Ver2.00  :   09/04/22    >> Final touches. Changed "About" page to "Education". Changed "Interests" to "Bio". Both sections reworked to display in (mostly) a single column. 
-                               >> background image changed from some random concept art, actually a picture of me now. logo still not worked with. literally just a picture of myself that i zoomed in really far and cropped for the logo and icon.
-                                
-      Ver2.20  :   11/28/22    >> Updating for mock inverviews, 2022 Fall Semester.
-                               >> Coming off of a Bootstrap 5 project, there's a lot I'd want to change with this page but not sure how much time and energy I should be devoting to such this week.
-                               >> THINGS TO CHANGE: 1) Update Past Projects with more, scroll right/left?? 2) Make Bio look better and have more meaningful content 3) Some additional pictures 4) validation in form. Maybe change the form entirely.
-
-      Ver2.50  :   12/07/22    >> last minute changes; fully updated jiggycentro with the new version
-                               >> updated classes, updated some padding, changed some columns, combined two sections of bio into one,
-                               >> logo still my face and needs changed somehow. i can brand myself later.
-
-      Ver2.76  :   12/12/22    >> Added shaymin.gg and mimir to projects tab. there's an open space as of this update
-                               >> separate mobile and tablet bio sections because that has been a pain point for decades. the inbetween-size is still awful.
-                               >> need to add more validation to form!
-
-      Ver3.00  :   12/12/22    >> updated validation. was a hassle to get jquery/js validation to cooperate with sending the email.
-                               >> a couple elements wouldn't send to the email template.
-                               >> it's on purpose that the only required elements are name, email, and message/comment section
-                               >> mimir was zipped and able to be downloaded. github cannot contain mimir, so im removing it from the file and the download link in the mimir modal
-
-      Ver3.70  :   12/12/22    >> Updating colors, layout, and new projects
-
-      Ver4.00  :   01/03/24    >> Added Projects page that contains more projects without cluttering the main, single-page format.
-                               >> Added many projects.
-                               >> Removed game section in bio.
-                               >> Added portfolio download next to past work experience.
-        --
+PLEASE VIEW MODLOG @ BradleyJohnson.html
+--
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
   <head>
@@ -111,6 +68,242 @@
         <div class="bg-A p-5 text-white mt-3 " id="Projects">
           <div class="row">
             <h1 class="col-12 text-center mb-5 display-4">All Projects</h1>
+            <div class="col-md-4 mt-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/SFBThumbnail.jpg" alt="SFB preview image">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>Scott's Furniture Barn<span class="float-right">December 2023</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <span class="badge badge-primary">HTML</span>
+                    <span class="badge badge-primary">CSS</span>
+                    <span class="badge badge-info">Bootstrap</span>
+                    <span class="badge badge-warning">PHP</span>
+                    <span class="badge badge-warning">SQL</span>
+                      <p>A collaborative assignment in my SWDV280 class, myself and six others were assigned to create a website for our client, Scott. This is an E-Commerce page complete with a LAMP stack and is an exercise for our frontend and backend development.
+                      </p>
+                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#SFB">Click here for more</button>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/SHATTEREDthumbnail.jpg" alt="Shattered preview image">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>SHATTERED: A 3D RPG<span class="float-right">December 2023</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <span class="badge badge-danger">C#</span>
+                    <span class="badge badge-dark">Unity</span>
+                      <p>Made with Unity, I made a 3D RPG akin to the Persona Series or Pokemon. Features include persisting data across scenes, turn-based instanced fights, cutscenes, dialog, and more.
+                      </p>
+                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#SHATTERED">Click here for more</button>
+                  </div>
+              </div>
+            </div>  
+            <div class="col-md-4 mt-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/FloodEscapeLobby (1).png" alt="Flood Escape preview image">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>Flood Escape<span class="float-right">November 2023</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <span class="badge badge-danger">C++</span>
+                    <span class="badge badge-dark">Unreal Engine</span>
+                      <p>Made in Unreal Engine for Fortnite. My first mini-game like experience. Features an in-game shop, and opt-in/out game system, multiple maps, and cool gameplay.
+                      </p>
+                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#FLOODESCAPE">Click here for more</button>
+                  </div>
+              </div>
+            </div> 
+            <div class="col-md-4 mt-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/WWSapssc.jpg" alt="WWSapssc preview image">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>WWSapssc<span class="float-right">October 2023</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <span class="badge badge-danger">C#</span>
+                      <p>Working with Western Waterworks Supply & Fabrication, I created a program that automates some of the processes when adding pipe in AutoCAD. Please watch the video and read the description.
+                      </p>
+                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#WWSapssc">Click here for more</button>
+                  </div>
+              </div>
+            </div>  
+            <div class="col-md-4 mt-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/EffigyGoods.jpg" alt="Effigy Goods preview image">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>Effigy Goods<span class="float-right">October 2023</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <span class="badge badge-primary">HTML</span>
+                    <span class="badge badge-info">Bootstrap</span>
+                    <span class="badge badge-warning">PHP</span>
+                    <span class="badge badge-warning">SQL</span>
+
+                      <p>A solo project where I made an E-Commerce website with SQL and PHPmyadmin. Complete with a login feature.
+                      </p>
+                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#Effigy">Click here for more</button>
+                  </div>
+              </div>
+            </div>  
+            <div class="col-md-4 mt-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/CATRUN_thumbnail.png" alt="Cat Run preview image">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>Cat Run<span class="float-right">September 2023</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <span class="badge badge-dark">GDevelop 5</span>
+                      <p>Fundamental game created inside GDevelop 5, a browser-based game creator engine. Features custom sounds and original soundtrack.
+                      </p>
+                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#CATRUN">Click here for more</button>
+                  </div>
+              </div>
+            </div>  
+            <div class="col-md-4 mt-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/Peppermint.png" alt="PEPPERMINT preview image">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>PEPPERMINT<span class="float-right">August 2023</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <span class="badge badge-danger">C++</span>
+                    <span class="badge badge-dark">Unreal Engine</span>
+                      <p>Made in Unreal Engine for Fortnite, uses C++. A 2D-Platformer, 3D-Shooter, 3D-Melee, story-driven experience.
+                      </p>
+                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#PEPPERMINT">Click here for more</button>
+                  </div>
+              </div>
+            </div>  
+            <div class="col-md-4 mt-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/TDWS.PNG" alt="TDWS preview image">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>Top-Down Wilderness Survival<span class="float-right">August 2023</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <span class="badge badge-danger">C++</span>
+                    <span class="badge badge-dark">Unreal Engine</span>
+                      <p>Made in Unreal Engine for Fortnite. Features a camera that constantly updates and tracks the player. The objective is to fight wolves and find parts to repair your car.
+                      </p>
+                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#TDWS">Click here for more</button>
+                  </div>
+              </div>
+            </div> 
+            <div class="col-md-4 mt-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/C2S.jpg" alt="Cut-to-Static preview image">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>Cut-to-Static Records<span class="float-right">May 2023</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <span class="badge badge-warning">PHP</span>
+                    <span class="badge badge-warning">SQL</span>
+                    <span class="badge badge-primary">CSS</span>
+                      <p>This was an exercise in learning SQL databases and PHP. It's the backend website for maintaining a record store's inventory.
+                      </p>
+                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#C2S">Click here for more</button>
+                  </div>
+              </div>
+            </div>  
+            <div class="col-md-4 mt-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/shayminGGimage.png" alt="Shaymin.gg image, browse Niantic's Pokemon GO API for base attack, defense, and stamina stats of all pokemon.">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>Shaymin.gg<span class="float-right">December 2022</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <span class="badge badge-primary">HTML</span>
+                    <span class="badge badge-info">Bootstrap</span>
+                    <span class="badge badge-success">React</span>
+                      <p>Using React, a JavaScript Framework, Shaymin.gg pulls information from Pokemon GO's API to display the base attack, defense, and stamina stats for all availble pokemon.</p>
+
+                      <!--MODAL BUTTON, MODAL INFO @BELOW FOOTER-->
+                      <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#SHAYMIN">Click here for more</button>
+                      <!---->
+                  </div>
+              </div>
+            </div>  
+            <div class="col-md-4 mt-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/spiralshoesthumbnail.png" alt="Spiral Shoes & Co., a made-up company that sells high performance shoes.">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>Spiral Shoes & Co.<span class="float-right">November 2022</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <span class="badge badge-primary">HTML</span>
+                    <span class="badge badge-info">Bootstrap</span>
+                    <span class="badge badge-info">JQuery</span>
+                      <p>One of my first exercises using Bootstrap. Features JQuery date countdown, JQuery Navigation Drop-down animation, and a good example of a static, single-page E-Commerce page. </p>
+                      <!--MODAL BUTTON, MODAL INFO @BELOW FOOTER-->
+                      <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#SPIRALSHOES">Click here for more</button>
+                      <!---->
+                  </div>
+              </div>
+            </div>  
+            <div class="col-md-4 mt-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/JIGGYimage.png" alt="Jiggy Centro, Smash Bros Ultimate character selector website preview">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>Jiggy Centro<span class="float-right">November 2022</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <!--tags-->
+                    <span class="badge badge-primary">HTML</span>
+                    <span class="badge badge-primary">CSS</span>
+                    <span class="badge badge-success">Vue</span>
+                    <!--desc-->
+                      <p>Utalizing Vue 3.0 JavaScript framework, users can use this website to select their favorite fighters from Super Smash Bros Ultimate. Uses vue-router.</p>
+
+                      <!--MODAL BUTTON, MODAL INFO @BELOW FOOTER-->
+                      <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#JIGGY">Click here for more</button>
+                      <!---->
+                  </div>
+              </div>
+            </div>  
+            <div class="col-md-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/MIMIRimage.png" alt="Mimir preview image">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>MIMIR<span class="float-right">October 2022</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <!--tags-->
+                    <span class="badge badge-primary">HTML</span>
+                    <span class="badge badge-primary">CSS</span>
+                    <!--desc-->
+                      <p>This is a concept of a Destiny 2 Companion App.
+                        There are concept maps, a written proposal, a PowerPoint, a YouTube video presenting 
+                        the PowerPoint, and an early prototype.
+                      </p>
+                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#MIMIR">Click here for more</button>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-E p-3">
+                  <img class="card-img-top" src="./images/GLOAMimage.png" alt="GLOAM screenshot image">
+                  <div class="card-header text-BIG" style="height:3.25rem">
+                      <p>GLOAM<span class="float-right">August 2022</span></p>
+                  </div>
+                  <div class="card-body text-center lead">
+                    <!--tags-->
+                    <span class="badge badge-primary">HTML</span>
+                    <span class="badge badge-primary">CSS</span>
+                    <span class="badge badge-info">JQuery</span>
+                    <span class="badge badge-info">JavaScript</span>
+                    <!--desc-->
+                    <span class="badge badge-primary">CSS</span>
+                      <p>GLOAM is a website for a fake inflatables business. The process became an exercise of utalizing JavaScript in various ways such as timers, accordions, and some JavaScript plug-ins. JQuery is also used here.<br></p>
+                      <br>
+                                            <!--MODAL BUTTON, MODAL INFO @BELOW FOOTER-->
+                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#GLOAM">Click here for more</button>
+                                            <!---->
+                  </div>
+              </div>
+            </div>
             <div class="col-md-4">
               <div class="card bg-E p-3">
                   <img class="card-img-top" src="./images/DOORGUY.png" alt="DOORGUY thumbnail, a game made by Brad">
@@ -127,193 +320,9 @@
                   </div>
               </div>
             </div>
-
-            <div class="col-md-4">
-              <div class="card bg-E p-3">
-                  <img class="card-img-top" src="./images/GLOAMimage.png" alt="GLOAM screenshot image">
-                  <div class="card-header text-BIG" style="height:3.25rem">
-                      <p>GLOAM<span class="float-right">August 2022</span></p>
-                  </div>
-                  <div class="card-body text-center lead">
-                      <p>GLOAM is a website for a fake inflatables business. The process became an exercise of utalizing JavaScript in various ways such as timers, accordions, and some JavaScript plug-ins. JQuery is also used here.<br></p>
-                      <br>
-                                            <!--MODAL BUTTON, MODAL INFO @BELOW FOOTER-->
-                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#GLOAM">Click here for more</button>
-                                            <!---->
-                  </div>
-              </div>
-            </div>
-
-
-
-            <div class="col-md-4">
-              <div class="card bg-E p-3">
-                  <img class="card-img-top" src="./images/MIMIRimage.png" alt="Mimir preview image">
-                  <div class="card-header text-BIG" style="height:3.25rem">
-                      <p>MIMIR<span class="float-right">October 2022</span></p>
-                  </div>
-                  <div class="card-body text-center lead">
-                      <p>This is a concept of a Destiny 2 Companion App.
-                        There are concept maps, a written proposal, a PowerPoint, a YouTube video presenting 
-                        the PowerPoint, and an early prototype.
-                      </p>
-                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#MIMIR">Click here for more</button>
-                  </div>
-              </div>
-            </div>
-         
             <div class="col-md-4 mt-4">
               <div class="card bg-E p-3">
-                  <img class="card-img-top" src="./images/JIGGYimage.png" alt="Jiggy Centro, Smash Bros Ultimate character selector website preview">
-                  <div class="card-header text-BIG" style="height:3.25rem">
-                      <p>Jiggy Centro<span class="float-right">November 2022</span></p>
-                  </div>
-                  <div class="card-body text-center lead">
-                      <p>Utalizing Vue 3.0 JavaScript framework, users can use this website to select their favorite fighters from Super Smash Bros Ultimate. Uses vue-router.</p>
-
-                      <!--MODAL BUTTON, MODAL INFO @BELOW FOOTER-->
-                      <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#JIGGY">Click here for more</button>
-                      <!---->
-                  </div>
-              </div>
-            </div>     
-            <div class="col-md-4 mt-4">
-              <div class="card bg-E p-3">
-                  <img class="card-img-top" src="./images/spiralshoesthumbnail.png" alt="Spiral Shoes & Co., a made-up company that sells high performance shoes.">
-                  <div class="card-header text-BIG" style="height:3.25rem">
-                      <p>Spiral Shoes & Co.<span class="float-right">November 2022</span></p>
-                  </div>
-                  <div class="card-body text-center lead">
-                      <p>One of my first exercises using Bootstrap. Features JQuery date countdown, JQuery Navigation Drop-down animation, and a good example of a static, single-page E-Commerce page. </p>
-                      <!--MODAL BUTTON, MODAL INFO @BELOW FOOTER-->
-                      <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#SPIRALSHOES">Click here for more</button>
-                      <!---->
-                  </div>
-              </div>
-            </div>      
-            
-            <div class="col-md-4 mt-4">
-              <div class="card bg-E p-3">
-                  <img class="card-img-top" src="./images/shayminGGimage.png" alt="Shaymin.gg image, browse Niantic's Pokemon GO API for base attack, defense, and stamina stats of all pokemon.">
-                  <div class="card-header text-BIG" style="height:3.25rem">
-                      <p>Shaymin.gg<span class="float-right">December 2022</span></p>
-                  </div>
-                  <div class="card-body text-center lead">
-                      <p>Using React, a JavaScript Framework, Shaymin.gg pulls information from Pokemon GO's API to display the base attack, defense, and stamina stats for all availble pokemon.</p>
-
-                      <!--MODAL BUTTON, MODAL INFO @BELOW FOOTER-->
-                      <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#SHAYMIN">Click here for more</button>
-                      <!---->
-                  </div>
-              </div>
-            </div>  
-            <div class="col-md-4 mt-4">
-              <div class="card bg-E p-3">
-                  <img class="card-img-top" src="./images/C2S.jpg" alt="Cut-to-Static preview image">
-                  <div class="card-header text-BIG" style="height:3.25rem">
-                      <p>Cut-to-Static Records<span class="float-right">May 2023</span></p>
-                  </div>
-                  <div class="card-body text-center lead">
-                      <p>This was an exercise in learning SQL databases and PHP. It's the backend website for maintaining a record store's inventory.
-                      </p>
-                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#C2S">Click here for more</button>
-                  </div>
-              </div>
-            </div>  
-            <div class="col-md-4 mt-4">
-              <div class="card bg-E p-3">
-                  <img class="card-img-top" src="./images/TDWS.PNG" alt="TDWS preview image">
-                  <div class="card-header text-BIG" style="height:3.25rem">
-                      <p>Top-Down Wilderness Survival<span class="float-right">August 2023</span></p>
-                  </div>
-                  <div class="card-body text-center lead">
-                      <p>Made in Unreal Engine for Fortnite. Features a camera that constantly updates and tracks the player. The objective is to fight wolves and find parts to repair your car.
-                      </p>
-                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#TDWS">Click here for more</button>
-                  </div>
-              </div>
-            </div> 
-            <div class="col-md-4 mt-4">
-              <div class="card bg-E p-3">
-                  <img class="card-img-top" src="./images/Peppermint.png" alt="PEPPERMINT preview image">
-                  <div class="card-header text-BIG" style="height:3.25rem">
-                      <p>PEPPERMINT<span class="float-right">August 2023</span></p>
-                  </div>
-                  <div class="card-body text-center lead">
-                      <p>Made in Unreal Engine for Fortnite. A 2D-Platformer, 3D-Shooter, 3D-Melee, story-driven experience.
-                      </p>
-                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#PEPPERMINT">Click here for more</button>
-                  </div>
-              </div>
-            </div>  
-            <div class="col-md-4 mt-4">
-              <div class="card bg-E p-3">
-                  <img class="card-img-top" src="./images/EffigyGoods.jpg" alt="Effigy Goods preview image">
-                  <div class="card-header text-BIG" style="height:3.25rem">
-                      <p>Effigy Goods<span class="float-right">October 2023</span></p>
-                  </div>
-                  <div class="card-body text-center lead">
-                      <p>A solo project where I made an E-Commerce website with SQL and PHPmyadmin. Complete with a login feature.
-                      </p>
-                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#Effigy">Click here for more</button>
-                  </div>
-              </div>
-            </div>  
-            <div class="col-md-4 mt-4">
-              <div class="card bg-E p-3">
-                  <img class="card-img-top" src="./images/WWSapssc.jpg" alt="WWSapssc preview image">
-                  <div class="card-header text-BIG" style="height:3.25rem">
-                      <p>WWSapssc<span class="float-right">October 2023</span></p>
-                  </div>
-                  <div class="card-body text-center lead">
-                      <p>Working with Western Waterworks Supply & Fabrication, I created a program that automates some of the processes when adding pipe in AutoCAD. Please watch the video and read the description.
-                      </p>
-                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#WWSapssc">Click here for more</button>
-                  </div>
-              </div>
-            </div>  
-            <div class="col-md-4 mt-4">
-              <div class="card bg-E p-3">
-                  <img class="card-img-top" src="./images/FloodEscapeLobby (1).png" alt="Flood Escape preview image">
-                  <div class="card-header text-BIG" style="height:3.25rem">
-                      <p>Flood Escape<span class="float-right">November 2023</span></p>
-                  </div>
-                  <div class="card-body text-center lead">
-                      <p>Made in Unreal Engine for Fortnite. My first mini-game like experience. Features an in-game shop, and opt-in/out game system, multiple maps, and cool gameplay.
-                      </p>
-                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#FLOODESCAPE">Click here for more</button>
-                  </div>
-              </div>
-            </div> 
-            <div class="col-md-4 mt-4">
-              <div class="card bg-E p-3">
-                  <img class="card-img-top" src="./images/SHATTEREDthumbnail.jpg" alt="Shattered preview image">
-                  <div class="card-header text-BIG" style="height:3.25rem">
-                      <p>SHATTERED: A 3D RPG<span class="float-right">December 2023</span></p>
-                  </div>
-                  <div class="card-body text-center lead">
-                      <p>Made with Unity, I made a 3D RPG akin to the Persona Series or Pokemon. Features include persisting data across scenes, turn-based instanced fights, cutscenes, dialog, and more.
-                      </p>
-                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#SHATTERED">Click here for more</button>
-                  </div>
-              </div>
-            </div>  
-                <div class="col-md-4 mt-4">
-              <div class="card bg-E p-3">
-                  <img class="card-img-top" src="./images/SFBThumbnail.jpg" alt="SFB preview image">
-                  <div class="card-header text-BIG" style="height:3.25rem">
-                      <p>Scott's Furniture Barn<span class="float-right">December 2023</span></p>
-                  </div>
-                  <div class="card-body text-center lead">
-                      <p>A collaborative assignment in my SWDV280 class, myself and six others were assigned to create a website for our client, Scott. This is an E-Commerce page complete with a LAMP stack and is an exercise for our frontend and backend development.
-                      </p>
-                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#SFB">Click here for more</button>
-                  </div>
-              </div>
-            </div>
-            <div class="col-md-4 mt-4">
-              <div class="card bg-E p-3">
-                  <img class="card-img-top hide" src="./images/placeholder.png" alt="Shaymin.gg image, browse Niantic's Pokemon GO API for base attack, defense, and stamina stats of all pokemon.">
+                  <img class="card-img-top hide" src="./images/placeholder.png" alt="placeholder_image">
                   <div class="card-header text-BIG" style="height:3.25rem">
                       <p>MORE PROJECTS TO COME...<span class="float-right"></span></p>
                   </div>
@@ -515,6 +524,7 @@
     </div>
   </div>
 </div>
+
 <!--PEPPERMINT WEBSITE MODAL-->
 <div id="PEPPERMINT" class="modal fade" role="dialog">
   <div class="modal-dialog modal-dialog-centered">
@@ -527,6 +537,24 @@
         <p><a href="https://youtu.be/9UZzVToIqmc" target="_blank">Click here to watch a YouTube Video [8.7.23]&nbsp;&nbsp;<i class="bi bi-youtube"></i></i></a></p>
         <p><a href="https://www.youtube.com/watch?v=fdBgDzg2184" target="_blank">Click here to watch a YouTube Video [7.13.23]&nbsp;&nbsp;<i class="bi bi-youtube"></i></i></a></p>
         <p><a href="https://www.youtube.com/watch?v=n4AGkCsZM2E" target="_blank">Click here to watch a YouTube Video [6.15.23]&nbsp;&nbsp;<i class="bi bi-youtube"></i></i></a></p>
+      </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--CATRUN WEBSITE MODAL-->
+<div id="CATRUN" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-C">
+      <div class="modal-header">
+        <h3 class="modal-title">Cat Run</h3>
+      </div>
+      <div class="modal-body">
+        <p><a href="https://gd.games/goldspiral/cat-run" target="_blank">Click here to go to the GDevelop page&nbsp;&nbsp;<i class="bi bi-arrow-up-right-square"></i></a></p>
+        <p><a href="images/Project2MindMap_brad.png" target="_blank">Click here to view mind map&nbsp;&nbsp;<i class="bi bi-arrow-up-right-square"></i></a></p>
       </p>
       </div>
       <div class="modal-footer">

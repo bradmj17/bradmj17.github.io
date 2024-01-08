@@ -3,8 +3,8 @@
 --
 #Original Author:    Bradley Johnson                           #
 #Date Created:       03/01/22                                  #
-#Version:      4.00                                            #
-#Date Last Modified:    01/03/24                              #
+#Version:      4.20                                            #
+#Date Last Modified:    01/08/24                              #
 #Modified by:       Bradley Johnson                            #
 #Modification log:                                             #
 
@@ -39,13 +39,17 @@
                                >> it's on purpose that the only required elements are name, email, and message/comment section
                                >> mimir was zipped and able to be downloaded. github cannot contain mimir, so im removing it from the file and the download link in the mimir modal
 
-      Ver3.70  :   12/12/22    >> Updating colors, layout, and new projects
+      Ver3.70  :   12/14/23    >> Updating colors, layout, and new projects
 
       Ver4.00  :   01/03/24    >> Added Projects page that contains more projects without cluttering the main, single-page format.
                                >> Added many projects.
                                >> Removed game section in bio.
                                >> Added portfolio download next to past work experience.
                                >> Chart.js added below education
+
+      Ver4.20  :   01/08/24    >> Adding Cat Game
+                               >> Added tags to projects; Unity for Unity games, Vue.js for Vue projects, PHP & SQL for LAMP projects, etc
+                               >> Added a better quality resume to the resume icon (old one was poor quality; raw pdf without real text, couldn't visit portfolio or linkedin from resume)
         --
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
@@ -148,7 +152,7 @@
          
           <hr class="hr" />
           <div class="col-8 m-auto">
-          <h1 class="mt-5">Resume&nbsp;&nbsp;<a href="Resume_BradleyJohnson_Jan2024.docx.pdf" target="_blank"><i class="bi bi-arrow-up-right-square"></i></a></h1>
+          <h1 class="mt-5">Resume&nbsp;&nbsp;<a href="Resume_BradleyJohnson_Jan2024.pdf" target="_blank"><i class="bi bi-arrow-up-right-square"></i></a></h1>
 
           <div class="row mb-5 tablet-desktop">
             <div class="col-7 flex-column mobile"><p class="lead">Since 2019, I've been working summers at <span class="font-weight-normal">Western Water Works Supply</span>, a pipe drafting company based outside of Boise. Here, I recieve plans approved by the sales team, and translate a PDF file of complex pipe into AutoCAD. I've had success at this job because I have four years of AutoCAD experience and I am well-versed in Microsoft Excel, allowing me to read both detailed spreadsheets and AutoCAD plans.</p></div>
@@ -183,6 +187,8 @@
                       <p>PEPPERMINT<span class="float-right">August 2023</span></p>
                   </div>
                   <div class="card-body text-center lead">
+                    <span class="badge badge-danger">C++</span>
+                    <span class="badge badge-dark">Unreal Engine</span>
                       <p>Made in Unreal Engine for Fortnite. A 2D-Platformer, 3D-Shooter, 3D-Melee, story-driven experience.
                       </p>
                                             <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#PEPPERMINT">Click here for more</button>
@@ -197,6 +203,7 @@
                       <p>WWSapssc<span class="float-right">October 2023</span></p>
                   </div>
                   <div class="card-body text-center lead">
+                    <span class="badge badge-danger">C#</span>
                       <p>Working with Western Waterworks Supply & Fabrication, I created a program that automates some of the processes when adding pipe in AutoCAD. Please watch the video and read the description.
                       </p>
                                             <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#WWSapssc">Click here for more</button>
@@ -211,6 +218,11 @@
                       <p>Scott's Furniture Barn<span class="float-right">December 2023</span></p>
                   </div>
                   <div class="card-body text-center lead">
+                    <span class="badge badge-primary">HTML</span>
+                    <span class="badge badge-primary">CSS</span>
+                    <span class="badge badge-info">Bootstrap</span>
+                    <span class="badge badge-warning">PHP</span>
+                    <span class="badge badge-warning">SQL</span>
                       <p>A collaborative assignment in my SWDV280 class, myself and six others were assigned to create a website for our client, Scott. This is an E-Commerce page complete with a LAMP stack and is an exercise for our frontend and backend development.
                         My role here was primarily backend (server and database).
                       </p>
@@ -226,6 +238,9 @@
                       <p>Jiggy Centro<span class="float-right">November 2022</span></p>
                   </div>
                   <div class="card-body text-center lead">
+                    <span class="badge badge-primary">HTML</span>
+                    <span class="badge badge-primary">CSS</span>
+                    <span class="badge badge-success">Vue</span>
                       <p>Utalizing Vue 3.0 JavaScript framework, users can use this website to select their favorite fighters from Super Smash Bros Ultimate. Uses vue-router.</p>
 
                       <!--MODAL BUTTON, MODAL INFO @BELOW FOOTER-->
@@ -242,6 +257,9 @@
                       <p>Shaymin.gg<span class="float-right">December 2022</span></p>
                   </div>
                   <div class="card-body text-center lead">
+                    <span class="badge badge-primary">HTML</span>
+                    <span class="badge badge-info">Bootstrap</span>
+                    <span class="badge badge-success">React</span>
                       <p>Using React, a JavaScript Framework, Shaymin.gg pulls information from Pokemon GO's API to display the base attack, defense, and stamina stats for all availble pokemon.</p>
 
                       <!--MODAL BUTTON, MODAL INFO @BELOW FOOTER-->
@@ -258,6 +276,10 @@
                       <p>Effigy Goods<span class="float-right">October 2023</span></p>
                   </div>
                   <div class="card-body text-center lead">
+                    <span class="badge badge-primary">HTML</span>
+                    <span class="badge badge-info">Bootstrap</span>
+                    <span class="badge badge-warning">PHP</span>
+                    <span class="badge badge-warning">SQL</span>
                       <p>A solo project where I made an E-Commerce website with SQL and PHPmyadmin. Complete with a login feature.
                       </p>
                                             <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#Effigy">Click here for more</button>
