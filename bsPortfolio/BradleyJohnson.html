@@ -50,6 +50,8 @@
       Ver4.20  :   01/08/24    >> Adding Cat Game
                                >> Added tags to projects; Unity for Unity games, Vue.js for Vue projects, PHP & SQL for LAMP projects, etc
                                >> Added a better quality resume to the resume icon (old one was poor quality; raw pdf without real text, couldn't visit portfolio or linkedin from resume)
+                               >> updated logo; face still in files
+                               >> changed chart.js legend display to false
         --
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
@@ -63,10 +65,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--icon at the top-->
-    <link rel="shortcut icon" href="images/stare.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/stare.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/stare.png">
-    <link rel="icon" sizes="192x192" href="images/stare.png">
+    <link rel="shortcut icon" href="images/Logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Logo.png">
+    <link rel="icon" sizes="192x192" href="images/Logo.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -88,7 +90,7 @@
   <body class="bg-D">
     <!--bootstrap nav bar-->
     <nav class="navbar navbar-expand-md navbar-dark bg-A fixed-top m-lg text-BIG">
-      <a href="#Home" class="navbar-brand Home"><img class="img-nav" src="images/stare.png" alt="My face: the logo">Bradley Johnson</a>
+      <a href="#Home" class="navbar-brand Home"><img class="img-nav" src="images/Logo.png" alt="Logo Image">Bradley Johnson</a>
 
       <!-- Hamburger Menu Icon -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -896,7 +898,9 @@
             labels: {
               color: 'white',
               fontColor: 'white'
-            }
+            },
+            position: "bottom",
+            display:false
           }
         }
       }
