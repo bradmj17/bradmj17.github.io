@@ -3,8 +3,8 @@
 --
 #Original Author:    Bradley Johnson                           #
 #Date Created:       03/01/22                                  #
-#Version:      4.20                                            #
-#Date Last Modified:    01/08/24                              #
+#Version:      4.50                                            #
+#Date Last Modified:    01/12/24                              #
 #Modified by:       Bradley Johnson                            #
 #Modification log:                                             #
 
@@ -51,7 +51,16 @@
                                >> Added tags to projects; Unity for Unity games, Vue.js for Vue projects, PHP & SQL for LAMP projects, etc
                                >> Added a better quality resume to the resume icon (old one was poor quality; raw pdf without real text, couldn't visit portfolio or linkedin from resume)
                                >> updated logo; face still in files
-                               >> changed chart.js legend display to false
+                               >> changed chart.js legend display to false, as well as tool tip
+
+      Ver4.50  :   01/12/24    >> Updated Portfolio uploaded
+                               >> All projects button toward bottom of section
+                               >> added larger resume button at bottom of education section
+                               >> fixed dead home link in projects.html @ top
+                               >> added linkedin link and github link in the nav, styled for mobile and desktop; mobile have them in a distinct row
+                               >> view resume button - BUG: it sends the user to the bottom upon clicking
+
+
         --
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
@@ -119,6 +128,17 @@
           <li class="nav-item">
             <a class="nav-link Contact" href="#Contact">Contact</a>
           </li>
+          <li class="nav-item mobile">
+            <a href="https://www.linkedin.com/in/bradley-johnson-0a2664238/?original_referer=" target="_blank"><i class="bi bi-linkedin fa-1x pr-2 pl-2 nav-link"></i></a>
+          </li>
+          <li class="nav-item mobile">
+            <a href="https://github.com/bradmj17" target="_blank"><i class="bi bi-github fa-1x pl-2 pr-2 nav-link"></i></a>
+          </li>
+          <div class="row m-auto">
+            <a href="https://www.linkedin.com/in/bradley-johnson-0a2664238/?original_referer=" target="_blank"><i class="bi bi-linkedin fa-1x pr-2 pl-2 nav-link mr-2"></i></a>
+            <a href="https://github.com/bradmj17" target="_blank"><i class="bi bi-github fa-1x pl-2 pr-2 nav-link ml-2"></i></a>
+          </div>
+          
         </ul>
       </div>
     </nav>
@@ -127,7 +147,8 @@
     <header class="jumbotron jumbotron-fluid text-center hero mb-1" id="Home">
       <div class="container welcome">
         <h1 class="display-1 text-orange text-BIG mb-3">Bradley Johnson</h1>
-        <a href="#Contact" role="button" class="btn btn-outline-secondary btn-lg text-white bg-B Contact">Contact Me</a>
+        <a href="#Contact" role="button" class="btn btn-outline-secondary btn-lg text-white bg-B Contact mr-1">Contact Me</a>
+        <a href="2024_Jan_BradleyJohnsonResume.pdf" target="_blank" role="button" class="btn btn-outline-secondary btn-lg text-white bg-B Contact ml-1">View Resume</a>
       </div>
     </header>
    
@@ -136,7 +157,7 @@
 <!--ABOUT-->
 <a name="About" class="uppies"></a>
       <div class="row pt-5 bg-C">
-        <h1 class="col-12 text-center mb-5 display-4 m-auto">Education</h1>
+        <h1 class="col-12 text-center mb-5 display-4 m-auto mt-5">Education</h1>
         <div class="col-sm-12">
         <div class="col-sm-8 p-3 m-auto">
           <figure class="col-8 m-auto">
@@ -154,14 +175,14 @@
          
           <hr class="hr" />
           <div class="col-8 m-auto">
-          <h1 class="mt-5">Resume&nbsp;&nbsp;<a href="Resume_BradleyJohnson_Jan2024.pdf" target="_blank"><i class="bi bi-arrow-up-right-square"></i></a></h1>
+          <h1 class="mt-5">Resume&nbsp;&nbsp;<a href="2024_Jan_BradleyJohnsonResume.pdf" target="_blank"><i class="bi bi-arrow-up-right-square"></i></a></h1>
 
           <div class="row mb-5 tablet-desktop">
             <div class="col-7 flex-column mobile"><p class="lead">Since 2019, I've been working summers at <span class="font-weight-normal">Western Water Works Supply</span>, a pipe drafting company based outside of Boise. Here, I recieve plans approved by the sales team, and translate a PDF file of complex pipe into AutoCAD. I've had success at this job because I have four years of AutoCAD experience and I am well-versed in Microsoft Excel, allowing me to read both detailed spreadsheets and AutoCAD plans.</p></div>
             <div class="col-5 flex-column float-right">
               <a href="https://www.westernwaterworks.net/" target="_blank"><img src="./images/WWS.png" alt="Western Water Works Supply Company logo" class="img-fluid bg-white w-100 float-right col-10 mobile"></a>
             </div>
-            
+            <a href="2024_Jan_BradleyJohnsonResume.pdf" target="_blank"><button type="button" class="btn bg-D btn-md mt-5 text-white">VIEW RESUME</button></a>
           </div>
 
           <div class="row mb-5 hideinDesktop">
@@ -169,7 +190,7 @@
             <div class="col-12 flex-column">
               <a href="https://www.westernwaterworks.net/" target="_blank"><img src="./images/WWS.png" alt="Western Water Works Supply Company logo" class="img-fluid bg-white w-100 float-right col-12"></a>
             </div>
-            
+            <a href="2024_Jan_BradleyJohnsonResume.pdf" target="_blank"><button type="button" class="btn bg-D btn-md mt-5 text-white">VIEW RESUME</button></a>
           </div>
         </div><a name="Projects"></a>
         </div>
@@ -284,12 +305,13 @@
                     <span class="badge badge-warning">SQL</span>
                       <p>A solo project where I made an E-Commerce website with SQL and PHPmyadmin. Complete with a login feature.
                       </p>
-                                            <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#Effigy">Click here for more</button>
+                      <button type="button" class="btn bg-D btn-md mt-5 text-white" data-toggle="modal" data-target="#Effigy">Click here for more</button>             
                   </div>
               </div>
             </div>  
           </div>
-
+          
+          <a href="Projects.html"><button type="button" class="btn bg-D btn-md mt-5 text-white">ALL PROJECTS</button></a>
           </div>
         
 <!--INTERESTS-->
